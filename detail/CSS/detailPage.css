@@ -1,0 +1,416 @@
+/* =========공통 속성=========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+#header,
+#container,
+#footer .footer_cover {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+div {
+    /* border: 1px solid; */
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+.fake::after {
+    content: "";
+    display: block;
+    height: 70px;
+}
+
+/* ############################### container전체 ############################ */
+
+#container {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* ===================== main ============================= */
+
+.detailScriptPage {
+    /* border: 1px solid; */
+    width: 1240px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.leftSide {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 70%;
+    text-align: center;
+}
+
+.leftSide .flex {
+    /* border: 1px solid; */
+    display: flex;
+    width: 100%;
+}
+
+.rightSide {
+    display: inline-block;
+    position: sticky;
+    bottom: 50%;
+}
+
+
+
+/* ================= 이미지 오른쪽 상세설명 ==================== */
+.detail_tit_img>img {
+    margin-left: 70px;
+    width: 300px;
+    height: 400px;
+}
+
+.detail_tit,
+.detail_tit_img {
+    display: inline-block;
+}
+
+.detail_tit {
+    /* border: 1px solid; */
+    text-align: initial;
+    vertical-align: top;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.detail_tit div {
+    padding-top: 8px;
+}
+
+.opa5 {
+    opacity: 0.7;
+}
+
+.detail_tit_top {
+    font-size: 25px;
+}
+
+.detail_tit_bot {
+    color: gold;
+}
+
+.detail_tit_star::after {
+    content: " ★ ★ ★ ★ ★ ";
+    opacity: 0.5;
+}
+
+.font_weight {
+    font-weight: bold;
+}
+
+.price {
+    font-size: 30px;
+}
+
+.blue {
+    color: blue;
+}
+
+/* ======================================================= */
+/* 핵심 포인트 */
+.point {
+    text-align: center;
+    background-color: rgb(229, 226, 226);
+    padding: 50px;
+    width: 600px;
+    height: 800px;
+    font-size: 20px;
+    margin: 100px auto;
+}
+
+.point_text1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.point_text2,
+.point_text3,
+.point_text4 {
+    background-color: white;
+    height: 200px;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.point_containing {
+    position: relative;
+}
+
+.point_img>img {
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+/* 첫 번째 줄 */
+.point_text_first {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 두 번째 줄 */
+.point_text_second {
+    padding-top: 20px;
+}
+
+/* 위에 margin */
+.point_text3,
+.point_text4 {
+    margin-top: 30px;
+}
+
+
+/* ========== 어울리는 안주 =========== */
+
+.side_dish {
+    /* text-align: center; */
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+.side_dish_tit {
+    margin: 70px 0 50px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.side_dish_img div {
+    display: inline-block;
+}
+
+.side_dish_first,
+.side_dish_second,
+.side_dish_third {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    text-indent: -9999px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+
+.side_dish_first {
+    background: url(../image/chicken.jpg) no-repeat center/100% 100%;
+}
+
+.side_dish_second {
+    background: url(../image/tunaCanape.jpg) no-repeat center/100% 100%;
+}
+
+.side_dish_third {
+    background: url(../image/peach.jpg) no-repeat center/100% 100%;
+}
+
+.side_dish_wrap label {
+    display: block;
+    margin-top: 15px;
+}
+
+/* ===================== 상세 설명 ===================== */
+/* 양조장 배송 */
+.detail_explain_top {
+    margin-top: 70px;
+    width: 70%;
+    margin-left: calc(100% / 7);
+    /* border: 1px solid; */
+    text-align: initial;
+}
+
+.detail_explain_deliver_img img {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.detail_explain_deliver_img {
+    height: 50px;
+    line-height: 50px;
+    background-color: gold;
+    border-top-left-radius: 5% 70%;
+    border-top-right-radius: 5% 70%
+}
+
+.detail_explain_deliver>div>div {
+    display: inline-block;
+}
+
+.detail_explain_deliver div:nth-of-type(2) {
+    font-size: 18px;
+}
+
+.detail_explain_delive_list {
+    height: 100px;
+    padding: 10px 0 10px 0;
+    background-color: rgb(248, 238, 182);
+    border-bottom-left-radius: 5% 35%;
+    border-bottom-right-radius: 5% 35%;
+}
+
+.detail_explain_delive_list li:nth-of-type(1) {
+    padding-top: 10px;
+}
+
+.detail_explain_delive_list li {
+    margin-bottom: 5px;
+    list-style: circle;
+    margin-left: 35px;
+}
+
+/* 상품설명 메인 */
+.detail_explain_main img {
+    width: 645px;
+}
+
+.detail_explain_main_text p:nth-of-type(1),
+.detail_explain_main_text p:nth-of-type(2) {
+    font-size: 1.5em;
+}
+
+.gold {
+    color: gold;
+}
+
+
+/* ===================================================== */
+/* Kakao+ 친구 */
+
+.kakao_plus {
+    border: 4px solid rgb(231, 193, 81);
+    border-radius: 50px;
+    width: 440px;
+    height: 360px;
+    margin: 100px auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.kakao_plus_svg>a {
+    background: url(../image/k.svg) no-repeat center/45px 45px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999em;
+    background-color: rgb(251, 211, 89);
+    border-radius: 40%;
+}
+
+.kakao_text {
+    margin-top: 15px;
+}
+
+.kakao_text>p>a {
+    color: rgb(231, 193, 81);
+}
+
+.kakao_text p {
+    line-height: 45px;
+}
+
+/* ======================================================= */
+/* =======================플로팅바=================== */
+.rightFloat {
+    box-sizing: border-box;
+    width: 300px;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    padding: 30px 10px;
+    margin-left: 50px;
+    font-size: 14px;
+}
+
+.rightSide .label {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.optOfProduct,
+.numofProduct,
+.productPrice {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px lightgray solid;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.numofProduct input {
+    width: 45%;
+    height: 100%;
+    border: none;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    text-align: center;
+}
+
+.guideofShipment {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.guideofShipment {
+    background: url(../image/starbucks.jpg) no-repeat left/45px;
+    background-color: #f1f1f163;
+}
+
+.guideofShipment p {
+    margin-left: 50px;
+}
+
+.productBuy_btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.productBuy_btn button {
+    padding: 10px 20px;
+    font-size: 150%;
+    background-color: lightgreen;
+    border: 1px solid lightgray;
+    border-radius: 17px;
+}
+
+
+/*  ########################/////########################///// header ########################//////////##################### */
+/* header */

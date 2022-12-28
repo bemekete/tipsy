@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+}
+
+/* ================================================================ login ================================================================ */
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+.hide {
+    display: inline-block;
+    text-indent: -5000px;
+}
+
+.find {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.find2 {
+    font-size: 14px;
+    color: black;
+}
+
+/* #################################################################### */
+main {
+    height: 100vh;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+#login_wrap {
+    height: 100%;
+}
+
+#login_container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* border: 1px solid; */
+    height: 600px;
+    width: 1000px;
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form {
+    padding: 50px;
+    border-right: 2px solid #ccc;
+    /* border: 1px solid; */
+}
+
+/* ======== 메인로그인 ========= */
+.login_tit img {
+    width: 150px;
+}
+
+.login_input {
+    width: 450px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.login_btn {
+    margin-top: 15px;
+    width: 450px;
+    height: 40px;
+    background-color: maroon;
+    color: white;
+    border: #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.find_div {
+    margin: 20px 0 20px 0;
+}
+
+/* ========= sns로그인 ========== */
+.sns_login_tit {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.sns_login_img {
+    width: 200px;
+    /* height: 45px; */
+}
+
+.sns_login_img2 {
+    width: 205px;
+    height: 50px;
+}
+
+.sns_login {
+    padding-left: 50px;
+    padding-bottom: 60px;
+}
+
+.sns_login div:first-child {
+    padding-bottom: 40px;
+}
+
+.sns_login div:nth-of-type(n+2) {
+    padding: 10px 0 10px 0;
+}
+
+
+/* ========= 로그인광고 ========== */
+.ad_img {
+    width: 430px;
+    margin-bottom: 50px;
+}
+
+/* ====== 로그인 푸터 링크 ===== */
+.login_fotter_link li {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ============================================================== header ============================================================== */
+
+/* =========================header============================ */
+
+header {
+    background-color: lightsteelblue;
+}
+
+.headerTopWide {
+    background-color: white;
+}
+
+/* 로고 & 로그인 메뉴 전체 */
+.headerTop {
+    width: 1240px;
+    height: 60px;
+    margin: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 카테고리 & 검색창 전체 */
+.headerBottom {
+    width: 1240px;
+    height: 110px;
+    margin: auto;
+    white-space: nowrap;
+    position: relative;
+    background-color: lightsteelblue;
+}
+
+.headerMenu {
+    width: 100%;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 로고 */
+.mainLogo {
+    display: inline-block;
+    width: 200px;
+    text-indent: -9999em;
+}
+
+/* 로그인탭 */
+.serviceTab {
+    margin-top: 10px;
+    line-height: 3em;
+}
+
+.serviceTabList {
+    white-space: nowrap;
+}
+
+.serviceTabList li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.serviceTabList li a {
+    color: grey;
+}
+
+.serviceTabList li+li::before {
+    content: " | ";
+    color: lightsteelblue;
+}
+
+/* 카테고리탭 */
+.mainCategories {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.mainCategoryList li {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.mainCategoryList li a {
+    color: white;
+}
+
+.categoryHover {
+    width: 190px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.categoryIcon {
+    background: url(../image/noun-menu-928567.png) left/60px no-repeat;
+}
+
+.categoryIcon span {
+    color: lightslategrey;
+    margin-left: 60px;
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+/* 검색창 */
+.mainSearch {
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    background-color: white;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+}
+
+.mainSearch input {
+    border: none;
+    background: white;
+    margin-left: 10px;
+}
+
+.mainSearch button img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.mainSearch button,
+.searchPageBar button {
+    border: none;
+    background: none;
+}
+
+.mainSearch,
+.serviceTab {
+    margin-right: 30px;
+}
+
+/* 카테고리1 hover */
+.categoryHover ul {
+    box-sizing: border-box;
+    width: 190px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+}
+
+.categoryHover li {
+    font-size: 16px;
+    display: block;
+}
+
+.categoryHover:hover {
+    background-color: lightslategray;
+}
+
+.categoryHover:hover span {
+    color: white;
+}
+
+.categoryHover:hover ul {
+    visibility: visible;
+}
+
+/*  ########################/////########################///// footer ########################//////////##################### */
+/* footer */
+
+#footer {
+    background-color: rgb(233, 234, 234);
+    /* margin-bottom: 30px; */
+    padding-bottom: 5vh;
+}
+
+#footer div {
+    margin-left: 1vw;
+}
+
+#footer .footer_cover {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.footer_cover li {
+    display: inline-block;
+}
+
+/* 고객센터, FamilySite ================================================== */
+
+/* 고색센터 위  */
+.foot_margin_top1 {
+    margin-top: 70px;
+}
+
+.footer_cover span,
+.footer_cover strong {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.footer_cover strong {
+    margin-left: 18px;
+    color: rgb(44, 44, 173);
+    font-size: 30px;
+}
+
+.CustomerService {
+    display: inline-block;
+}
+
+.FamilySite {
+    display: inline-block;
+    /* 오른쪽 고정 */
+    position: relative;
+    left: 885px;
+}
+
+/* 수신자 부담전화=================================================== */
+/* 수신자 부담전화 위 */
+.foot_margin_top2 {
+    margin-top: 35px;
+}
+
+/* 왼쪽 margin number은 리스트 */
+.foot_list1>li+li,
+.foot_list1>li+li+li+li,
+.foot_list2>li+li,
+.foot_list2>li+li+li+li {
+    margin-left: 10px;
+}
+
+.foot_list1>li+li+li,
+.foot_list2>li+li+li {
+    margin-left: 50px;
+}
+
+/* 다른 사이트 "_blank"================================================== */
+/* sns_src 위 */
+.foot_margin_top3 {
+    margin-top: 10px;
+}
+
+.sns_src {
+    position: relative;
+    left: 900px;
+    width: 300px;
+    height: 60px;
+}
+
+.sns_src>li:nth-of-type(n+2) {
+    margin-left: 25px;
+}
+
+.sns_src>li {
+    display: inline-block;
+}
+
+.sns_src>li>a {
+    background: url(../image/instagram.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999em;
+}
+
+.sns_src>li+li>a {
+    background: url(../image/youtube.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 48px;
+}
+
+.sns_src>li+li+li>a {
+    background: url(../image/facebook.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+}
+
+.sns_src>li+li+li+li>a {
+    background: url(../image/twitter.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+}
+
+/* 로고 이미지 ================================================= */
+/* 이미지 위 */
+.foot_margin_top4 {
+    margin-top: 5px;
+}
+
+.foot_logo>img {
+    width: 130px;
+}
+
+/* 제휴(a 태그)=================================================== */
+/* 제휴위 */
+.foot_margin_top5 {
+    margin-top: 20px;
+}
+
+.foot_list3>li:nth-of-type(n+2),
+.foot_list4>li:nth-of-type(n+2) {
+    margin-left: 20px;
+}
+
+.top_margin_6 {
+    margin-top: 20px;
+}
+
+/* =============== 플로팅바 =============== */
+#floatingBar {
+    width: 70px;
+    height: 480px;
+    background-color: lightblue;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.floating {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+.floating:nth-of-type(-n + 3) {
+    border-bottom: 1px solid white;
+}
+
+.floating a {
+    display: inline-block;
+    width: 60px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.floating p {
+    margin-top: 47px;
+}
+
+.floating.cart a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.myPage a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.share a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.top a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
