@@ -13,8 +13,8 @@ body {
     word-break: keep-all;
 }
 
-#header,
-#container,
+#header .header_cover,
+#container, 
 #footer .footer_cover {
     max-width: 1240px;
     margin: 0 auto;
@@ -35,6 +35,139 @@ a {
     content: "";
     display: block;
     height: 70px;
+}
+
+/* ======================header==================================================== */
+/* ========================header 공통========================================== */
+
+#header {
+    margin-bottom: 50px;
+    background-color: rgb(141, 141, 201);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.headerTop {
+    width: 1240px;
+    height: 60px;
+    margin: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainLogo {
+    display: inline-block;
+    width: 200px;
+    text-indent: -9999em;
+}
+
+/* 로그인탭 */
+.serviceTab {
+    margin-top: 10px;
+    line-height: 3em;
+}
+
+.serviceTabList {
+    white-space: nowrap;
+}
+
+.serviceTabList li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.serviceTabList li a {
+    color: grey;
+}
+
+.serviceTabList li+li::before {
+    content: " | ";
+    color: lightsteelblue;
+}
+
+
+.header_cover {
+    line-height: 60px;
+}
+
+img {
+    width: 20px;
+}
+
+.mainCategoryList {
+    display: flex;
+    gap: 40px;
+}
+
+.mainCategoryList>li>a {
+    padding: 0 10px;
+    color: white;
+    font-size: 18;
+    text-shadow: 1px 1px black;
+}
+
+.mainCategoryList li:nth-of-type(5)>a {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 75%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.mainLogo {
+    margin-right: 50px;
+}
+/* =====================상단 우측 검색창=============================== */
+.mainSearch {
+    width: 250px;
+    background-color: white;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px;
+    position: absolute;
+    left: 100%;
+}
+.mainSearch form{
+    position: relative;
+}
+
+.mainSearch form button {
+    position: absolute;
+    /* margin: 0 3px; */
+    border: none;
+    background-color: white;
+    right: 5px;
+    top: 10px;
+}
+
+.mainSearch input {
+    border: none;
+    width: 244px;
+    height: 30px;
+    margin-left: 3px;
+}
+
+/* //////////////////////////////////////////카테고리 세부 메뉴/////////////////////////////////// */
+/* ===========================================카테고리 1===================================== */
+.mainCategoryList>li:nth-of-type(2) {
+    position: relative;
+}
+
+.detailCategoryList1 {
+    position: absolute;
+    visibility: hidden;
+    width: 20px;
+    background-color: white;
+}
+
+.mainCategoryList>li:nth-of-type(2):hover .detailCategoryList1 {
+    visibility: visible;
+    width: 100%;
+
 }
 
 /* ############################### container전체 ############################ */
