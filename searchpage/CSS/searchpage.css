@@ -1,0 +1,456 @@
+/* =========공통 속성=========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+#header,
+#container,
+#footer .footer_cover {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+div {
+    /* border: 1px solid; */
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ==================header==================== */
+
+#header {
+    background-color: rgb(238, 238, 238);
+}
+
+/* 로고 & 로그인 메뉴 전체 */
+.headerTop {
+    line-height: 70px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 카테고리 & 검색창 전체 */
+.headerBottom {
+    height: 100px;
+    white-space: nowrap;
+}
+
+.headerMenu {
+    height: 50px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 로고 */
+.mainLogo {
+    display: inline-block;
+    background-image: url(../image/logo.png);
+    background-position: left;
+    width: 200px;
+    text-indent: -9999em;
+}
+
+/* 로그인탭 */
+.serviceTab {
+    margin-top: 10px;
+    line-height: 3em;
+}
+
+.serviceTabList {
+    white-space: nowrap;
+}
+
+.serviceTabList li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.serviceTabList li a {
+    color: grey;
+}
+
+.serviceTabList li+li::before {
+    content: " | ";
+    color: lightsteelblue;
+}
+
+/* 카테고리탭 */
+.mainCategories {
+    display: inline-block;
+    margin-left: 10px;
+    /* margin-top: -10px; */
+    white-space: nowrap;
+}
+
+.mainCategoryList li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.mainCategoryList li a {
+    color: grey;
+}
+
+.categoryIcon {
+    background: url(../image/noun-menu-928567.png) left/60px no-repeat;
+}
+
+.categoryIcon span {
+    margin-left: 60px;
+    margin-right: 40px;
+    font-size: 24px;
+}
+
+/* 검색창 */
+.mainSearch {
+    display: inline-block;
+    width: 220px;
+    height: 32px;
+    background-color: white;
+    border-bottom: 1px solid;
+}
+
+.mainSearch input {
+    border: none;
+    background: white;
+    margin-left: 10px;
+}
+
+.mainSearch button img {
+    height: 20px;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.mainSearch button,
+.searchPageBar button {
+    border: none;
+    background: none;
+}
+
+.mainSearch,
+.serviceTab {
+    margin-right: 30px;
+}
+
+/* ############################### container전체 ############################ */
+
+#container {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 40px 100px 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    clear: both;
+}
+
+
+/* ===================== main ============================= */
+
+.pageTitle {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 45px 0;
+}
+
+#contents {
+    margin: auto;
+    width: 95%;
+}
+
+/* ================ 검색바 ================= */
+
+.searchPageBar form {
+    width: 500px;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.searchPageBar input {
+    width: 400px;
+    height: 60px;
+    font-size: 30px;
+    margin: 0 10px;
+    border: none;
+}
+
+.searchPageBar img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+/* =================== 검색결과 상자 ====================== */
+
+/* 카테고리 */
+.searchPageBox {
+    width: 100%;
+}
+
+.searchPageCategories {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.searchPageCategories li {
+    display: inline-block;
+    font-size: 90%;
+    width: 170px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    border: 0.5px solid;
+}
+
+.searchCategory p {
+    color: gray;
+    text-decoration: none;
+}
+
+.searchPageCategories span {
+    font-weight: bold;
+    color: black;
+}
+
+/* 결과창 */
+.totalSearchArea {
+    width: 100%;
+}
+
+.totalSearch p {
+    line-height: 400px;
+    text-align: center;
+}
+
+.totalSearchArea a {
+    display: inline-block;
+    width: 100%;
+    line-height: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid lightgray;
+    margin-bottom: 30px;
+}
+
+
+
+/* ####################################/////footer/////############################################## */
+/* footer */
+
+#footer {
+    background-color: rgb(233, 234, 234);
+    /* margin-bottom: 30px; */
+    padding-bottom: 5vh;
+}
+
+#footer div {
+    margin-left: 1vw;
+}
+
+#footer .footer_cover {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.footer_cover li {
+    display: inline-block;
+}
+
+/* 고객센터, FamilySite ================================================== */
+
+/* 고색센터 위  */
+.foot_margin_top1 {
+    margin-top: 70px;
+}
+
+.footer_cover span,
+.footer_cover strong {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.footer_cover strong {
+    margin-left: 18px;
+    color: rgb(44, 44, 173);
+    font-size: 30px;
+}
+
+.CustomerService {
+    display: inline-block;
+}
+
+.FamilySite {
+    display: inline-block;
+    /* 오른쪽 고정 */
+    position: relative;
+    left: 885px;
+}
+
+/* 수신자 부담전화=================================================== */
+/* 수신자 부담전화 위 */
+.foot_margin_top2 {
+    margin-top: 35px;
+}
+
+/* 왼쪽 margin number은 리스트 */
+.foot_list1>li+li,
+.foot_list1>li+li+li+li,
+.foot_list2>li+li,
+.foot_list2>li+li+li+li {
+    margin-left: 10px;
+}
+
+.foot_list1>li+li+li,
+.foot_list2>li+li+li {
+    margin-left: 50px;
+}
+
+/* 다른 사이트 "_blank"================================================== */
+/* sns_src 위 */
+.foot_margin_top3 {
+    margin-top: 10px;
+}
+
+.sns_src {
+    position: relative;
+    left: 900px;
+    width: 300px;
+    height: 60px;
+}
+
+.sns_src>li:nth-of-type(n+2) {
+    margin-left: 25px;
+}
+
+.sns_src>li {
+    display: inline-block;
+}
+
+.sns_src>li>a {
+    background: url(../image/instagram.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999em;
+}
+
+.sns_src>li+li>a {
+    background: url(../image/youtube.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 48px;
+}
+
+.sns_src>li+li+li>a {
+    background: url(../image/facebook.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+}
+
+.sns_src>li+li+li+li>a {
+    background: url(../image/twitter.svg) no-repeat 0/ cover;
+    display: inline-block;
+    width: 40px;
+}
+
+
+/* 로고 이미지 ================================================= */
+/* 이미지 위 */
+.foot_margin_top4 {
+    margin-top: 5px;
+}
+
+.foot_logo>img {
+    width: 130px;
+}
+
+/* 제휴(a 태그)=================================================== */
+/* 제휴위 */
+.foot_margin_top5 {
+    margin-top: 20px;
+}
+
+.foot_list3>li:nth-of-type(n+2),
+.foot_list4>li:nth-of-type(n+2) {
+    margin-left: 20px;
+}
+
+.top_margin_6 {
+    margin-top: 20px;
+}
+
+
+/* =============== 플로팅바 =============== */
+#floatingBar {
+    width: 70px;
+    height: 480px;
+    background-color: lightblue;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.floating {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+.floating:nth-of-type(-n + 3) {
+    border-bottom: 1px solid white;
+}
+
+.floating a {
+    display: inline-block;
+    width: 60px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.floating p {
+    margin-top: 47px;
+}
+
+.floating.cart a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.myPage a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.share a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
+
+.floating.top a {
+    background: url(../image/naver_whale.png) no-repeat top/30px;
+}
