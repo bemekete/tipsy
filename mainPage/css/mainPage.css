@@ -295,6 +295,8 @@ button {
 
 
 .listInfo1 {
+    display: flex;
+    justify-content: space-between;
     background-color: #f9f9f9;
     padding: 25px 5px;
 
@@ -302,8 +304,7 @@ button {
 
 
 .listLeng {
-    float: left;
-
+    margin-left: 10px;
 }
 
 .listStyle1 {
@@ -332,8 +333,7 @@ div[class="img"]>img {
 }
 
 .listSort {
-    margin-right: 50px;
-    text-align: right;
+    margin-right: 10px;
 }
 
 /* =======================================더보기 버튼============================ */
