@@ -245,9 +245,12 @@ button {
     border-bottom: 2px solid #efefef;
 }
 
+.sortListCon dl dt {
+    font-weight: bold;
+}
+
 .sortListCon dl:first-child li {
     width: 130px;
-    margin-left: 50px;
 }
 
 .sortList ul {
@@ -303,12 +306,16 @@ button {
 
 }
 
+.listStyle1 {
+    min-width: 80%;
+}
+
 .listStyle1 .list>li {
     width: 32%;
 }
 
 div[class="img"]>img {
-    width: 314px;
+    width: 100%;
     border-radius: 10px;
 }
 
