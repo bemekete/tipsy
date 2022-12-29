@@ -336,6 +336,15 @@ div[class="img"]>img {
     text-align: right;
 }
 
+/* =======================================더보기 버튼============================ */
+#expand_input {
+    display: none;
+}
+
+.collapse_img {
+    display: none;
+}
+
 .btnSection {
     margin-top: 50px;
     width: 100%;
@@ -347,6 +356,10 @@ div[class="img"]>img {
     line-height: 46px;
     background-color: #efefef;
     box-sizing: border-box;
+}
+
+#expand_input:checked~* .collapse_img {
+    display: flex;
 }
 
 
