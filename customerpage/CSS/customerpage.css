@@ -220,32 +220,37 @@ button {
 
 #footer {
     background-color: rgb(233, 234, 234);
-    color: rgb(72, 71, 71);
+    /* margin-bottom: 30px; */
+    padding-bottom: 5vh;
 }
 
 #footer div {
     margin-left: 1vw;
 }
 
-.footer_cover {
+#footer .footer_cover {
     max-width: 1240px;
     margin: 0 auto;
+}
+
+.footer_cover li {
+    display: inline-block;
 }
 
 /* 고객센터, FamilySite ================================================== */
 
 /* 고색센터 위  */
-.top_margin_1 {
+.foot_margin_top1 {
     margin-top: 70px;
 }
 
-span,
-strong {
+.footer_cover span,
+.footer_cover strong {
     display: inline-block;
     font-weight: bold;
 }
 
-strong {
+.footer_cover strong {
     margin-left: 18px;
     color: rgb(44, 44, 173);
     font-size: 30px;
@@ -257,45 +262,45 @@ strong {
 
 .FamilySite {
     display: inline-block;
-    /* margin-left: 10000px; */
-    /* 고객센터 위 margin */
-    /* margin-top: 100px; */
-    /* margin-left: 70vw; */
-    /* margin-left: 700px; */
-    padding-left: 70vw;
+    /* 오른쪽 고정 */
+    position: relative;
+    left: 885px;
 }
 
 /* 수신자 부담전화=================================================== */
 /* 수신자 부담전화 위 */
-.top_margin_2 {
-    margin-top: 50px;
+.foot_margin_top2 {
+    margin-top: 35px;
 }
 
-
 /* 왼쪽 margin number은 리스트 */
-.number_1>li+li,
-.number_1>li+li+li+li,
-.number_2>li+li,
-.number_2>li+li+li+li {
+.foot_list1>li+li,
+.foot_list1>li+li+li+li,
+.foot_list2>li+li,
+.foot_list2>li+li+li+li {
     margin-left: 10px;
 }
 
-.number_1>li+li+li,
-.number_2>li+li+li {
+.foot_list1>li+li+li,
+.foot_list2>li+li+li {
     margin-left: 50px;
 }
 
 /* 다른 사이트 "_blank"================================================== */
 /* sns_src 위 */
-.top_margin_3 {
+.foot_margin_top3 {
     margin-top: 10px;
 }
 
 .sns_src {
-    /* margin-left: 770px; */
-    margin-left: 70vw;
+    position: relative;
+    left: 900px;
     width: 300px;
     height: 60px;
+}
+
+.sns_src>li:nth-of-type(n+2) {
+    margin-left: 25px;
 }
 
 .sns_src>li {
@@ -331,7 +336,7 @@ strong {
 
 /* 로고 이미지 ================================================= */
 /* 이미지 위 */
-.top_margin_4 {
+.foot_margin_top4 {
     margin-top: 5px;
 }
 
@@ -341,15 +346,15 @@ strong {
 
 /* 제휴(a 태그)=================================================== */
 /* 제휴위 */
-.top_margin_5 {
+.foot_margin_top5 {
     margin-top: 20px;
 }
 
-.number_3>li:nth-of-type(n+2),
-.number_4>li:nth-of-type(n+2) {
+.foot_list3>li:nth-of-type(n+2),
+.foot_list4>li:nth-of-type(n+2) {
     margin-left: 20px;
 }
 
 .top_margin_6 {
-    margin-top: 10px;
+    margin-top: 20px;
 }
