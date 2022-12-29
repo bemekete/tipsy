@@ -13,10 +13,10 @@ body {
     word-wrap: break-word;
     word-break: keep-all;
 }
-
+/* 
 div {
     border: 1px solid;
-}
+} */
 
 a {
     color: #222;
