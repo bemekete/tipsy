@@ -14,16 +14,16 @@ body {
 }
 
 #header .header_cover,
-#container, 
+#container,
 #footer .footer_cover {
     max-width: 1240px;
     margin: 0 auto;
 }
 
 
-div {
-    /* border: 1px solid; */
-}
+/* div {
+    border: 1px solid;
+} */
 
 a {
     color: #222;
@@ -39,6 +39,10 @@ a {
 
 /* ======================header==================================================== */
 /* ========================header 공통========================================== */
+#header,
+.headerTop {
+    min-width: 1400px;
+}
 
 #header {
     margin-bottom: 50px;
@@ -49,9 +53,8 @@ a {
 }
 
 .headerTop {
-    width: 1240px;
     height: 60px;
-    margin: auto;
+    /* margin: auto; */
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
@@ -120,6 +123,7 @@ img {
 .mainLogo {
     margin-right: 50px;
 }
+
 /* =====================상단 우측 검색창=============================== */
 .mainSearch {
     width: 250px;
@@ -131,7 +135,8 @@ img {
     position: absolute;
     left: 100%;
 }
-.mainSearch form{
+
+.mainSearch form {
     position: relative;
 }
 
