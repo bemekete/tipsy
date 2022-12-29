@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 목록 페이지</title>
+    <link rel="stylesheet" href="./css/mainPage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_cover">
+                <div class="headerTop">
+                    <div class="mainLogo">tipsy</div>
+                    <div class="serviceTab">
+                        <ul class="serviceTabList">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">고객지원</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headerMenu">
+                    <div class="mainCategories">
+                        <ul class="mainCategoryList">
+                            <li><a href="#">카테고리1</a></li>
+                            <li><a href="#">카테고리2</a></li>
+                            <li><a href="#">카테고리3</a></li>
+                            <li><a href="#">카테고리4</a></li>
+                            <li><a href="#">카테고리5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mainSearch">
+                        <div class="Searchform">
+                            <form action="#">
+                                <input type="search" id="searchbar" name="mainSearch" placeholder="검색">
+                                <button type="submit">
+                                    <img src="./image/search.png" alt="검색">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="location_wrap">
+            <div class="location_con">
+                <a href="">홈</a> > 주류 > 약주, 청주
+            </div>
+        </div>
+        <div id="container">
+            <div id="search">
+                <div class="search_tit pageTit">주류</div>
+                <div class="search_list cate_list">
+                    <div class="cate_list_item"><a href="./mainPage_wine.html">와인</a></div>
+                    <div class="cate_list_item"><a href="./mainPage_soju.html">소주</a></div>
+                    <div class="cate_list_item"><a href="./mainPage_makgeolli.html">막걸리, 탁주</a></div>
+                    <div class="cate_list_item"><a href="#">약주, 청주</a></div>
+                    <div class="cate_list_item"><a href="./mainPage_fruit.html">과실주</a></div>
+                </div>
+                <div class="searchSorter">
+                    <div class="sortListCon">
+                        <dl>
+                            <dt>가격</dt>
+                            <dd>
+                                <ul class="sortList">
+                                    <li><a href="#">0만원 ~ 1만원</a></li>
+                                    <li><a href="#">1만원 ~ 3만원</a></li>
+                                    <li><a href="#">3만원 ~ 5만원</a></li>
+                                    <li><a href="#">5만원 ~ 10만원</a></li>
+                                    <li><a href="#">10만원 이상</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>종류</dt>
+                            <dd>
+                                <ul class="sortList">
+                                    <li><a href="#">레드와인</a></li>
+                                    <li><a href="#">화이트와인</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>도수</dt>
+                            <dd>
+                                <ul class="sortList">
+                                    <li><a href="#">0%~10%</a></li>
+                                    <li><a href="#">10%~20%</a></li>
+                                    <li><a href="#">20%~30%</a></li>
+                                    <li><a href="#">30%이상</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>단맛</dt>
+                            <dd>
+                                <ul class="sortList">
+                                    <li><a href="#">약한</a></li>
+                                    <li><a href="#">중간</a></li>
+                                    <li><a href="#">강한</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>신맛</dt>
+                            <dd>
+                                <ul class="sortList">
+                                    <li><a href="#">약한</a></li>
+                                    <li><a href="#">중간</a></li>
+                                    <li><a href="#">강한</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sortFilter">
+                        <a href="#">전체 필터 초기화</a>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <p class="pageTit">약주, 청주</p>
+                <div class="listStyle1" id="prod_schview">
+                    <div class="listInfo1">
+                        <p class="listLeng"> 총 <b>25</b>개의 상품이 있습니다</p>
+                        <ul class="listSort">
+                            <li><a href="#">인기순</a></li>
+                            <li><a href="#">등록순</a></li>
+                            <li><span class="txt_blue">"시리즈순"</span></li>
+                        </ul>
+                    </div>
+                    <input type="checkbox" id="expand_input">
+                    <ul id="productList" class="list">
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>천비향 약주</p>
+                                </div>
+                                <p class="price">30,400원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju2.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>문삼이공 약주 X 2병</p>
+                                </div>
+                                <p class="price">46,800원</p>
+                            </a>
+                        </li>
+                        <li class="collapse_img">
+                            <a href="" target="_blank">
+                                <div class="img">
+                                    <img src="./image/cheongju3.jpg" alt="상품 이미지">
+                                </div>
+                                <div class="tit">
+                                    <p>세종대왕어주 약주</p>
+                                </div>
+                                <p class="price">33,000원</p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="btnSection">
+                    <label for="expand_input" class="btnMore btnMore_prod">더보기</label>
+                    <!-- <a href="#" id="btnMore" class="btnMore btnMore_prod">더보기</a> -->
+                </div>
+            </div>
+        </div>
+        <!-- ===================================================================================== -->
+        <div id="footer" style="width: 100%;">
+            <div class="footer_cover">
+                <div>
+                    <!-- 고객센터 -->
+                    <div class="CustomerService">
+                        <div class="foot_margin_top1">
+                            <span>고객센터</span>
+                            <strong>070-1111-2222</strong>
+                            <p>평일 10:00 - 18:00, 주말휴무</p>
+                        </div>
+
+                        <div class="FamilySite">
+                            <label for="family site" name="family"></label>
+
+                            <select name="family" id="family site">
+                                <option value="FAMILY SITE">FAMILY SITE</option>
+                                <option value="술칭구">술칭구</option>
+                                <option value="칭구칭구">칭구칭구</option>
+                                <option value="호이호이">호이호이</option>
+                                <option value="뇸뇸뇸">뇸뇸뇸</option>
+                                <option value="마지막 칭구">마지막 칭구</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="nf">
+                        <div class="foot_margin_top2">수신자 부담전화:</div>
+                        <ul class="foot_list1">
+                            <li>대리점 가구전용</li>
+                            <li>080-666-6666</li>
+                            <li>인천 본사전시장</li>
+                            <li>032-222-2222</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="foot_list2">
+                            <li>인터넷 가구전용</li>
+                            <li>080-444-4444</li>
+                            <li>대리점 개설문화</li>
+                            <li>032-555-5555</li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top3">
+                        <ul class="sns_src">
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">인스타그램
+                                    <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" target="_blank">유튜브
+                                    <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank">페이스북
+                                    <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank">트위터
+                                    <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top4 foot_logo">
+                        <img src="./image/jeep_logo.png" alt="이미지. 로고">
+                    </div>
+
+                    <div class="foot_margin_top5 ">
+                        <ul class="foot_list3">
+                            <li><a href="">제휴/제안 문의</a></li>
+                            <li><a href="">대리점 개설 문의</a></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">고객지원</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="top_margin_6">
+                        <ul class="foot_list4">
+                            <li>상호명: 도르리</li>
+                            <li>대표: 이현배황</li>
+                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                            <li>이메일:
+                                <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+                            </li>
+                            <li>사업자등록번호: 100-21-12345</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
