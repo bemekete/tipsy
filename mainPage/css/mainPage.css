@@ -48,7 +48,7 @@ li {
 
 #header {
     background-color: rgb(238, 238, 238);
-
+    min-width: 1400px;
 }
 
 
@@ -307,7 +307,7 @@ button {
 }
 
 .listStyle1 {
-    min-width: 80%;
+    min-width: 800px;
 }
 
 .listStyle1 .list>li {
