@@ -355,12 +355,9 @@ header {
     align-items: center;
 }
 
-.icon {
+.icon img{
     width: 100px;
-    height: 100px;
-    background: url(../image/noun-shipment-1540091.png) no-repeat center/100%;
 }
-
 
 
 /* ########################/////footer/////##################### */
