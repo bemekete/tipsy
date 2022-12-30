@@ -49,10 +49,11 @@ header {
 }
 
 .headerTop {
-    height: 200px;
+    height: 70px;
     padding: 0 10px 0 10px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template: 20fr 1fr 1fr /1fr;
+    justify-content: flex-start;
     position: relative;
 }
 
@@ -66,10 +67,10 @@ header {
 
 /* ----------- 상단 헤더 ----------- */
 .mainLogo {
-    width: 400px;
+    width: 200px;
     text-indent: -9999em;
     background: url(../image/logo_black.png) 0/100%;
-    /* margin-right: 270px; */
+    margin-left:50px;
 }
 
 /* 로그인탭 */
@@ -172,11 +173,23 @@ header {
     height: 20px;
 }
 
-.mainSearch form {
+.mainSearch {
     height: 100%;
+    display: flex;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
+}
+.mainSearch form{
     display: flex;
     align-items: center;
 }
+
+.mainSearch form input{
+    background: none;
+    height: 17px;
+    width: 210px;
+}
+
 
 /* ############################### container전체 ############################ */
 
