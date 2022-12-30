@@ -7,10 +7,18 @@
 }
 
 body {
-    /* margin: 0 auto; */
+    margin: 0 auto;
     color: #333;
     word-wrap: break-word;
     word-break: keep-all;
+}
+
+.headerTop,
+.headerMenu,
+#container,
+#footer .footer_cover {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* div {
@@ -21,18 +29,6 @@ a {
     color: #222;
     text-decoration: none;
     outline: none;
-}
-
-li {
-    display: inline-block;
-}
-
-#header .header_cover,
-#container,
-#footer .footer_cover {
-    max-width: 1400px;
-    margin: 0 auto;
-
 }
 
 /* ======================header==================================================== */
@@ -304,7 +300,7 @@ button {
 
 
 .listLeng {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .listStyle1 {
@@ -333,7 +329,8 @@ div[class="img"]>img {
 }
 
 .listSort {
-    margin-right: 10px;
+    margin-right: 20px;
+    text-align: right;
 }
 
 /* =======================================더보기 버튼============================ */
@@ -363,40 +360,31 @@ div[class="img"]>img {
 }
 
 
-/* ####################################/////footer/////############################################## */
-
-
-/* ####################################/////footer/////############################################## */
+/* ########################/////footer/////##################### */
 /* footer */
 
 #footer {
     background-color: rgb(233, 234, 234);
-    /* margin-bottom: 30px; */
-    padding-bottom: 5vh;
-}
-
-#footer div {
-    margin-left: 1vw;
+    padding: 70px 0 30px 0;
 }
 
 #footer .footer_cover {
+    width: 1240px;
     margin: 0 auto;
 }
 
-/* 고객센터, FamilySite ================================================== */
-
-/* 고색센터 위  */
-.foot_margin_top1 {
-    margin-top: 70px;
+.footer_cover li {
+    display: inline-block;
 }
 
-span,
-strong {
+/* 고객센터, FamilySite ================================================== */
+/* .footer_cover span,
+.footer_cover strong {
     display: inline-block;
     font-weight: bold;
-}
+} */
 
-strong {
+.footer_cover strong {
     margin-left: 18px;
     color: rgb(44, 44, 173);
     font-size: 30px;
@@ -404,13 +392,14 @@ strong {
 
 .CustomerService {
     display: inline-block;
+    width: 100%;
+    position: relative;
 }
 
 .FamilySite {
-    display: inline-block;
     /* 오른쪽 고정 */
-    position: relative;
-    left: 885px;
+    position: absolute;
+    right: 0;
 }
 
 /* 수신자 부담전화=================================================== */
@@ -432,58 +421,57 @@ strong {
     margin-left: 50px;
 }
 
+.foot_list3 a {
+    color: initial;
+}
+
 /* 다른 사이트 "_blank"================================================== */
 /* sns_src 위 */
 .foot_margin_top3 {
-    margin-top: 10px;
+    width: 100%;
+    height: 10px;
+    position: relative;
 }
 
 .sns_src {
-    position: relative;
-    left: 900px;
-    width: 300px;
+    width: 225px;
     height: 60px;
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-.sns_src>li:nth-of-type(n+2) {
-    margin-left: 25px;
-}
-
-.sns_src>li {
+.sns_src li a {
     display: inline-block;
-}
-
-.sns_src>li>a {
-    background: url(../image/instagram.svg) no-repeat 0/ cover;
-    display: inline-block;
+    text-indent: -9999em;
     width: 40px;
     height: 40px;
-    text-indent: -9999em;
 }
 
-.sns_src>li+li>a {
-    background: url(../image/youtube.svg) no-repeat 0/ cover;
-    display: inline-block;
+.sns_src li:nth-of-type(1) a {
+    background: url(../image/instagram.svg) no-repeat center/cover;
+}
+
+.sns_src li:nth-of-type(2) a {
+    background: url(../image/youtube.svg) no-repeat center/cover;
     width: 48px;
 }
 
-.sns_src>li+li+li>a {
-    background: url(../image/facebook.svg) no-repeat 0/ cover;
-    display: inline-block;
-    width: 40px;
+.sns_src li:nth-of-type(3) a {
+    background: url(../image/facebook.svg) no-repeat center/cover;
 }
 
-.sns_src>li+li+li+li>a {
-    background: url(../image/twitter.svg) no-repeat 0/ cover;
-    display: inline-block;
-    width: 40px;
+.sns_src li:nth-of-type(4) a {
+    background: url(../image/twitter.svg) no-repeat center/cover;
 }
-
 
 /* 로고 이미지 ================================================= */
 /* 이미지 위 */
 .foot_margin_top4 {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .foot_logo>img {
