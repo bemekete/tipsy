@@ -1,0 +1,195 @@
+/* =========공통 속성=========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+#header,
+#container,
+#footer .footer_cover {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+div {
+    /* border: 1px solid; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ############################### container전체 ############################ */
+
+#container {
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.pageTitle {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 45px 0;
+}
+
+#contents {
+    margin: auto;
+    width: 95%;
+}
+
+/* 전체 */
+.myPageBox {
+    margin: auto;
+}
+
+/* 프로필 배너 */
+.profileBox {
+    width: 100%;
+    height: 200px;
+    background-color: navy;
+    color: white;
+
+    display: flex;
+}
+
+.profile {
+    font-size: 22px;
+    border: 1px solid;
+    padding-left: 20px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.profile>div:first-child {
+    font-weight: bold;
+}
+
+.part1 {
+    flex: 2;
+}
+
+.part1>div+div {
+    display: flex;
+    gap: 20px;
+}
+
+.part1 div div {
+    font-size: initial;
+    color: initial;
+    width: 150px;
+    text-align: center;
+    padding: 13px 10px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 50px;
+}
+
+/* 배송현황 */
+.shipmentBorder {
+    margin-top: 50px;
+    border-top: 2px solid lightgray;
+    margin: 0 20px;
+    margin-top: 50px;
+    padding: 20px 10px;
+}
+
+.shipmentBorder>p {
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.shipmentBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ship {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ship p {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.ship div {
+    font-size: 36px;
+}
+
+/* 카테고리 */
+.category {
+    margin-top: 50px;
+    border-top: 2px solid lightgray;
+
+    display: flex;
+}
+
+.categoryList {
+    flex: 2;
+}
+
+.categoryList li {
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.categoryList li a{
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+}
+
+.nowpage {
+    background-color: lightgray;
+}
+
+/* 콘텐츠 */
+.listContents {
+    height: 800px;
+    flex: 8;
+    opacity: 0.5;
+
+    border: 1px solid lightgray;
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background: url(../image/noun-produce-2823265.png) no-repeat center/100%;
+}
