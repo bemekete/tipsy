@@ -31,46 +31,59 @@ a {
     outline: none;
 }
 
-/* ==================header==================== */
+/* .fake::after {
+    content: "";
+    display: block;
+    height: 70px;
+} */
 
-#header {
-    background-color: rgb(238, 238, 238);
+/* ======================header====================== */
+/* ====================header 공통==================== */
+header {
+    /* height: 120px; */
+    margin-bottom: 50px;
 }
 
-/* 로고 & 로그인 메뉴 전체 */
+.headertop_cover {
+    background-color: rgba(223, 223, 223, 0.4);
+}
+
 .headerTop {
-    line-height: 70px;
-    white-space: nowrap;
-    display: flex;
-    justify-content: space-between;
+    height: 70px;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template: 20fr 1fr 1fr /1fr;
+    justify-content: flex-start;
+    position: relative;
 }
 
-/* 카테고리 & 검색창 전체 */
-.headerBottom {
-    height: 100px;
-    white-space: nowrap;
+.header_cover {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 1px 1px 2px lightgray;
+    /* height: 60px; */
+    padding: 0 10px 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-.headerMenu {
-    height: 50px;
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* 로고 */
+/* ----------- 상단 헤더 ----------- */
 .mainLogo {
-    display: inline-block;
-    background-image: url(../image/logo.png);
-    background-position: left;
-    width: 200px;
+    width: 150px;
     text-indent: -9999em;
+    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    margin-left: 15px;
 }
 
 /* 로그인탭 */
 .serviceTab {
-    margin-top: 10px;
-    line-height: 3em;
+    line-height: 80px;
+    padding-right: 20px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .serviceTabList {
@@ -88,67 +101,96 @@ a {
 
 .serviceTabList li+li::before {
     content: " | ";
-    color: lightsteelblue;
-}
-
-/* 카테고리탭 */
-.mainCategories {
-    display: inline-block;
-    margin-left: 10px;
-    /* margin-top: -10px; */
-    white-space: nowrap;
-}
-
-.mainCategoryList li {
-    display: inline-block;
-    font-size: 20px;
-    margin: 0 10px;
-}
-
-.mainCategoryList li a {
     color: grey;
 }
 
-.categoryIcon {
-    background: url(../image/noun-menu-928567.png) left/60px no-repeat;
+/* ----------- 하단 헤더 ----------- */
+.headerMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.categoryIcon span {
-    margin-left: 60px;
-    margin-right: 40px;
-    font-size: 24px;
+/* 좌측 카테고리 */
+.mainCategoryList {
+    display: flex;
 }
 
-/* 검색창 */
+.mainCategoryList>li {
+    padding: 20px;
+}
+
+.mainCategoryList>li>a {
+    color: black;
+    font-weight: bold;
+}
+
+/* ============== 카테고리 세부 메뉴 ============== */
+.detailCategoryList1 {
+    visibility: hidden;
+
+    box-sizing: border-box;
+    width: 100%;
+    background-color: lavender;
+    padding: 10px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.detailCategoryList1 li {
+    padding: 20px;
+}
+
+.bannerCategory:hover .detailCategoryList1,
+.detailCategoryList1:hover {
+    visibility: visible;
+}
+
+/* 우측 검색창 */
 .mainSearch {
-    display: inline-block;
-    width: 220px;
-    height: 32px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
     background-color: white;
-    border-bottom: 1px solid;
+    padding: 0 10px 0 10px;
 }
 
 .mainSearch input {
+    box-sizing: border-box;
+    width: 90%;
     border: none;
-    background: white;
-    margin-left: 10px;
 }
 
-.mainSearch button img {
-    height: 20px;
-    vertical-align: middle;
-    margin: 5px;
-}
-
-.mainSearch button,
-.searchPageBar button {
+.mainSearch button {
+    width: 10%;
     border: none;
     background: none;
 }
 
-.mainSearch,
-.serviceTab {
-    margin-right: 30px;
+.mainSearch img {
+    height: 20px;
+}
+
+.mainSearch {
+    height: 100%;
+    display: flex;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
+}
+
+.mainSearch form {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch form input {
+    background: none;
+    height: 17px;
+    width: 210px;
 }
 
 /* ############################### container전체 ############################ */

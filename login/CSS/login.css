@@ -135,58 +135,92 @@ main {
     opacity: 0.7;
 }
 
-/* ============================================================== header ============================================================== */
+/* =========공통 속성=========== */
 
-/* =========================header============================ */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+.headerTop,
+.headerMenu,
+#container,
+#footer .footer_cover {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* div {
+    border: 1px solid;
+} */
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+/* .fake::after {
+    content: "";
+    display: block;
+    height: 70px;
+} */
+
+/* ======================header====================== */
+/* ====================header 공통==================== */
 header {
-    background-color: lightsteelblue;
+    /* height: 120px; */
+    margin-bottom: 50px;
 }
 
-.headerTopWide {
-    background-color: white;
+.headertop_cover {
+    background-color: rgba(223, 223, 223, 0.4);
 }
 
-/* 로고 & 로그인 메뉴 전체 */
 .headerTop {
-    width: 1240px;
-    height: 60px;
-    margin: auto;
-    white-space: nowrap;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* 카테고리 & 검색창 전체 */
-.headerBottom {
-    width: 1240px;
-    height: 110px;
-    margin: auto;
-    white-space: nowrap;
+    height: 70px;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template: 20fr 1fr 1fr /1fr;
+    justify-content: flex-start;
     position: relative;
-    background-color: lightsteelblue;
 }
 
-.headerMenu {
-    width: 100%;
-    line-height: 50px;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
+.header_cover {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 1px 1px 2px lightgray;
+    /* height: 60px; */
+    padding: 0 10px 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-/* 로고 */
+/* ----------- 상단 헤더 ----------- */
 .mainLogo {
-    display: inline-block;
-    width: 200px;
+    width: 150px;
     text-indent: -9999em;
+    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    margin-left: 15px;
 }
 
 /* 로그인탭 */
 .serviceTab {
-    margin-top: 10px;
-    line-height: 3em;
+    line-height: 80px;
+    padding-right: 20px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .serviceTabList {
@@ -204,100 +238,96 @@ header {
 
 .serviceTabList li+li::before {
     content: " | ";
-    color: lightsteelblue;
+    color: grey;
 }
 
-/* 카테고리탭 */
-.mainCategories {
-    margin-left: 10px;
-    white-space: nowrap;
+/* ----------- 하단 헤더 ----------- */
+.headerMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.mainCategoryList li {
-    display: inline-block;
-    font-size: 18px;
-    margin: 0 10px;
+/* 좌측 카테고리 */
+.mainCategoryList {
+    display: flex;
 }
 
-.mainCategoryList li a {
-    color: white;
+.mainCategoryList>li {
+    padding: 20px;
 }
 
-.categoryHover {
-    width: 190px;
-    background-color: white;
-    border-radius: 10px 10px 0 0;
+.mainCategoryList>li>a {
+    color: black;
+    font-weight: bold;
 }
 
-.categoryIcon {
-    background: url(../image/noun-menu-928567.png) left/60px no-repeat;
+/* ============== 카테고리 세부 메뉴 ============== */
+.detailCategoryList1 {
+    visibility: hidden;
+
+    box-sizing: border-box;
+    width: 100%;
+    background-color: lavender;
+    padding: 10px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
-.categoryIcon span {
-    color: lightslategrey;
-    margin-left: 60px;
-    margin-right: 40px;
-    font-size: 20px;
+.detailCategoryList1 li {
+    padding: 20px;
 }
 
-/* 검색창 */
+.bannerCategory:hover .detailCategoryList1,
+.detailCategoryList1:hover {
+    visibility: visible;
+}
+
+/* 우측 검색창 */
 .mainSearch {
-    width: 220px;
-    height: 35px;
-    line-height: 35px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
     background-color: white;
-    border-bottom: 1px solid;
-    margin-top: 10px;
+    padding: 0 10px 0 10px;
 }
 
 .mainSearch input {
+    box-sizing: border-box;
+    width: 90%;
     border: none;
-    background: white;
-    margin-left: 10px;
 }
 
-.mainSearch button img {
-    height: 20px;
-    vertical-align: middle;
-}
-
-.mainSearch button,
-.searchPageBar button {
+.mainSearch button {
+    width: 10%;
     border: none;
     background: none;
 }
 
-.mainSearch,
-.serviceTab {
-    margin-right: 30px;
+.mainSearch img {
+    height: 20px;
 }
 
-/* 카테고리1 hover */
-.categoryHover ul {
-    box-sizing: border-box;
-    width: 190px;
-    padding: 10px;
-    border: 1px solid lightgray;
-    background-color: white;
-    position: absolute;
-    visibility: hidden;
+.mainSearch {
+    height: 100%;
+    display: flex;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
 }
 
-.categoryHover li {
-    font-size: 16px;
-    display: block;
+.mainSearch form {
+    display: flex;
+    align-items: center;
 }
 
-.categoryHover:hover {
-    background-color: lightslategray;
-}
-
-.categoryHover:hover span {
-    color: white;
-}
-
-.categoryHover:hover ul {
-    visibility: visible;
+.mainSearch form input {
+    background: none;
+    height: 17px;
+    width: 210px;
 }
 
 /*  ########################/////########################///// footer ########################//////////##################### */
