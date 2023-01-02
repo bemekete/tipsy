@@ -355,21 +355,21 @@ header {
     align-items: center;
 }
 
-.icon img{
+.icon img {
     width: 100px;
 }
-
 
 /* ########################/////footer/////##################### */
 /* footer */
 
 #footer {
-    background-color: rgba(165, 165, 165, 0.055);
-    padding: 70px 0 30px 0;
+    box-sizing: border-box;
+    background-color: rgb(233, 234, 234);
+    padding: 70px 30px 30px 30px;
 }
 
 #footer .footer_cover {
-    width: 1240px;
+    /* width: 1240px; */
     margin: 0 auto;
 }
 
@@ -386,7 +386,7 @@ header {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: black;
+    color: rgb(44, 44, 173);
     font-size: 30px;
 }
 
