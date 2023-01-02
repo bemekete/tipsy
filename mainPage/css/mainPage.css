@@ -173,6 +173,7 @@ header {
 
 .mainSearch img {
     height: 20px;
+    cursor: pointer;
 }
 
 .mainSearch {
