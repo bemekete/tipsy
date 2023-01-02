@@ -39,12 +39,12 @@
                 <li><a href="#">이벤트</a></li>
             </ul>
             <div class="mainSearch">
-                    <form action="../searchpage/searchpage.html">
-                        <input type="search" name="mainSearch" placeholder="검색">
-                        <button type="submit">
-                            <img src="./image/search.png" alt="검색">
-                        </button>
-                    </form>
+                <form action="../searchpage/searchpage.html">
+                    <input type="search" name="mainSearch" placeholder="검색">
+                    <button type="submit">
+                        <img src="./image/search.png" alt="검색">
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -88,15 +88,18 @@
 
                                 <div class="point_text2">
                                     <div class="point_containing point_img">
-                                        <img src="./image/mage.jpg" alt="이미지">
-                                    </div>
+                                        <img class="yellow_img"
+                                            src="https://www.sooldamhwa.com/images/modules/damhwaMarket/mainPointImg.png"
+                                            alt="이미지">
+                                    </div>>
                                     <div class="point_text_first">맛</div>
                                     <div class="point_text_second">요구르트 같이 새콤달콤한 맛</div>
                                 </div>
 
                                 <div class="point_text3">
                                     <div class="point_containing point_img">
-                                        <img src="./image/mage.jpg" alt="이미지">
+                                        <img src="https://www.sooldamhwa.com/images/modules/damhwaMarket/point_anju.png"
+                                            alt="이미지">
                                     </div>
                                     <div class="point_text_first">안주</div>
                                     <div class="point_text_second">단짠단짠 음식들과 함께라면 뭔들...!</div>
@@ -104,8 +107,9 @@
 
                                 <div class="point_text4">
                                     <div class="point_containing point_img">
-                                        <img src="./image/mage.jpeg" alt="이미지">
-                                    </div>
+                                        <img src="https://www.sooldamhwa.com/images/modules/damhwaMarket/point_damhwa.png"
+                                              alt="이미지">
+                                  </div>
                                     <div class="point_text_first">담화</div>
                                     <div class="point_text_second">홍국 쌀로 만든 붉은색 막걸리</div>
                                 </div>
@@ -149,9 +153,6 @@
                                 <div class="detail_explain_deliver">
                                     <div class="class= detail_explain_deliver_img">
                                         <div>
-                                            <img src="./image/truck_icon.png">
-                                        </div>
-                                        <div>
                                             양조장 배송
                                         </div>
                                     </div>
@@ -190,7 +191,8 @@
                                     <p><br></p>
                                 </div>
                                 <div>
-                                    <img src="https://d38cxpfv0ljg7q.cloudfront.net/content_images/contents_images-1626521129772-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-3.jpg" alt="와인사진2">
+                                    <img src="https://d38cxpfv0ljg7q.cloudfront.net/content_images/contents_images-1626521129772-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-3.jpg"
+                                        alt="와인사진2">
                                 </div>
                                 <div class="detail_explain_main_text">
                                     <p><Strong>[술취한 원숭이],</Strong></p>
@@ -206,7 +208,8 @@
                                     <p><br></p>
                                 </div>
                                 <div>
-                                    <img src="https://d38cxpfv0ljg7q.cloudfront.net/content_images/contents_images-1626521260390-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-1.jpg" alt="와인사진3">
+                                    <img src="https://d38cxpfv0ljg7q.cloudfront.net/content_images/contents_images-1626521260390-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-1.jpg"
+                                        alt="와인사진3">
                                 </div>
                                 <div class="detail_explain_main_text">
                                     <p><Strong>[술취한 원숭이],</Strong></p>
@@ -255,9 +258,62 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="review-wrap">
+                            <div class="review_filter">
+                                <div>
+                                    <input id="review-checkbox" type="checkbox">
+                                    <label for="review-checkbox">포토리뷰만 보기</label>
+                                </div>
+                                <div>
+                                    <select>
+                                        <option value="상세 리뷰순">상세 리뷰순</option>
+                                        <option value="최신순">최신순</option>
+                                        <option value="평점 높은 순">평점 높은 순</option>
+                                        <option value="평점 낮은 순">평점 낮은 순</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="review_detail">
+                                <div class="review_header">
+                                    <div class="review_header_name">황인규</div>
+                                    <div class="review_header_right">
+                                        <div>
+                                            <div class="review_header_tit">[500ml]세인트하우스 복숭아 스파클링
+                                                와인</div>
+                                            <div class="review_star"></div>
+                                            <div class="review_date">2022.12.23</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_txt">
+                                    달아서 너무 맛있어요.
+                                    입문 하시는 분으로 아주 좋을것 같습니다.
+                                    단맛을 싫어 하시는 분은 비추이고 달달한 와인 찾으시면 좋을꺼 같네요.
+                                    포도 향도 아주 진하게 잘나서 한변 금방 마셨어요.
+                                </div>
+                                <div class="review_header">
+                                    <div class="review_header_name">황인규</div>
+                                    <div class="review_header_right">
+                                        <div>
+                                            <div class="review_header_tit">[500ml]세인트하우스 복숭아 스파클링
+                                                와인</div>
+                                            <div class="review_star"></div>
+                                            <div class="review_date">2022.12.23</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_txt">
+                                    달아서 너무 맛있어요.
+                                    입문 하시는 분으로 아주 좋을것 같습니다.
+                                    단맛을 싫어 하시는 분은 비추이고 달달한 와인 찾으시면 좋을꺼 같네요.
+                                    포도 향도 아주 진하게 잘나서 한변 금방 마셨어요.
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 플로팅바 -->
+                    <!------------------------------ 플로팅바 ---------------------------------->
                     <div class="rightSide">
                         <div class="rightFloat">
                             <form action="">
@@ -266,7 +322,7 @@
                                         <label>옵션</label>
                                     </div>
                                     <select class="optOfProduct" name="option" required>
-                                        <option value disabled selected>옵션</option>
+                                        <option value disabled selected>어떤 옵션을 원하시나요?</option>
                                         <option value="soju">소주</option>
                                         <option value="beer">맥주</option>
                                         <option value="wine">와인</option>
@@ -278,7 +334,7 @@
                                     </div>
                                     <div class="numofProduct">
                                         <div class="numfor minus">-</div>
-                                        <input type="number" pattern="\d*" max="3" value="1">
+                                        <input type="number" pattern="\d*" maxlength="3" value="1">
                                         <div class="numfor plus">+</div>
                                     </div>
                                 </div>
@@ -293,11 +349,11 @@
                                 <div class="guideofShipment">
                                     <p>
                                         (전국택배) 3,000원<br>
-                                        (제주도 및 도서산간) 3,000원
+                                        (제주도 및 도서산간) 3,000원<br>
+                                        <b>50,000이상 구매시 무료배송</b>
                                     </p>
                                 </div>
                                 <div class="productBuy_btn">
-                                    
                                     <button>장바구니</button>
                                     <button>구매하기</button>
                                 </div>
