@@ -18,25 +18,48 @@
 </head>
 
 <body>
+
+
+    <!-- ============================== header ======================================== -->
+
+
+    <!-- ============================== main ======================================== -->
     <main>
-        <div>
-            <div>
-                <div class="scroll_ banner">
-                    <a class="scroller scroll_left"></a>
-                    <a class="scroller scroll_right"></a>
-                    <div class="scroll-wrapper">
-                        <div class="item_wrapper">
-                            <img src="./image/ec6bcd20c33941efa56e07ee8a5297bf.jpg">
-                        </div>
-                        <div class="item_wrapper">
-                            <img src="./image/9a026313e9a2cfc02f01a870e062e49b.gif">
-                        </div>
-                        <div class="item_wrapper">
-                            <img src="./image/rightscroller.jpg">
-                        </div>
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <input type="radio" name="slide" id="slide04">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a href="#"><img src="./image/slide1.png"></a>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                        <a href="#"><img src="./image/slide2.png"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide04" class="right"></label>
+                        <a href="#"><img src="./image/slide3.png"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                        <a href="#"><img src="./image/slide1.png"></a>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="wrap_triple">
             <div class="triple_tit">
@@ -82,6 +105,8 @@
             </div>
         </div>
     </main>
+    <!-- ============================== footer ======================================== -->
+
 </body>
 
 </html>
