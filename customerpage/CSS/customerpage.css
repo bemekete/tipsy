@@ -128,25 +128,58 @@ header {
 }
 
 /* ============== 카테고리 세부 메뉴 ============== */
-.detailCategoryList1 {
+.detailCategoryList {
     visibility: hidden;
 
     box-sizing: border-box;
-    width: 100%;
-    background-color: lavender;
-    padding: 10px;
+    width: 35em;
+    font-weight: initial;
+    background-color: white;
+    padding: 20px 40px;
+    border: 1px solid lightgray;
+    /* border-top: none; */
+    box-shadow: 1px 1px 2px lightgray;
 
     position: absolute;
     top: 100%;
     left: 0;
 }
 
-.detailCategoryList1 li {
-    padding: 20px;
+.detailCategoryList>ul {
+    width: 12em;
+    height: 16.25em;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.bannerCategory:hover .detailCategoryList1,
-.detailCategoryList1:hover {
+.detailCategoryList li {
+    padding: 15px;
+}
+
+
+.detailCategoryList a {
+    display: block;
+}
+
+.detailCategoryListof {
+    visibility: hidden;
+    width: 12em;
+    border-left: 1px solid lightgray;
+    padding-left: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerCategory:hover .detailCategoryList,
+.drinkhover:hover .detailCategoryListof,
+.detailCategoryListof:hover {
     visibility: visible;
 }
 
@@ -169,6 +202,8 @@ header {
     width: 10%;
     border: none;
     background: none;
+
+    cursor: pointer;
 }
 
 .mainSearch img {
@@ -191,7 +226,7 @@ header {
     background: none;
     height: 17px;
     width: 210px;
-}
+}   
 
 /* ############################### container전체 ############################ */
 
