@@ -12,6 +12,12 @@
     margin: 0 auto;
 }
 
+#FAQ_main {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
 div {
     /* border: 1px solid; */
 }
@@ -260,6 +266,7 @@ header {
 .Qbox_container p {
     line-height: 30px;
     padding: 0 25px;
+    text-align: start;
 
     /* 이거 안됨,,,,;;; */
     /* text-align: justify; */
