@@ -222,9 +222,8 @@ header {
     text-align: center;
     margin-top: 70px;
 
-    padding-top: 70px;
-    border: solid 1px lightgray;
-    border-radius: 50px;
+    /* border: solid 1px lightgray; */
+    border-radius: 10px;
 }
 
 .leftSide .flex {
@@ -236,7 +235,7 @@ header {
 .rightSide {
     display: inline-block;
     position: sticky;
-    bottom: 20%;
+    bottom: 27.5%;
 }
 
 
@@ -299,7 +298,7 @@ header {
 /* 핵심 포인트 */
 .point {
     text-align: center;
-    background-color: rgb(229, 226, 226);
+    background-color: #efefef;
     padding: 50px;
     width: 600px;
     height: 800px;
@@ -333,6 +332,10 @@ header {
     position: absolute;
     left: 10px;
     top: 10px;
+}
+
+.yellow_img {
+    background-color: yellow;
 }
 
 /* 첫 번째 줄 */
@@ -411,19 +414,20 @@ header {
     text-align: initial;
 }
 
-.detail_explain_deliver_img img {
-    margin-left: 30px;
-    width: 30px;
-    height: 30px;
-}
-
 .detail_explain_deliver_img {
     height: 50px;
     line-height: 50px;
     background-color: gold;
     border-top-left-radius: 5% 70%;
-    border-top-right-radius: 5% 70%
+    border-top-right-radius: 5% 70%;
 }
+
+.detail_explain_deliver_img div {
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 
 .detail_explain_deliver>div>div {
     display: inline-block;
@@ -439,6 +443,10 @@ header {
     background-color: rgb(248, 238, 182);
     border-bottom-left-radius: 5% 35%;
     border-bottom-right-radius: 5% 35%;
+}
+
+.detail_explain_delive_list ul {
+    margin-left: 20px;
 }
 
 .detail_explain_delive_list li:nth-of-type(1) {
@@ -503,6 +511,77 @@ header {
     line-height: 45px;
 }
 
+/* ==================== 리뷰 ======================= */
+.review-wrap {
+    margin: 0 auto;
+    width: 750px;
+
+    border-top: 2px solid #efefef;
+
+}
+
+.review_filter {
+    display: flex;
+    justify-content: space-between;
+
+    width: 95%;
+    margin: 50px auto 0 auto;
+}
+
+.review_header {
+    background-color: #efefef;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.review_header_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+}
+
+.review_header_right>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+/* .review_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.review_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.review_header_tit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.review_star::after {
+    padding: 0 10px;
+    content: "☆☆☆☆☆";
+    display: inline-flex;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.review_txt {
+    padding: 50px;
+    text-align: justify;
+    word-break: break-all;
+}
+
 /* ======================================================= */
 /* =======================플로팅바=================== */
 .rightFloat {
@@ -513,7 +592,7 @@ header {
     text-align: center;
     border: 1px solid lightgray;
     border-radius: 30px;
-    padding: 30px 10px;
+    /* padding: 30px 10px; */
     margin-left: 60px;
     font-size: 14px;
     display: flex;
@@ -523,7 +602,7 @@ header {
 .rightSide .label {
     font-weight: bold;
     text-align: left;
-    margin-bottom: 10px;
+    margin: 15px 0;
 }
 
 .optOfProduct,
@@ -563,7 +642,7 @@ header {
 }
 
 .guideofShipment p {
-    margin-left: 50px;
+    padding: 0 30px;
 }
 
 .productBuy_btn {
@@ -573,11 +652,14 @@ header {
 
 .productBuy_btn button {
     padding: 10px 20px;
-    font-size: 150%;
+    font-size: 100%;
+    font-weight: bold;
     background-color: lightgreen;
     border: 1px solid lightgray;
-    border-radius: 17px;
+    border-radius: 5px;
 }
+
+
 
 /* ########################/////footer/////##################### */
 /* footer */
