@@ -365,8 +365,17 @@ div[class="img"]>img {
 }
 
 .listSort {
+    display: flex;
     margin-right: 20px;
     text-align: right;
+}
+
+.listSort li {
+    padding-right: 10px;
+}
+
+.txt_blue {
+    font-weight: bold;
 }
 
 /* =======================================더보기 버튼============================ */
