@@ -58,33 +58,6 @@ main {
     transition: all .35s;
 }
 
-/* .slidebox .slideitem label {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-label.left {
-    left: 20px;
-    background-color: transparent;
-    background-image: url('../image/left-arrow2.png');
-    background-position: center center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-}
-
-label.right {
-    right: 20px;
-    background-color: transparent;
-    background-image: url('../image/right-arrow.png');
-    background-position: center center;
-    background-size: 50%;
-    background-repeat: no-repeat;
-} */
 
 /* 페이징 스타일 */
 .paginglist {
@@ -283,18 +256,21 @@ label.right {
 }
 
 /* //////////////////////////////////이미지 헤더////////////////////////////////////// */
-.wrap_triple {
+.wrap_triple,
+.wrap_event {
     display: grid;
-    gap: 50px;
+    gap: 20px;
 }
 
-.wrap_triple {
+.wrap_triple,
+.wrap_event {
     width: 1024px;
     margin: 0 auto;
 }
 
-/* ====================================이미지 타이틀================== */
-.triple_tit {
+/* ====================================이미지 타이틀(공통)================== */
+.triple_tit,
+.event_tit {
     font: 40px 'Oswald';
     font-weight: lighter;
     margin-top: 80px;
@@ -303,8 +279,7 @@ label.right {
 
 /* ================================ 이미지 메인===================================== */
 .triple_main1,
-.triple_main2,
-.event_triple_main {
+.triple_main2 {
     width: 100%;
     display: grid;
     grid-template: repeat(1, auto)/ repeat(3, 1fr);
@@ -315,47 +290,35 @@ label.right {
     margin-bottom: 50px;
 }
 
-.event_triple_main div:nth-of-type(1),
-.event_triple_main div:nth-of-type(4),
-.event_triple_main div:nth-of-type(5) {
-    grid-column: span 2;
-}
 
 
-.triple_main1 div:nth-of-type(1)::after,
-.event_triple_main div:nth-of-type(1)::after {
+.triple_main1 div:nth-of-type(1)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/Gt8e-1623070755884-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-5.jpg) center/cover;
 }
 
-.triple_main1 div:nth-of-type(2)::after,
-.event_triple_main div:nth-of-type(2)::after {
+.triple_main1 div:nth-of-type(2)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/TOnv-1655794504098-1.jpg) center/cover;
 }
 
-.triple_main1 div:nth-of-type(3)::after,
-.event_triple_main div:nth-of-type(3)::after {
+.triple_main1 div:nth-of-type(3)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/5YHz-1651137039043-1.jpg) center/cover;
 }
 
-.triple_main2 div:nth-of-type(1)::after,
-.event_triple_main div:nth-of-type(4)::after {
+.triple_main2 div:nth-of-type(1)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/fe1w-1631180181351-hsocd+ap0.jpg) center/cover;
 }
 
-.triple_main2 div:nth-of-type(2)::after,
-.event_triple_main div:nth-of-type(5)::after {
+.triple_main2 div:nth-of-type(2)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7DjO-1669259690558-%ED%95%9C%EC%8B%9C%EC%9A%B8.jpg) center/cover;
 }
 
-.triple_main2 div:nth-of-type(3)::after,
-.event_triple_main div:nth-of-type(6)::after {
+.triple_main2 div:nth-of-type(3)::after {
     background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/r9a3-1653530958733-mildam40_thumbnail.jpg) center/cover;
 }
 
 
 .triple_main1 div,
-.triple_main2 div,
-.event_triple_main div {
+.triple_main2 div {
     width: 100%;
     position: relative;
     height: 400px;
@@ -442,6 +405,295 @@ label.right {
     transition: ease-out 1s;
     z-index: -1;
 }
+
+/* ////////////////////////////////////////////event 전체////////////////////////////////////////////////////////////// */
+/* ===============================================event 메인============================================= */
+
+.event_triple_main {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+    justify-content: center;
+}
+
+.event_main {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    row-gap: 50px;
+}
+
+.event_main div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.event_img1 div:nth-of-type(1),
+.event_img2 div:nth-of-type(2),
+.event_img3 div:nth-of-type(1) {
+    grid-column: span 2;
+}
+
+.event_main a {
+    width: 170px;
+    height: 50px;
+
+    color: black;
+    border-bottom: solid 1px;
+    font-weight: bold;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+
+.event_main div {
+    width: 100%;
+    width: 100%;
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+    justify-content: center;
+}
+
+.event_img1 div:nth-of-type(1)::after {
+    background: url("../image/gift-small.png") no-repeat center/682.65px 300px;
+}
+
+
+.event_img2 div:nth-of-type(1)::after {
+    background: white center/cover;
+}
+
+.event_img2 div:nth-of-type(2)::after {
+    background: url("../image/makyo-small.jpg") no-repeat center/682.65px 300px;
+}
+
+.event_img3 div:nth-of-type(1)::after {
+    background: url("../image/anju-small.png") no-repeat center/682.65px 300px;
+}
+
+.event_img3 div:nth-of-type(2)::after {
+    background: white center/cover;
+}
+
+/* ------------------------------------------ */
+
+
+
+/* ===================hover===================================== */
+/* hover 공통 */
+.event_img1 div:nth-of-type(1):hover::after,
+.event_img2 div:nth-of-type(2):hover::after,
+.event_img3 div:nth-of-type(1):hover::after {
+    animation: left 1.5s;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.event_img1 div:nth-of-type(1):hover+div,
+.event_img3 div:nth-of-type(1):hover+div {
+    display: none;
+}
+
+.event_img1 div:hover a,
+.event_img3 div:hover a {
+    display: grid;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    translate: 60% -100%;
+
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+/* ======================================1번째 단락 이미지 hover======================== */
+.event_img1 div:nth-of-type(1):hover {
+    grid-column: span 3;
+    height: 300px;
+}
+
+.event_img1 div:nth-of-type(1):hover::after {
+    background: url("../image/gift-main.png") no-repeat center/1024px 300px;
+}
+
+/* =========================================2번쨰 단락 이미지 hover========================= */
+
+.event_img2 {
+    position: relative;
+}
+
+.event_img2 div:nth-of-type(2):hover {
+    width: 1024px;
+    height: 300px;
+
+    display: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.event_img2 div:hover a {
+    display: grid;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    translate: -60% -100%;
+
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+
+.event_img2 div:nth-of-type(2):hover::after {
+    background: url("../image/makyo-main.jpg") no-repeat center/1024px 300px;
+}
+
+
+/* =========================================3번쨰 단락 이미지 hover========================= */
+.event_img3 div:nth-of-type(1):hover {
+    grid-column: span 3;
+    height: 300px;
+}
+
+.event_img3 div:nth-of-type(1):hover::after {
+    background: url("../image/anju-main.png") no-repeat center/1024px 300px;
+}
+
+/* ========================================공통 애니메이션================================ */
+@keyframes left {
+    0% {
+        transform: translate3D(0, 0, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 0.6;
+    }
+
+}
+
+/* =============================================== 인트로보드 ============================================ */
+/* --------------------------- 상품후기, 공지사항 공통 --------------------------- */
+.intro_board_wrap {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1200px;
+    /* border: 1px solid; */
+    margin-top: 20px;
+}
+
+.board_wrap {
+    padding: 10px;
+}
+
+.board_notice_top {
+    display: flex;
+    justify-content: space-between;
+
+    width: 95%;
+    margin: 30px auto;
+
+    border-bottom: 2px solid black;
+}
+
+.board_notice_top div:nth-child(2) {
+    padding-top: 10px;
+    font-size: .8em;
+}
+
+/* --------------------------- 상품후기 ---------------------------*/
+.intro_board_tit {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.intro_board>div {
+    margin: 0 auto;
+    width: 500px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.star::after {
+    padding: 0 10px;
+    content: "☆☆☆☆☆";
+    display: inline-flex;
+    position: relative;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.intro_board p {
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+.intro_board_txt {
+    font-size: .8em;
+}
+
+/* --------------------------- 공지사항 ---------------------------*/
+.intro_board_notice {
+    display: grid;
+    justify-content: center;
+}
+
+.intro_board_notice ul {
+    width: 540px;
+}
+
+.intro_board_notice li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.intro_board_notice li a {
+    font-weight: bold;
+}
+
+/* --------------------------- 인트로이벤트 ---------------------------*/
+.intro_ad {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.intro_ad>div:nth-child(1) {
+    background-color: #ffebb6;
+}
+
+.intro_ad>div:nth-child(2) {
+    background-color: #e8f4ff;
+}
+
+.intro_ad div:nth-child(1) div {
+    display: grid;
+    justify-content: end;
+}
+
+
 
 /* ====================header 공통==================== */
 header {
