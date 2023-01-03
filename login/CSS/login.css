@@ -95,8 +95,13 @@ main {
 }
 
 /* ======== 메인로그인 ========= */
-.login_tit img {
-    width: 150px;
+.login_logo {
+    width: 100px;
+    height: 100px;
+    text-indent: -9999em;
+    background: url(../image/login_logo2.png) no-repeat center/100%;
+    margin-left: 15px;
+    display: inline-block;
 }
 
 .login_input {
