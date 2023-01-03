@@ -15,12 +15,21 @@
             <ul class="mainCategoryList">
                 <li class="bannerCategory">
                     <a href="#">카테고리
-                        <ul class="detailCategoryList1">
-                            <li>세부 카테고리 1</li>
-                            <li>세부 카테고리 2</li>
-                            <li>세부 카테고리 3</li>
-                            <li>세부 카테고리 4</li>
-                        </ul>
+                        <div class="detailCategoryList">
+                            <ul>
+                                <li class="drinkhover">
+                                    <a href="../mainPage/mainPage_wine.html">주류</a>
+                                    <ul class="detailCategoryListof">
+                                        <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                        <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                        <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                            </ul>
+                        </div>
                     </a>
                 </li>
                 <li><a href="#">매장찾기</a></li>
@@ -53,7 +62,7 @@
                             <ul>
                                 <li>
                                     <input class="login_input" type="text" id="login_id" name="login_id"
-                                        placeholder="아이디를 입력하세요." autofocus>
+                                        placeholder="아이디를 입력하세요." autofocus required>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +74,7 @@
                             </li>
                             <li>
                                 <input class="login_input" type="password" id="login_pw" name="login_pw"
-                                    placeholder="비밀번호를 입력하세요.">
+                                    placeholder="비밀번호를 입력하세요." required>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +91,7 @@
                     </div>
                     <div>
                         <span>
-                            <strong>아직 회원이 아니신가요? <a href="#" class="find2">회원가입</strong></a>
+                            <strong>아직 회원이 아니신가요? <a href="../join/join.html" class="find2">회원가입</strong></a>
                         </span>
                     </div>
                 </form>
