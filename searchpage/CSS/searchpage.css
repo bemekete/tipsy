@@ -299,6 +299,7 @@ header {
 .searchPageBar button {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .searchPageBar img {

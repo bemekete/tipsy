@@ -318,7 +318,7 @@ header {
     gap: 20px;
 }
 
-.part1 div div {
+.part1 a {
     font-size: initial;
     color: initial;
     width: 150px;
