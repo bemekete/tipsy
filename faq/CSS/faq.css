@@ -2,6 +2,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'NEXON Lv2 Gothic';
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .headerTop,
@@ -276,7 +284,7 @@ header {
 
 .Qbox_container>ul>li {
     display: inline-block;
-    background-color: lightgray;
+    background-color: #e3f2fd;
     height: 100px;
     /* flex: 1; */
 
@@ -419,7 +427,7 @@ table {
 
 thead {
     height: 50px;
-    background-color: silver;
+    background-color: #efefef;
 }
 
 tbody {
@@ -474,7 +482,7 @@ tbody tr td button img {
 
 .inquiry_page_button a {
     font-weight: bold;
-    background-color: silver;
+    background-color: #efefef;
     border-radius: 50%;
     display: inline-block;
     width: 30px;
@@ -534,7 +542,7 @@ a:not([href*="#"]) {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: rgb(44, 44, 173);
+    color: #084875b7;
     font-size: 30px;
 }
 

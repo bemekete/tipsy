@@ -4,6 +4,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'NEXON Lv2 Gothic';
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -72,7 +80,7 @@ header {
     width: 45px;
     height: 45px;
     background: url(../image/rightscroller.png) center/80%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 100%;
     opacity: 0.3;
 
@@ -226,7 +234,7 @@ header {
 .mainSearch {
     height: 100%;
     display: flex;
-    background-color: rgba(211, 211, 211, 0.4);
+    background-color: #f7f7f7;
     border-radius: 5px;
 }
 
@@ -270,8 +278,8 @@ header {
 
 /* 고객센터 안내 박스 */
 .customerBox {
-    background-color: navy;
-    color: white;
+    background-color: #084875b7;
+    color: rgb(255, 255, 255);
     margin-bottom: 45px;
 }
 
@@ -283,7 +291,7 @@ header {
 }
 
 .guidement p>span:nth-of-type(1) {
-    color: lightgray;
+    color: rgb(223, 223, 223);
 }
 
 .guidement span>span {
@@ -390,7 +398,7 @@ header {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: rgb(44, 44, 173);
+    color: #084875b7;
     font-size: 30px;
 }
 
