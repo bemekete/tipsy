@@ -429,6 +429,7 @@ tbody td:nth-of-type(2) {
     padding: 5px;
     box-sizing: border-box;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /* ==================================================오른쪽 주문 버튼============================================= */
@@ -444,6 +445,7 @@ tbody td:nth-of-type(2) {
     width: 190px;
     line-height: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .right_order_box button:nth-of-type(2) {

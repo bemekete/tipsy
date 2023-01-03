@@ -366,6 +366,7 @@ td {
     background-color: #084875b7;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* ########################/////footer/////##################### */
