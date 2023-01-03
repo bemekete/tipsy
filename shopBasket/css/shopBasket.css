@@ -317,6 +317,10 @@ td {
     border: .5px solid rgba(166, 166, 166, 0.7);
 }
 
+.cart_count_list tbody td {
+    border-right: hidden;
+    /* 체크박스 오른쪽 옆 테두리 제거 */
+}
 
 td {
     line-height: 50px;
