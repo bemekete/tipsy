@@ -13,387 +13,378 @@
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
+    <div id="wrap">
+        <!-- ======================================================== header ================================================== -->
+        <div class="headertop_cover">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>상품 목록 페이지</title>
-        <link rel="stylesheet" href="./CSS/index.css">
-    </head>
+            <div class="headerTop">
+                <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
+                <div class="serviceTab">
+                    <ul class="serviceTabList">
+                        <li><a href="../login/login.html">로그인</a></li>
+                        <li><a href="../join/join.html">회원가입</a></li>
+                        <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header_cover">
+            <div class="headerMenu">
+                <ul class="mainCategoryList">
+                    <li class="bannerCategory">
+                        <a href="#">카테고리
+                            <div class="detailCategoryList">
+                                <ul>
+                                    <li class="drinkhover">
+                                        <a href="../mainPage/mainPage_wine.html">주류</a>
+                                        <ul class="detailCategoryListof">
+                                            <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                            <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                            <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                            <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                            <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+                <div class="mainSearch">
+                    <a href="#">
+                        <form action="../searchpage/searchpage.html">
+                            <input type="search" name="mainSearch" placeholder="검색">
+                            <button type="submit">
+                                <img src="./image/search.png" alt="검색">
+                            </button>
+                        </form>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <body>
-        <div id="wrap">
-            <!-- ======================================================== header ================================================== -->
-            <div class="headertop_cover">
+        <div id="container">
+            <div id="contents">
+                <div class="location">
+                    <span><a href="#" class="main_home">HOME</a>>장바구니</span>
+                </div>
+                <div class="main_contents">
+                    <div class="sub_contents">
+                        <div class="order_tit">
+                            <span>장바구니</span>
+                            <ul>
+                                <li class="Now_select">01 장바구니<img class="tri_arrow"
+                                        src="./image/right-arrow-black-triangle.png" alt="화살표이미지"></li>
+                                <li>02 주문서작성/결제<img class="tri_arrow" src="./image/right-arrow-black-triangle.png"
+                                        alt="화살표이미지"></li>
+                                <li>03 주문완료</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <form id="formCart">
 
-                <div class="headerTop">
-                    <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
-                    <div class="serviceTab">
-                        <ul class="serviceTabList">
-                            <li><a href="../login/login.html">로그인</a></li>
-                            <li><a href="../join/join.html">회원가입</a></li>
-                            <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
+                            <div class="cart_count_list">
+                                <table>
+                                    <colgroup>
+                                        <col>
+                                        <col width="30%">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <div>
+                                            <tr>
+                                                <th scope="col">
+                                                    <label><input type="checkbox" name="allCheck" id="allCheck"></label>
+                                                </th>
+                                                <th scope="col">상품/옵션 정보
+                                                </th>
+                                                <th scope="col">수량</th>
+                                                <th scope="col">상품 금액</th>
+                                                <th scope="col">할인/적립</th>
+                                                <th scope="col">합계 금액</th>
+                                                <th scope="col">배송비</th>
+                                            </tr>
+                                        </div>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label><input type="checkbox" name="CartNo1" id="CartNo1"></label>
+                                            </td>
+                                            <td>
+                                                <a href="../detail/detail_saint.html"><img
+                                                        src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/fWO1-1668403134296-1Z7A1584.jpg"
+                                                        alt="상품 사진"></a>막쿠르트
+                                            </td>
+                                            <td class="td_count_Pdt">
+                                                <span class="count_Pdt">
+                                                    <input class="text_count" type="number" minlength="2" size="1"
+                                                        value="1">
+                                                    <span>
+                                                        <button type="button" class="count_up"></button>
+                                                        <button type="button" class="count_down"></button>
+                                                    </span>
+                                                </span>
+                                            </td>
+
+                                            <td>25,000</td>
+                                            <td>없음</td>
+                                            <td>25,000</td>
+                                            <td>3,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="CartNo1" id="CartNo1"></label>
+                                            </td>
+                                            <td>
+                                                <a href="../detail/detail_hansiwool.html"><img
+                                                        src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7rOd-1652094650305-hongsam_thumbnail.png"
+                                                        alt="상품 사진"></a>홍삼명주
+                                            </td>
+                                            <td class="td_count_Pdt">
+                                                <span class="count_Pdt">
+                                                    <input class="text_count" type="number" minlength="2" size="1"
+                                                        value="1">
+                                                    <span>
+                                                        <button type="button" class="count_up"></button>
+                                                        <button type="button" class="count_down"></button>
+                                                    </span>
+                                                </span>
+                                            </td>
+
+                                            <td>25,000</td>
+                                            <td>없음</td>
+                                            <td>25,000</td>
+                                            <td>3,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="btn_Cart_Under">
+                            <a href="#">
+                                <em>쇼핑 계속하기</em>
+                            </a>
+                        </div>
+                        <div class="price_sum">
+                            <div class="price_sum_list">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price_sum">
+                        <div class="price_sum_list">
+                            <dl>
+                                <dt>총 <strong>2</strong>개의 상품</dt>
+                                <dd><strong>50,000</strong>원</dd>
+                            </dl>
+                            <span><img src="./image/plus.jpg" alt="더하기 그림" width="20px"></span>
+                            <dl>
+                                <dt>배송비</dt>
+                                <dd><strong>6,000</strong>원</dd>
+                            </dl>
+                            <span><img src="./image/plus.jpg" alt="더하기 그림" width="20px"></span>
+                            <dl>
+                                <dt>합계</dt>
+                                <dd><strong>56,000</strong>원</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="order_box">
+                        <span class="left_order_box">
+                            <button class="" type="button">선택 상품 삭제</button>
+                            <button class="" type="button">선택 상품 찜</button>
+                        </span>
+                        <span class="right_order_box">
+                            <button class="" type="button">선택 상품 주문</button>
+                            <button class="" type="button">전체 상품 주문</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="main_recommend">
+                <div class="recommend_tit">
+                    <span>이런 제품은 어떠세요?</span>
+                    <span>당신을 위한 맞춤 추천, 최근 본 상품의 연관상품입니다.</span>
+                </div>
+                <div class="product_main">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/s7bN-1671603090982-thumbnail.jpg"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>한영석청명주</div>
+                                    </a>
+                                </th>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/3MJv-1672710004913-1.jpg"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>한주 35%</div>
+                                </th>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/fWO1-1668403134296-1Z7A1584.jpg"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>막zn르트</div>
+                                </th>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7rOd-1652094650305-hongsam_thumbnail.png"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>홍삼명주</div>
+                                </th>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/CjOs-1663250480886-1.jpg"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>스위트 와인</div>
+                                </th>
+                                <th>
+                                    <a href="#">
+                                        <div><img
+                                                src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/ayGA-1658114266997-1.jpg"
+                                                alt="술 사진" class="pro_thumbnail"></div>
+                                        <div>여유 19%</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><span>45,000원</span></a></td>
+                                <td><a href="#"><span>18,000원</span></a></td>
+                                <td><a href="#"><span>12,000원</span></a></td>
+                                <td><a href="#"><span>14,000원</span></a></td>
+                                <td><a href="#"><span>25,000원</span></a></td>
+                                <td><a href="#"><span>22,000원</span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ===================================================================================== -->
+        <div id="footer" style="width: 100%;">
+            <div class="footer_cover">
+                <div>
+                    <!-- 고객센터 -->
+                    <div class="CustomerService">
+                        <div class="foot_margin_top1">
+                            <span>고객센터</span>
+                            <strong>070-1111-2222</strong>
+                            <p>평일 10:00 - 18:00, 주말휴무</p>
+                        </div>
+
+                        <div class="FamilySite">
+                            <label for="family site" name="family"></label>
+
+                            <select name="family" id="family site">
+                                <option value="FAMILY SITE">FAMILY SITE</option>
+                                <option value="술칭구">술칭구</option>
+                                <option value="칭구칭구">칭구칭구</option>
+                                <option value="호이호이">호이호이</option>
+                                <option value="뇸뇸뇸">뇸뇸뇸</option>
+                                <option value="마지막 칭구">마지막 칭구</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="nf">
+                        <div class="foot_margin_top2">수신자 부담전화:</div>
+                        <ul class="foot_list1">
+                            <li>대리점 가구전용</li>
+                            <li>080-666-6666</li>
+                            <li>인천 본사전시장</li>
+                            <li>032-222-2222</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="foot_list2">
+                            <li>인터넷 가구전용</li>
+                            <li>080-444-4444</li>
+                            <li>대리점 개설문화</li>
+                            <li>032-555-5555</li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top3">
+                        <ul class="sns_src">
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">인스타그램
+                                    <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" target="_blank">유튜브
+                                    <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank">페이스북
+                                    <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank">트위터
+                                    <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top4 foot_logo">
+                        <img src="./image/logo.png" alt="이미지. 로고">
+                    </div>
+
+                    <div class="foot_margin_top5 ">
+                        <ul class="foot_list3">
+                            <li><a href="">제휴/제안 문의</a></li>
+                            <li><a href="">대리점 개설 문의</a></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">고객지원</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="top_margin_6">
+                        <ul class="foot_list4">
+                            <li>상호명: 도르리</li>
+                            <li>대표: 이현배황</li>
+                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                            <li>이메일:
+                                <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+                            </li>
+                            <li>사업자등록번호: 100-21-12345</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="header_cover">
-                <div class="headerMenu">
-                    <ul class="mainCategoryList">
-                        <li class="bannerCategory">
-                            <a href="#">카테고리
-                                <div class="detailCategoryList">
-                                    <ul>
-                                        <li class="drinkhover">
-                                            <a href="../mainPage/mainPage_wine.html">주류</a>
-                                            <ul class="detailCategoryListof">
-                                                <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
-                                                <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
-                                                <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
-                                                <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
-                                                <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="../mainpage/mainPage_side.html">안주</a></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </li>
-                        <li><a href="#">매장찾기</a></li>
-                        <li><a href="#">이벤트</a></li>
-                    </ul>
-                    <div class="mainSearch">
-                        <a href="#">
-                            <form action="../searchpage/searchpage.html">
-                                <input type="search" name="mainSearch" placeholder="검색">
-                                <button type="submit">
-                                    <img src="./image/search.png" alt="검색">
-                                </button>
-                            </form>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="container">
-                <div id="contents">
-                    <div class="location">
-                        <span><a href="#" class="main_home">HOME</a>>장바구니</span>
-                    </div>
-                    <div class="main_contents">
-                        <div class="sub_contents">
-                            <div class="order_tit">
-                                <span>장바구니</span>
-                                <ul>
-                                    <li class="Now_select">01 장바구니<img class="tri_arrow"
-                                            src="./image/right-arrow-black-triangle.png" alt="화살표이미지"></li>
-                                    <li>02 주문서작성/결제<img class="tri_arrow" src="./image/right-arrow-black-triangle.png"
-                                            alt="화살표이미지"></li>
-                                    <li>03 주문완료</li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <form id="formCart">
-
-                                <div class="cart_count_list">
-                                    <table>
-                                        <colgroup>
-                                            <col>
-                                            <col width="30%">
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                            <col>
-                                        </colgroup>
-                                        <thead>
-                                            <div>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <label><input type="checkbox" name="allCheck"
-                                                                id="allCheck"></label>
-                                                    </th>
-                                                    <th scope="col">상품/옵션 정보
-                                                    </th>
-                                                    <th scope="col">수량</th>
-                                                    <th scope="col">상품 금액</th>
-                                                    <th scope="col">할인/적립</th>
-                                                    <th scope="col">합계 금액</th>
-                                                    <th scope="col">배송비</th>
-                                                </tr>
-                                            </div>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <label><input type="checkbox" name="CartNo1" id="CartNo1"></label>
-                                                </td>
-                                                <td>
-                                                    <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/fWO1-1668403134296-1Z7A1584.jpg"
-                                                        alt="상품 사진">막쿠르트
-                                                </td>
-                                                <td class="td_count_Pdt">
-                                                    <span class="count_Pdt">
-                                                        <input class="text_count" type="number" minlength="2" size="1"
-                                                            value="1">
-                                                        <span>
-                                                            <button type="button" class="count_up"></button>
-                                                            <button type="button" class="count_down"></button>
-                                                        </span>
-                                                    </span>
-                                                </td>
-
-                                                <td>25,000</td>
-                                                <td>없음</td>
-                                                <td>25,000</td>
-                                                <td>3,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td><label><input type="checkbox" name="CartNo1" id="CartNo1"></label>
-                                                </td>
-                                                <td><img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7rOd-1652094650305-hongsam_thumbnail.png"
-                                                        alt="상품 사진">홍삼명주</td>
-                                                <td class="td_count_Pdt">
-                                                    <span class="count_Pdt">
-                                                        <input class="text_count" type="number" minlength="2" size="1"
-                                                            value="1">
-                                                        <span>
-                                                            <button type="button" class="count_up"></button>
-                                                            <button type="button" class="count_down"></button>
-                                                        </span>
-                                                    </span>
-                                                </td>
-
-                                                <td>25,000</td>
-                                                <td>없음</td>
-                                                <td>25,000</td>
-                                                <td>3,000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </form>
-                            <div class="btn_Cart_Under">
-                                <a href="#">
-                                    <em>쇼핑 계속하기</em>
-                                </a>
-                            </div>
-                            <div class="price_sum">
-                                <div class="price_sum_list">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="price_sum">
-                            <div class="price_sum_list">
-                                <dl>
-                                    <dt>총 <strong>2</strong>개의 상품</dt>
-                                    <dd><strong>50,000</strong>원</dd>
-                                </dl>
-                                <span><img src="./image/plus.jpg" alt="더하기 그림" width="20px"></span>
-                                <dl>
-                                    <dt>배송비</dt>
-                                    <dd><strong>6,000</strong>원</dd>
-                                </dl>
-                                <span><img src="./image/plus.jpg" alt="더하기 그림" width="20px"></span>
-                                <dl>
-                                    <dt>합계</dt>
-                                    <dd><strong>56,000</strong>원</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="order_box">
-                            <span class="left_order_box">
-                                <button class="" type="button">선택 상품 삭제</button>
-                                <button class="" type="button">선택 상품 찜</button>
-                            </span>
-                            <span class="right_order_box">
-                                <button class="" type="button">선택 상품 주문</button>
-                                <button class="" type="button">전체 상품 주문</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="main_recommend">
-                    <div class="recommend_tit">
-                        <span>이런 제품은 어떠세요?</span>
-                        <span>당신을 위한 맞춤 추천, 최근 본 상품의 연관상품입니다.</span>
-                    </div>
-                    <div class="product_main">
-                        <table>
-                            <colgroup>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/s7bN-1671603090982-thumbnail.jpg"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>한영석청명주</div>
-                                        </a>
-                                    </th>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/3MJv-1672710004913-1.jpg"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>한주 35%</div>
-                                    </th>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/fWO1-1668403134296-1Z7A1584.jpg"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>막zn르트</div>
-                                    </th>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7rOd-1652094650305-hongsam_thumbnail.png"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>홍삼명주</div>
-                                    </th>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/CjOs-1663250480886-1.jpg"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>스위트 와인</div>
-                                    </th>
-                                    <th>
-                                        <a href="#">
-                                            <div><img
-                                                    src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/ayGA-1658114266997-1.jpg"
-                                                    alt="술 사진" class="pro_thumbnail"></div>
-                                            <div>여유 19%</div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td><a href="#"><span>45,000원</span></a></td>
-                                    <td><a href="#"><span>18,000원</span></a></td>
-                                    <td><a href="#"><span>12,000원</span></a></td>
-                                    <td><a href="#"><span>14,000원</span></a></td>
-                                    <td><a href="#"><span>25,000원</span></a></td>
-                                    <td><a href="#"><span>22,000원</span></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- ===================================================================================== -->
-            <div id="footer" style="width: 100%;">
-                <div class="footer_cover">
-                    <div>
-                        <!-- 고객센터 -->
-                        <div class="CustomerService">
-                            <div class="foot_margin_top1">
-                                <span>고객센터</span>
-                                <strong>070-1111-2222</strong>
-                                <p>평일 10:00 - 18:00, 주말휴무</p>
-                            </div>
-
-                            <div class="FamilySite">
-                                <label for="family site" name="family"></label>
-
-                                <select name="family" id="family site">
-                                    <option value="FAMILY SITE">FAMILY SITE</option>
-                                    <option value="술칭구">술칭구</option>
-                                    <option value="칭구칭구">칭구칭구</option>
-                                    <option value="호이호이">호이호이</option>
-                                    <option value="뇸뇸뇸">뇸뇸뇸</option>
-                                    <option value="마지막 칭구">마지막 칭구</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="nf">
-                            <div class="foot_margin_top2">수신자 부담전화:</div>
-                            <ul class="foot_list1">
-                                <li>대리점 가구전용</li>
-                                <li>080-666-6666</li>
-                                <li>인천 본사전시장</li>
-                                <li>032-222-2222</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <ul class="foot_list2">
-                                <li>인터넷 가구전용</li>
-                                <li>080-444-4444</li>
-                                <li>대리점 개설문화</li>
-                                <li>032-555-5555</li>
-                            </ul>
-                        </div>
-
-                        <div class="foot_margin_top3">
-                            <ul class="sns_src">
-                                <li>
-                                    <a href="https://www.instagram.com" target="_blank">인스타그램
-                                        <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com" target="_blank">유튜브
-                                        <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com" target="_blank">페이스북
-                                        <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
-                                    </a>
-
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" target="_blank">트위터
-                                        <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="foot_margin_top4 foot_logo">
-                            <img src="./image/logo.png" alt="이미지. 로고">
-                        </div>
-
-                        <div class="foot_margin_top5 ">
-                            <ul class="foot_list3">
-                                <li><a href="">제휴/제안 문의</a></li>
-                                <li><a href="">대리점 개설 문의</a></li>
-                                <li><a href="">이용약관</a></li>
-                                <li><a href="">개인정보취급방침</a></li>
-                                <li><a href="">고객지원</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="top_margin_6">
-                            <ul class="foot_list4">
-                                <li>상호명: 도르리</li>
-                                <li>대표: 이현배황</li>
-                                <li>주소: 경기 성남시 분당구 돌마로 47</li>
-                                <li>이메일:
-                                    <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
-                                </li>
-                                <li>사업자등록번호: 100-21-12345</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </body>
+    </div>
+</body>
 
-    </html>
+</html>
 </body>
 
 </html>
