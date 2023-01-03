@@ -68,6 +68,19 @@ header {
     z-index: 9999;
 }
 
+.topfloatingbar {
+    width: 45px;
+    height: 45px;
+    background: url(../image/rightscroller.png) center/80%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 100%;
+    opacity: 0.3;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
 /* ----------- 상단 헤더 ----------- */
 .mainLogo {
     width: 150px;
