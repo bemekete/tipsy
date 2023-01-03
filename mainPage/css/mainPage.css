@@ -402,6 +402,15 @@ div[class="img"]>img {
 .listSort {
     margin-right: 20px;
     text-align: right;
+    display: flex;
+}
+
+.listSort li {
+    margin-left: 10px;
+}
+
+.txt_blue {
+    font-weight: bold;
 }
 
 /* =======================================더보기 버튼============================ */
