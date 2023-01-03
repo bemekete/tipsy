@@ -347,7 +347,7 @@ header {
 .mainSearch {
     height: 100%;
     display: flex;
-    background-color: rgba(211, 211, 211, 0.4);
+    background-color: #f7f7f7;
     border-radius: 5px;
 }
 
@@ -389,7 +389,7 @@ header {
 
 .footer_cover strong {
     margin-left: 18px;
-    color: rgb(44, 44, 173);
+    color: #084875b7;
     font-size: 30px;
 }
 
