@@ -40,8 +40,7 @@ main {
 }
 
 .slidebox img {
-    width: 1024px;
-    height: 300px;
+    width: 1200px;
 }
 
 .slidebox .slidelist {
@@ -259,22 +258,23 @@ main {
 .wrap_triple,
 .wrap_event {
     display: grid;
-    gap: 20px;
+    gap: 30px;
 }
 
 .wrap_triple,
 .wrap_event {
-    width: 1024px;
+    width: 1200px;
     margin: 0 auto;
 }
 
 /* ====================================이미지 타이틀(공통)================== */
 .triple_tit,
 .event_tit {
-    font: 40px 'Oswald';
+    font: 50px 'Oswald';
     font-weight: lighter;
     margin-top: 80px;
-    /* margin-left: px; */
+    /* margin-bottom: 10px; */
+    /* margin-left: -10px; */
 }
 
 /* ================================ 이미지 메인===================================== */
@@ -462,7 +462,7 @@ main {
     width: 100%;
     width: 100%;
     position: relative;
-    height: 300px;
+    height: 350px;
     border-radius: 10px;
 
     display: flex;
@@ -472,29 +472,32 @@ main {
     justify-content: center;
 }
 
+.event_img1 div:nth-of-type(2)::after {
+    background: url(../image/gift-text.png) center/cover;
+}
+
 .event_img1 div:nth-of-type(1)::after {
-    background: url("../image/gift-small.png") no-repeat center/682.65px 300px;
+    background: url("../image/gift-small.png") no-repeat center/800px 350px;
 }
 
 
 .event_img2 div:nth-of-type(1)::after {
-    background: white center/cover;
+    background: url("../image/mak-text.png") center/cover;
 }
 
 .event_img2 div:nth-of-type(2)::after {
-    background: url("../image/makyo-small.jpg") no-repeat center/682.65px 300px;
+    background: url("../image/makyo-small.jpg") no-repeat center/800px 350px;
 }
 
 .event_img3 div:nth-of-type(1)::after {
-    background: url("../image/anju-small.png") no-repeat center/682.65px 300px;
+    background: url("../image/anju-small.png") no-repeat center/800px 350px;
 }
 
 .event_img3 div:nth-of-type(2)::after {
-    background: white center/cover;
+    background: url(../image/anju-text.png) center/cover;
 }
 
 /* ------------------------------------------ */
-
 
 
 /* ===================hover===================================== */
@@ -502,8 +505,8 @@ main {
 .event_img1 div:nth-of-type(1):hover::after,
 .event_img2 div:nth-of-type(2):hover::after,
 .event_img3 div:nth-of-type(1):hover::after {
-    animation: left 1.5s;
-    opacity: 0.6;
+    animation: left 1.2s;
+    opacity: 1;
     z-index: -1;
 }
 
@@ -518,21 +521,23 @@ main {
     position: absolute;
     left: 0;
     bottom: 0;
-    translate: 60% -100%;
+    translate: 43% -100%;
 
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 20px;
 }
 
-/* ======================================1번째 단락 이미지 hover======================== */
-.event_img1 div:nth-of-type(1):hover {
+.event_img1 div:nth-of-type(1):hover,
+.event_img3 div:nth-of-type(1):hover {
     grid-column: span 3;
-    height: 300px;
+    height: 350px;
 }
 
+/* ======================================1번째 단락 이미지 hover======================== */
+
 .event_img1 div:nth-of-type(1):hover::after {
-    background: url("../image/gift-main.png") no-repeat center/1024px 300px;
+    background: url("../image/gift-main.png") no-repeat center/1200px 350px;
 }
 
 /* =========================================2번쨰 단락 이미지 hover========================= */
@@ -542,8 +547,8 @@ main {
 }
 
 .event_img2 div:nth-of-type(2):hover {
-    width: 1024px;
-    height: 300px;
+    width: 1200px;
+    height: 350px;
 
     display: absolute;
     left: 0;
@@ -556,27 +561,23 @@ main {
     position: absolute;
     right: 0;
     bottom: 0;
-    translate: -60% -100%;
+    translate: -43% -100%;
 
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 20px;
 }
 
 
 .event_img2 div:nth-of-type(2):hover::after {
-    background: url("../image/makyo-main.jpg") no-repeat center/1024px 300px;
+    background: url("../image/makyo-main.png") no-repeat center/1200px 350px;
 }
 
 
 /* =========================================3번쨰 단락 이미지 hover========================= */
-.event_img3 div:nth-of-type(1):hover {
-    grid-column: span 3;
-    height: 300px;
-}
 
 .event_img3 div:nth-of-type(1):hover::after {
-    background: url("../image/anju-main.png") no-repeat center/1024px 300px;
+    background: url("../image/anju-main.png") no-repeat center/1200px 350px;
 }
 
 /* ========================================공통 애니메이션================================ */
@@ -588,7 +589,7 @@ main {
 
     to {
         transform: translateZ(0);
-        opacity: 0.6;
+        opacity: 1;
     }
 
 }
