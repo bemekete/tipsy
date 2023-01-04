@@ -391,7 +391,10 @@ header {
     display: flex;
     border: 1px solid;
     box-sizing: border-box;
+}
 
+.box_background ul li{
+    background-color: #e3f2fd;
 }
 
 .inquiry_box a {
