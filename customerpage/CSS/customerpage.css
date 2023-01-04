@@ -342,6 +342,14 @@ header {
     background-size: 100%;
 }
 
+.menuicon2 {
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .alert {
     background-image: url(../image/noun-alert-1196998.png);
 }
@@ -354,8 +362,8 @@ header {
     background-image: url(../image/noun-review-4999525.png);
 }
 
-.QnA {
-    background-image: url(../image/noun-question-670406.png);
+.Simpleinquiry {
+    background-image: url(../image/pen.svg);
 }
 
 .shipmentQnA {
