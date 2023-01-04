@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'NEXON Lv2 Gothic';
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0 auto;
+    color: #333;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+.headerTop,
+.headerMenu,
+#login_wrap,
+#footer .footer_cover {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+/* ================================================================ find ================================================================ */
+
+main {
+    height: 100vh;
+    text-align: center;
+}
+
+#find_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find_logo_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 50px 0;
+}
+
+.find_logo {
+    width: 150px;
+    height: 150px;
+    text-indent: -9999em;
+    background: url(../image/login_logo2.png) no-repeat center/100%;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.find_form_wrap {
+    width: 1200px;
+}
+
+.find_tab_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.find_tab_btn a {
+    display: inline-block;
+    width: 172px;
+    height: 47px;
+    line-height: 47px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+.find_tab_btn a:not([href="#"]) {
+    border: 1px solid #ccc;
+}
+
+.form_container .form_tit {
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.form_list {
+    border-top: 1px solid #ccc;
+    text-align: left;
+}
+
+.form_list li {
+    border-bottom: 1px solid #ccc;
+}
+
+.form_list>li dl {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.form_list>li dl dt {
+    display: table-cell;
+    padding: 15px 0 9px 42px;
+    width: 110px;
+    font-size: 14px;
+    color: #333;
+    vertical-align: top;
+}
+
+.form_list>li dl dd {
+    display: table-cell;
+    padding: 16px;
+}
+
+.input_line {
+    margin: 10px 0 0 0;
+}
+
+.input_line:first-of-type {
+    margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    line-height: 35px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.input_type1 {
+    width: 235px;
+}
+
+.button_type1 {
+    margin: 0 5px;
+    padding: 9px 0;
+    width: 125px;
+    background: #ccc;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.btnList {
+    display: block;
+    width: 146px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 48px;
+    color: #fff;
+    background: #084875b7;
+}
+
+
+/* #################################################################### */
+
+
+/* ====================header 공통==================== */
+header {
+    /* height: 120px; */
+    margin-bottom: 50px;
+}
+
+.headertop_cover {
+    background-color: rgba(223, 223, 223, 0.4);
+}
+
+.headerTop {
+    height: 70px;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template: 20fr 1fr 1fr /1fr;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.header_cover {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 1px 1px 2px lightgray;
+    /* height: 60px; */
+    padding: 0 10px 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* ----------- 상단 헤더 ----------- */
+.mainLogo {
+    width: 150px;
+    text-indent: -9999em;
+    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    margin-left: 15px;
+}
+
+/* 로그인탭 */
+.serviceTab {
+    line-height: 80px;
+    padding-right: 20px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.serviceTabList {
+    white-space: nowrap;
+}
+
+.serviceTabList li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.serviceTabList li a {
+    color: grey;
+}
+
+.serviceTabList li+li::before {
+    content: " | ";
+    color: grey;
+}
+
+/* ----------- 하단 헤더 ----------- */
+.headerMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* 좌측 카테고리 */
+.mainCategoryList {
+    display: flex;
+}
+
+.mainCategoryList>li {
+    padding: 20px;
+}
+
+.mainCategoryList>li>a {
+    color: black;
+    font-weight: bold;
+}
+
+/* ============== 카테고리 세부 메뉴 ============== */
+.detailCategoryList {
+    visibility: hidden;
+
+    box-sizing: border-box;
+    width: 35em;
+    font-weight: initial;
+    background-color: white;
+    padding: 20px 40px;
+    border: 1px solid lightgray;
+    /* border-top: none; */
+    box-shadow: 1px 1px 2px lightgray;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.detailCategoryList>ul {
+    width: 12em;
+    height: 16.25em;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.detailCategoryList li {
+    padding: 15px;
+}
+
+
+.detailCategoryList a {
+    display: block;
+}
+
+.detailCategoryListof {
+    visibility: hidden;
+    width: 12em;
+    border-left: 1px solid lightgray;
+    padding-left: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerCategory:hover .detailCategoryList,
+.drinkhover:hover .detailCategoryListof,
+.detailCategoryListof:hover {
+    visibility: visible;
+}
+
+/* 우측 검색창 */
+.mainSearch {
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    padding: 0 10px 0 10px;
+}
+
+.mainSearch input {
+    box-sizing: border-box;
+    width: 90%;
+    border: none;
+}
+
+.mainSearch button {
+    width: 10%;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+.mainSearch img {
+    height: 20px;
+}
+
+.mainSearch {
+    height: 100%;
+    display: flex;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+
+.mainSearch form {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch form input {
+    background: none;
+    height: 17px;
+    width: 210px;
+}
+
+/* ########################/////footer/////##################### */
+/* footer */
+
+#footer {
+    box-sizing: border-box;
+    background-color: rgb(233, 234, 234);
+    padding: 70px 30px 30px 30px;
+}
+
+#footer .footer_cover {
+    /* width: 1240px; */
+    margin: 0 auto;
+}
+
+.footer_cover li {
+    display: inline-block;
+}
+
+/* 고객센터, FamilySite ================================================== */
+/* .footer_cover span,
+.footer_cover strong {
+    display: inline-block;
+    font-weight: bold;
+} */
+
+.footer_cover strong {
+    margin-left: 18px;
+    color: #084875b7;
+    font-size: 30px;
+}
+
+.CustomerService {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.FamilySite {
+    /* 오른쪽 고정 */
+    position: absolute;
+    right: 0;
+}
+
+/* 수신자 부담전화=================================================== */
+/* 수신자 부담전화 위 */
+.foot_margin_top2 {
+    margin-top: 35px;
+}
+
+/* 왼쪽 margin number은 리스트 */
+.foot_list1>li+li,
+.foot_list1>li+li+li+li,
+.foot_list2>li+li,
+.foot_list2>li+li+li+li {
+    margin-left: 10px;
+}
+
+.foot_list1>li+li+li,
+.foot_list2>li+li+li {
+    margin-left: 50px;
+}
+
+.foot_list3 a {
+    color: initial;
+}
+
+/* 다른 사이트 "_blank"================================================== */
+/* sns_src 위 */
+.foot_margin_top3 {
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.sns_src {
+    width: 225px;
+    height: 60px;
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns_src li a {
+    display: inline-block;
+    text-indent: -9999em;
+    width: 40px;
+    height: 40px;
+}
+
+.sns_src li:nth-of-type(1) a {
+    background: url(../image/instagram.svg) no-repeat center/cover;
+}
+
+.sns_src li:nth-of-type(2) a {
+    background: url(../image/youtube.svg) no-repeat center/cover;
+    width: 48px;
+}
+
+.sns_src li:nth-of-type(3) a {
+    background: url(../image/facebook.svg) no-repeat center/cover;
+}
+
+.sns_src li:nth-of-type(4) a {
+    background: url(../image/twitter.svg) no-repeat center/cover;
+}
+
+/* 로고 이미지 ================================================= */
+/* 이미지 위 */
+.foot_margin_top4 {
+    margin-top: 10px;
+}
+
+.foot_logo>img {
+    width: 130px;
+}
+
+/* 제휴(a 태그)=================================================== */
+/* 제휴위 */
+.foot_margin_top5 {
+    margin-top: 20px;
+}
+
+.foot_list3>li:nth-of-type(n+2),
+.foot_list4>li:nth-of-type(n+2) {
+    margin-left: 20px;
+}
+
+.top_margin_6 {
+    margin-top: 20px;
+}
+
+/* 애니메이션 */
+@media screen and (max-width:77.5em) {
+    .rightSide {
+        display: none;
+    }
+
+    .detailScriptPage {
+        width: auto;
+        text-align: center;
+    }
+
+    .leftSide {
+        width: 95%;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width:54.25em) {
+    .leftSide {
+        width: initial;
+        font-size: initial;
+    }
+}
