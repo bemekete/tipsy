@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편문의 ㅣ Tipsy - 다양한 술이 있는 곳</title>
+
+    <link rel="stylesheet" href="./CSS/simple_inquiry.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- ======================================================== header ================================================== -->
+        <div class="headertop_cover">
+
+            <div class="headerTop">
+                <a href="../introPage/introPage.html" class="mainLogo">tipsy</a>
+                <div class="serviceTab">
+                    <ul class="serviceTabList">
+                        <li><a href="../login/login.html">로그인</a></li>
+                        <li><a href="../join/join.html">회원가입</a></li>
+                        <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header_cover">
+            <div class="headerMenu">
+                <ul class="mainCategoryList">
+                    <li class="bannerCategory">
+                        <a href="#">카테고리
+                            <div class="detailCategoryList">
+                                <ul>
+                                    <li class="drinkhover">
+                                        <a href="../mainPage/mainPage_wine.html">주류</a>
+                                        <ul class="detailCategoryListof">
+                                            <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                            <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                            <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                            <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                            <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+                <div class="mainSearch">
+                    <a href="#">
+                        <form action="../searchpage/searchpage.html">
+                            <input type="search" name="mainSearch" placeholder="검색">
+                            <button type="submit">
+                                <img src="./image/search.png" alt="검색">
+                            </button>
+                        </form>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===============================########### main ###########============================================== -->
+        <div id="simple_inquiry">
+            <div id="container">
+                <p class="main_first_text">간편문의</p>
+
+                <div class="main_text">
+
+                    <p>
+                        평일: 오전 08:30 ~ 오후 17:30 ㅣ 점심시간: 오후 12:00 ~ 오후 13:00 ㅣ 업무휴무: 토, 일, 공휴일 휴무
+                        <br>
+                        전국 어디서나 서비스 접수, 상담 및 기타 문의사항이 있으시면 연락주세요.
+                    </p>
+
+                    <div>
+                        <span>고객센터</span>
+                        <strong>070-1111-2222</strong>
+                    </div>
+                </div>
+
+                <div class="contens">
+                    <form action="../faq/faq.html" class="simple_inquirybox">
+                        <p><span>*</span>필수 입력 사항</p>
+                        <figure>
+                            <table>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <th>문의내용<span>&#42;</span></th>
+                                        <td>
+                                            <label>
+                                                <input type="radio" name="contens" value="purchase" checked>
+                                                구입 문의
+                                            </label>
+
+                                            <label>
+                                                <input type="radio" name="contens" value="product" checked>
+                                                제품 문의
+                                            </label>
+
+                                            <label>
+                                                <input type="radio" name="contens" value="event" checked>
+                                                이벤트 문의
+                                            </label>
+
+                                            <label>
+                                                <input type="radio" name="contens" value="homepage" checked>
+                                                홈페이지 문의
+                                            </label>
+
+                                            <label>
+                                                <input type="radio" name="contens" value="shipping_inquiry" checked>
+                                                배송 문의
+                                            </label>
+
+                                            <label>
+                                                <input type="radio" name="contens" value="shipping_complaint" checked>
+                                                배송 불만
+                                            </label>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>이름<span>&#42;</span></th>
+                                        <td>
+                                            <input type="text" minlength="2" maxlength="10" name="userName"
+                                                placeholder="이름을 입력해 주세요." required>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>휴대전화<span>&#42;</span></th>
+                                        <td>
+                                            <select name="userPhone[]" required>
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                            -
+                                            <input type="text" name="userPhone[]" minlength="3" maxlength="4" size="3px"
+                                                required>
+                                            -
+                                            <input type="text" name="userPhone[]" minlength="3" maxlength="4" size="3px"
+                                                required>
+                                            <a href="#">인증번호전송</a><br>
+                                            <input type="text" name="userPhoneVerification" minlength="6" maxlength="6"
+                                                placeholder="인증번호 입력" size="24px">
+                                            <a href="#">인증번호확인</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>제목<span>&#42;</span></th>
+                                        <td><input type="text" name="Title" minlength="10" maxlength="50"
+                                                placeholder="제목을 입력 하세요." required></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>내용<span>&#42;</span></th>
+                                        <td><textarea name="inquiries" cols="130" rows="20"
+                                                placeholder="내용을 입력 하세요."></textarea></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>주소<span>&#42;</span></th>
+                                        <td>
+                                            <input type="text" name="userPostcode1" size="10px" placeholder="우편번호"
+                                                readonly><a href="#">우편번호</a><br>
+                                            <input type="text" name="userPostcode2" size="50" placeholder="주소"
+                                                readonly><span>기본주소</span><br>
+                                            <input type="text" name="userPostcode3" size="50"
+                                                placeholder="상세 주소"><span>상세주소 (선택입력)</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                    </form>
+                </div>
+
+                <div class="agree_container">
+                    <p>개인정보 수집 및 이용동의</p>
+                    <form action="../faq/faq.html">
+                        <div class="agree_text">
+                            <p>
+                                1. 수집 항목 이름, 휴대전화번호, 주소
+                                <br>
+                                2. 수집 및 이용목적 고객상담서비스 제공을 위한 원활한 의사소통의 경로 확보
+                                <br>
+                                3.보유 및 이용기간 수집일로부터 3년(전자상거래등에서의소비자보호에관한법률에 따라 3년간 보관)
+                                <br>
+                                ※ 위 항목 ’개인정보 수집 및 이용동의‘를 거부하실 수 있습니다 . 동의를 거부하실 경우, 온라인을 통한 고객문의 접수가 되지 않습니다.
+                            </p>
+                            <div class="agree_use">
+                                <label for="agree_use"><span>개인정보 수집 및 이용동의</span></label>
+                                <input type="checkbox" name="agree_use" id="agree_use" value="agree_use" required>
+                            </div>
+                        </div>
+
+                        <div class="agree_submit">
+                            <button type="button">취소</button>
+                            <button type="submit">확인</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ================================############ footer ##############===================================================== -->
+        <div id="footer" style="width: 100%;">
+            <div class="footer_cover">
+                <div>
+                    <!-- 고객센터 -->
+                    <div class="CustomerService">
+                        <div class="foot_margin_top1">
+                            <span>고객센터</span>
+                            <strong>070-1111-2222</strong>
+                            <p>평일 10:00 - 18:00, 주말휴무</p>
+                        </div>
+
+                        <div class="FamilySite">
+                            <label for="family site" name="family"></label>
+
+                            <select name="family" id="family site">
+                                <option value="FAMILY SITE">FAMILY SITE</option>
+                                <option value="술칭구">술칭구</option>
+                                <option value="칭구칭구">칭구칭구</option>
+                                <option value="호이호이">호이호이</option>
+                                <option value="뇸뇸뇸">뇸뇸뇸</option>
+                                <option value="마지막 칭구">마지막 칭구</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="nf">
+                        <div class="foot_margin_top2">수신자 부담전화:</div>
+                        <ul class="foot_list1">
+                            <li>대리점 가구전용</li>
+                            <li>080-666-6666</li>
+                            <li>인천 본사전시장</li>
+                            <li>032-222-2222</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="foot_list2">
+                            <li>인터넷 가구전용</li>
+                            <li>080-444-4444</li>
+                            <li>대리점 개설문화</li>
+                            <li>032-555-5555</li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top3">
+                        <ul class="sns_src">
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">인스타그램
+                                    <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" target="_blank">유튜브
+                                    <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank">페이스북
+                                    <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank">트위터
+                                    <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="foot_margin_top4 foot_logo">
+                        <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
+                    </div>
+
+                    <div class="foot_margin_top5 ">
+                        <ul class="foot_list3">
+                            <li><a href="">제휴/제안 문의</a></li>
+                            <li><a href="">대리점 개설 문의</a></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">고객지원</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="top_margin_6">
+                        <ul class="foot_list4">
+                            <li>상호명: 도르리</li>
+                            <li>대표: 이현배황</li>
+                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                            <li>이메일:
+                                <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+                            </li>
+                            <li>사업자등록번호: 100-21-12345</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="topfloatingbar"></a>
+</body>
+
+</html>
