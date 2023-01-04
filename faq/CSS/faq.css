@@ -412,6 +412,7 @@ header {
 .inquiry_box3 {
     margin-left: 5px;
 }
+/* 문의 box 클릭시 이동 후 높이 */
 
 /* 구분, 제목 및 제품문의 */
 
@@ -432,8 +433,8 @@ thead {
     background-color: #efefef;
 }
 
-tbody {
-    height: 1200px;
+tr {
+    height: 45px;
 }
 
 th,
