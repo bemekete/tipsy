@@ -738,7 +738,6 @@ main {
 .event_img1 div:nth-of-type(1):hover,
 .event_img3 div:nth-of-type(1):hover {
     grid-column: span 3;
-    height: 350px;
 }
 
 /* ======================================1번째 단락 이미지 hover======================== */
@@ -755,7 +754,6 @@ main {
 
 .event_img2 div:nth-of-type(2):hover {
     width: 1200px;
-    height: 350px;
 
     display: absolute;
     left: 0;
