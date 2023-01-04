@@ -279,7 +279,6 @@ header {
 .Qbox_container>ul {
     /* display: flex; */
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .Qbox_container>ul>li {
@@ -287,6 +286,7 @@ header {
     background-color: #e3f2fd;
     height: 100px;
     /* flex: 1; */
+    padding: 0 25px;
 
     position: relative;
     line-height: 100px;
@@ -298,6 +298,7 @@ header {
     width: 100%;
     position: absolute;
     top: 100%;
+    left: 0;
     z-index: 999;
 
     display: none;
@@ -331,6 +332,7 @@ header {
     line-height: 30px;
     padding: 0 25px;
     text-align: start;
+    white-space: initial;
 
     /* 이거 안됨,,,,;;; */
     /* text-align: justify; */
