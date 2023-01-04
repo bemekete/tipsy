@@ -83,8 +83,8 @@
                     </div>
                 </div>
 
-                <div class="contens">
-                    <form action="../faq/faq.html" class="simple_inquirybox">
+                <form action="../faq/faq.html" class="simple_inquirybox">
+                    <div class="contens">
                         <p><span>*</span>필수 입력 사항</p>
                         <figure>
                             <table>
@@ -103,27 +103,27 @@
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="contens" value="product" checked>
+                                                <input type="radio" name="contens" value="product">
                                                 제품 문의
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="contens" value="event" checked>
+                                                <input type="radio" name="contens" value="event">
                                                 이벤트 문의
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="contens" value="homepage" checked>
+                                                <input type="radio" name="contens" value="homepage">
                                                 홈페이지 문의
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="contens" value="shipping_inquiry" checked>
+                                                <input type="radio" name="contens" value="shipping_inquiry">
                                                 배송 문의
                                             </label>
 
                                             <label>
-                                                <input type="radio" name="contens" value="shipping_complaint" checked>
+                                                <input type="radio" name="contens" value="shipping_complaint">
                                                 배송 불만
                                             </label>
                                         </td>
@@ -156,43 +156,41 @@
                                                 required>
                                             <a href="#">인증번호전송</a><br>
                                             <input type="text" name="userPhoneVerification" minlength="6" maxlength="6"
-                                                placeholder="인증번호 입력" size="24px">
+                                                placeholder="인증번호 입력" size="24px" required>
                                             <a href="#">인증번호확인</a>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>제목<span>&#42;</span></th>
-                                        <td><input type="text" name="Title" minlength="10" maxlength="50"
+                                        <td><input type="text" name="Title" minlength="10" maxlength="50" size="60"
                                                 placeholder="제목을 입력 하세요." required></td>
                                     </tr>
 
                                     <tr>
                                         <th>내용<span>&#42;</span></th>
-                                        <td><textarea name="inquiries" cols="130" rows="20"
-                                                placeholder="내용을 입력 하세요."></textarea></td>
+                                        <td><textarea name="inquiries" cols="130" rows="20" minlength="20" placeholder="내용을 입력 하세요."
+                                                required></textarea></td>
                                     </tr>
 
                                     <tr>
                                         <th>주소<span>&#42;</span></th>
                                         <td>
                                             <input type="text" name="userPostcode1" size="10px" placeholder="우편번호"
-                                                readonly><a href="#">우편번호</a><br>
+                                                required><a href="#">우편번호</a><br>
                                             <input type="text" name="userPostcode2" size="50" placeholder="주소"
-                                                readonly><span>기본주소</span><br>
-                                            <input type="text" name="userPostcode3" size="50"
-                                                placeholder="상세 주소"><span>상세주소 (선택입력)</span>
+                                                required><span>기본주소</span><br>
+                                            <input type="text" name="userPostcode3" size="50" placeholder="상세 주소"
+                                                required><span>상세주소 (선택입력)</span>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </figure>
-                    </form>
-                </div>
+                    </div>
 
-                <div class="agree_container">
-                    <p>개인정보 수집 및 이용동의</p>
-                    <form action="../faq/faq.html">
+                    <div class="agree_container">
+                        <p>개인정보 수집 및 이용동의</p>
                         <div class="agree_text">
                             <p>
                                 1. 수집 항목 이름, 휴대전화번호, 주소
@@ -213,8 +211,8 @@
                             <button type="button">취소</button>
                             <button type="submit">확인</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
 

@@ -305,7 +305,7 @@ td {
     padding: 15px 20px;
 }
 
-.simple_inquirybox p {
+.contens p {
     text-align: end;
     margin-right: 20px;
 }
@@ -367,7 +367,7 @@ td {
 }
 
 /* margin */
-.simple_inquirybox p {
+.contens p {
     margin: 30px;
     margin-right: 40px;
 }
