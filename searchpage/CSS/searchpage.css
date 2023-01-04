@@ -356,23 +356,37 @@ header {
     width: 100%;
 }
 
+.totalSearch {
+    margin-bottom: 100px;
+}
+
 .totalSearch p {
     line-height: 400px;
     text-align: center;
 }
 
-.totalSearchArea a {
-    display: inline-block;
+.totalSearch table {
     width: 100%;
-    line-height: 60px;
-    box-sizing: border-box;
-    text-align: center;
-    border: 1px solid lightgray;
-    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-.totalSearchArea a:hover {
-    background-color: #e3f2fd;
+.totalSearch thead {
+    height: 40px;
+    background-color: #efefef;
+}
+
+.totalSearch tbody td {
+    padding: 10px;
+}
+
+.totalSearch tbody img {
+    width: 80px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.totalSearch tbody td+td {
+    text-align: center;
 }
 
 /* ########################/////footer/////##################### */
