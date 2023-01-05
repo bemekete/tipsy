@@ -353,6 +353,11 @@ header {
     line-height: 30px;
 }
 
+.sortList a {
+    display: inline-block;
+    width: 100%;
+}
+
 .sortList:last-child {
     margin-bottom: 15px;
 }
