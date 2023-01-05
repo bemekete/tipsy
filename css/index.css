@@ -35,6 +35,8 @@ a {
     position: fixed;
     bottom: 30px;
     right: 30px;
+
+
 }
 
 /* ====================header 공통==================== */
@@ -844,7 +846,8 @@ main {
 
 .star::after {
     padding: 0 10px;
-    content: "☆☆☆☆☆";
+    content: "★★☆☆☆";
+    color: red;
     display: inline-flex;
     position: relative;
     font-size: 1em;
