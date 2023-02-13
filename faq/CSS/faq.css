@@ -510,25 +510,23 @@ a:not([href*="#"]) {
 }
 
 .inquiry_page_button::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     background: url(../image/arrow-left.svg) 0/100% 100%;
-    vertical-align: middle;
     margin-right: 5px;
 }
 
+.inquiry_page_button::after {
+    background: url(../image/arrow-right.svg) 0/100% 100%;
+    margin-left: 5px;
+}
+
+.inquiry_page_button::before,
 .inquiry_page_button::after {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url(../image/arrow-right.svg) 0/100% 100%;
     vertical-align: middle;
-    margin-left: 5px;
 }
-
 
 /* ########################/////footer/////##################### */
 /* footer */
