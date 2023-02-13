@@ -350,16 +350,24 @@ header {
 
 .FAQ_search {
     display: inline-block;
-    width: 600px;
+    width: 570px;
     line-height: 80px;
     margin: 10px;
+}
+
+.FAQ_search form {
+    border-bottom: 1px solid;
+    height: 65px;
+    /* border: solid; */
 }
 
 .FAQ_search input {
     border: none;
     width: 500px;
     height: 40px;
-    border-bottom: 1px solid;
+    padding: 0 10px;
+    /* border: red solid; */
+    font-size: 24px;
 }
 
 .FAQ_search button {
@@ -370,6 +378,7 @@ header {
 .FAQ_search button img {
     height: 40px;
     vertical-align: middle;
+    opacity: .7;
 }
 
 /* ======================# main 문의 #================================================== */
