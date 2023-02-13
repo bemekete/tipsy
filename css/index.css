@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     font-family: 'NEXON Lv2 Gothic';
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -36,7 +37,8 @@ a {
     bottom: 30px;
     right: 30px;
 
-
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 /* ====================header 공통==================== */
@@ -501,27 +503,27 @@ main {
 
 
 .triple_main1 div:nth-of-type(1)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/Gt8e-1623070755884-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-5.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/Gt8e-1623070755884-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-5.jpg) center/100%;
 }
 
 .triple_main1 div:nth-of-type(2)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/TOnv-1655794504098-1.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/TOnv-1655794504098-1.jpg) center/100%;
 }
 
 .triple_main1 div:nth-of-type(3)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/5YHz-1651137039043-1.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/5YHz-1651137039043-1.jpg) center/100%;
 }
 
 .triple_main2 div:nth-of-type(1)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/fe1w-1631180181351-hsocd+ap0.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/fe1w-1631180181351-hsocd+ap0.jpg) center/100%;
 }
 
 .triple_main2 div:nth-of-type(2)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7DjO-1669259690558-%ED%95%9C%EC%8B%9C%EC%9A%B8.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7DjO-1669259690558-%ED%95%9C%EC%8B%9C%EC%9A%B8.jpg) center/100%;
 }
 
 .triple_main2 div:nth-of-type(3)::after {
-    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/r9a3-1653530958733-mildam40_thumbnail.jpg) center/cover;
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/r9a3-1653530958733-mildam40_thumbnail.jpg) center/100%;
 }
 
 
@@ -554,6 +556,7 @@ main {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: all 1s;
 }
 
 .triple_main1 a,
@@ -571,7 +574,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    display: none;
+    display: grid;
 }
 
 .triple_main1 p,
@@ -582,6 +585,7 @@ main {
 
     font-family: 'Nanum Myeongjo';
     font-weight: bold;
+
 
 }
 
@@ -602,16 +606,42 @@ main {
 }
 
 /* -------------------------hover=------------------------------ */
-.triple_main1 div:hover a,
-.triple_main2 div:hover a {
-    display: grid;
+
+.triple_main1 div::after,
+.triple_main2 div::after {
+    transition: all 1s;
+
 }
 
 .triple_main1 div:hover::after,
 .triple_main2 div:hover::after {
     opacity: 0.3;
-    transition: ease-out 1s;
+    transition: ease-out .5s;
     z-index: -1;
+}
+
+.triple_main1 div:nth-of-type(1):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/Gt8e-1623070755884-%EC%88%A0%EC%B7%A8%ED%95%9C%EC%9B%90%EC%88%AD%EC%9D%B4-5.jpg) center/115%;
+}
+
+.triple_main1 div:nth-of-type(2):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/TOnv-1655794504098-1.jpg) center/115%;
+}
+
+.triple_main1 div:nth-of-type(3):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/5YHz-1651137039043-1.jpg) center/115%;
+}
+
+.triple_main2 div:nth-of-type(1):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/fe1w-1631180181351-hsocd+ap0.jpg) center/115%;
+}
+
+.triple_main2 div:nth-of-type(2):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/7DjO-1669259690558-%ED%95%9C%EC%8B%9C%EC%9A%B8.jpg) center/115%;
+}
+
+.triple_main2 div:nth-of-type(3):hover:after {
+    background: url(https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/r9a3-1653530958733-mildam40_thumbnail.jpg) center/115%;
 }
 
 /* ////////////////////////////////////////////event 전체////////////////////////////////////////////////////////////// */
@@ -709,12 +739,16 @@ main {
 /* ===================hover===================================== */
 /* hover 공통 */
 .event_img1 div:nth-of-type(1):hover::after,
-.event_img2 div:nth-of-type(2):hover::after,
 .event_img3 div:nth-of-type(1):hover::after {
-    animation: left 1.2s;
-    opacity: 1;
+    animation: left 1s;
     z-index: -1;
 }
+
+.event_img2 div:nth-of-type(2):hover::after {
+    animation: right 1s;
+    z-index: -1;
+}
+
 
 .event_img1 div:nth-of-type(1):hover+div,
 .event_img3 div:nth-of-type(1):hover+div {
@@ -788,7 +822,25 @@ main {
 @keyframes left {
     0% {
         transform: translate3D(0, 0, 0);
-        opacity: 0;
+        width: 800px;
+        margin-right: 400px;
+        opacity: .5;
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 1;
+        width: 1200px;
+    }
+
+}
+
+@keyframes right {
+    0% {
+        transform: translate3D(0, 0, 0);
+        width: 800px;
+        margin-left: 400px;
+        opacity: .5;
     }
 
     to {
@@ -797,6 +849,7 @@ main {
     }
 
 }
+
 
 /* =============================================== 인트로보드 ============================================ */
 /* --------------------------- 상품후기, 공지사항 공통 --------------------------- */
