@@ -359,6 +359,11 @@ header {
     width: 100%;
 }
 
+.sortList a:hover {
+    background-color: #333;
+    color: white;
+}
+
 .sortList:last-child {
     margin-bottom: 15px;
 }
@@ -436,7 +441,7 @@ div[class="img"]>img {
     margin-left: 10px;
 }
 
-.txt_blue {
+.txt_bold {
     font-weight: bold;
 }
 

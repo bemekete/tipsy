@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품목록페이지 | Tipsy - 다양한 술이 있는 곳</title>
     <link rel="stylesheet" href="./css/mainPage.css">
+    <script defer src="./javascript/mainPage.js"></script>
 </head>
 
 <body>
@@ -54,14 +55,12 @@
 
                 </ul>
                 <div class="mainSearch">
-                    <a href="#">
-                        <form action="../searchpage/searchpage.html">
-                            <input type="search" name="mainSearch" placeholder="검색">
-                            <button type="submit">
-                                <img src="./image/search.png" alt="검색">
-                            </button>
-                        </form>
-                    </a>
+                    <form action="../searchpage/searchpage.html">
+                        <input type="search" name="mainSearch" placeholder="검색">
+                        <button type="submit">
+                            <img src="./image/search.png" alt="검색">
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -119,11 +118,11 @@
                 <p class="pageTit">안주</p>
                 <div class="listStyle1" id="prod_schview">
                     <div class="listInfo1">
-                        <p class="listLeng"> 총 <b>25</b>개의 상품이 있습니다</p>
+                        <p class="listLeng"></p>
                         <ul class="listSort">
-                            <li><a href="#">인기순</a></li>
+                            <li><a class="txt_bold" href="#">인기순</a></li>
                             <li><a href="#">등록순</a></li>
-                            <li><span class="txt_blue">"시리즈순"</span></li>
+                            <li><a href="#">시리즈순</a></li>
                         </ul>
                     </div>
                     <input type="checkbox" id="expand_input">
