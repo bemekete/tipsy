@@ -34,3 +34,19 @@ const listLeng = document.querySelector('.listLeng'),
 
 listLeng.innerHTML = `<p>총 <b>${price.length}</b>개의 상품이 있습니다.</p>`
 
+// 왼쪽 네비게이션바 초기화 버튼
+const sortFilter = document.querySelector('.sortFilter'),
+      sortFilter_btn = sortFilter.querySelector('a');
+const allA = sortListCon.getElementsByTagName('a');
+
+sortFilter.addEventListener('click', function (e) {
+      let eventTarget = e.target.closest('a');
+      if (this.contains(eventTarget)) {
+            for (let i = 0; i < allA.length; i++) {
+                  allA[i].style.backgroundColor = '#f9f9f9';
+                  allA[i].style.color = 'black';
+            }
+      }
+})
+
+
