@@ -241,6 +241,7 @@ header {
 .mainSearch form {
     display: flex;
     align-items: center;
+    height: 30px;
 }
 
 .mainSearch form input {
@@ -498,6 +499,10 @@ td {
 .foot_list3>li:nth-of-type(n+2),
 .foot_list4>li:nth-of-type(n+2) {
     margin-left: 20px;
+}
+
+.foot_list3 a:hover {
+    color: #115c91b7;
 }
 
 .top_margin_6 {
