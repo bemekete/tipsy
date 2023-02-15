@@ -192,10 +192,6 @@ header {
     margin-bottom: 50px;
 }
 
-.headertop_cover {
-    background-color: rgba(223, 223, 223, 0.4);
-}
-
 .headerTop {
     height: 70px;
     padding: 0 10px 0 10px;
@@ -220,7 +216,7 @@ header {
 .mainLogo {
     width: 150px;
     text-indent: -9999em;
-    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    background: url(../../image/crop_logo_black.png) no-repeat 0/100%;
     margin-left: 15px;
 }
 

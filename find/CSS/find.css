@@ -44,6 +44,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .find_logo_div {
@@ -91,6 +92,7 @@ main {
 .form_container .form_tit {
     margin: 0 0 20px 0;
     text-align: left;
+    font-weight: bold;
 }
 
 .form_list {
@@ -154,6 +156,7 @@ input[type="number"] {
     background: #ccc;
     text-align: center;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .btnList {
@@ -175,10 +178,6 @@ input[type="number"] {
 header {
     /* height: 120px; */
     margin-bottom: 50px;
-}
-
-.headertop_cover {
-    background-color: rgba(223, 223, 223, 0.4);
 }
 
 .headerTop {
@@ -205,7 +204,7 @@ header {
 .mainLogo {
     width: 150px;
     text-indent: -9999em;
-    background: url(../image/crop_logo_black.png) no-repeat 0/100%;
+    background: url(../../image/crop_logo_black.png) no-repeat 0/100%;
     margin-left: 15px;
 }
 
@@ -329,6 +328,7 @@ header {
     box-sizing: border-box;
     width: 90%;
     border: none;
+    outline: none;
 }
 
 .mainSearch button {
