@@ -241,7 +241,6 @@ header {
 .mainSearch form {
     display: flex;
     align-items: center;
-    height: 30px;
 }
 
 .mainSearch form input {
@@ -349,6 +348,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+
+    margin: 12.5px;
 }
 
 .alert {
@@ -359,16 +360,16 @@ header {
     background-image: url(../image/noun-event-1430234.png);
 }
 
-.review {
-    background-image: url(../image/noun-review-4999525.png);
+.map {
+    background-image: url(../image/noun-map-5511510.png);
 }
 
 .Simpleinquiry {
     background-image: url(../image/pen.svg);
 }
 
-.shipmentQnA {
-    background-image: url(../image/noun-shipment-1540091.png);
+.myPage {
+    background-image: url(../image/noun-people-2868663.png);
 }
 
 .FAQ {
@@ -508,10 +509,6 @@ header {
 .foot_list3>li:nth-of-type(n+2),
 .foot_list4>li:nth-of-type(n+2) {
     margin-left: 20px;
-}
-
-.foot_list3 a:hover {
-    color: #115c91b7;
 }
 
 .top_margin_6 {
