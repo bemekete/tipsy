@@ -37,14 +37,12 @@
 
             </ul>
             <div class="mainSearch">
-                <a href="#">
-                    <form action="../searchpage/searchpage.html">
-                        <input type="search" name="mainSearch" placeholder="검색">
-                        <button type="submit">
-                            <img src="./image/search.png" alt="검색">
-                        </button>
-                    </form>
-                </a>
+                <form action="../searchpage/searchpage.html">
+                    <input class="search" type="search" name="mainSearch" placeholder="검색">
+                    <button type="submit">
+                        <img src="./image/search.png" alt="검색">
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -71,13 +69,14 @@
                     <div>
                         <ul>
                             <li>
-                                <label class="hide" for="login_pw">PASSWORD</label>
-                            </li>
-                            <li>
                                 <input class="login_input" type="password" id="login_pw" name="login_pw"
                                     placeholder="비밀번호를 입력하세요." required>
                             </li>
                         </ul>
+                    </div>
+                    <div class="keepIdDiv">
+                        <input id="keepId" type="checkbox">
+                        <label for="keepId">아이디 저장</label>
                     </div>
                     <div>
                         <button class="login_btn">로그인</button>
