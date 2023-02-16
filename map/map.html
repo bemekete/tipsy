@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객센터 | Tipsy - 다양한 술이 있는 곳</title>
-    <link rel="stylesheet" href="./CSS/customerpage.css">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db729b30d6dda229e1b2bd0c9566f4c3"></script>
+    <script defer src="./javascript/map.js"></script>
+    <link rel="stylesheet" href="./CSS/map.css">
 </head>
 
 <body>
-
+    <!-- ============================== header ======================================== -->
     <!-- ======================================================== header ================================================== -->
     <div class="headertop_cover">
 
@@ -21,6 +24,7 @@
                     <li><a href="../login/login.html">로그인</a></li>
                     <li><a href="../join/join.html">회원가입</a></li>
                     <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
+                    <li><a href="../customerpage/customerpage.html">고객지원</a></li>
                 </ul>
             </div>
         </div>
@@ -29,111 +33,103 @@
         <div class="headerMenu">
             <ul class="mainCategoryList">
                 <li class="bannerCategory">
-                    <a href="#"> 카테고리
+                    <a href="#">카테고리
                         <div class="detailCategoryList">
                             <ul>
                                 <li class="drinkhover">
                                     <a href="../mainPage/mainPage_wine.html">주류</a>
+
                                     <ul class="detailCategoryListof">
                                         <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
                                         <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
-                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
-                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a>
+                                        </li>
+                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a>
+                                        </li>
                                         <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                                <li><a href="../mainPage/mainPage_side.html">안주</a></li>
                             </ul>
                         </div>
-
+                    </a>
                 </li>
-                <li><a href="../map/map.html">매장찾기</a></li>
+                <li><a href="#">매장찾기</a></li>
                 <li><a href="../eventboard/eventboard.html">이벤트</a></li>
             </ul>
             <div class="mainSearch">
-                <a href="#">
-                    <form action="../searchpage/searchpage.html">
-                        <input type="search" name="mainSearch" placeholder="검색">
-                        <button type="submit">
-                            <img src="./image/search.png" alt="검색">
-                        </button>
-                    </form>
-                </a>
+                <form action="../searchpage/searchpage.html">
+                    <input type="search" name="mainSearch" placeholder="검색">
+                    <button type="submit">
+                        <img src="../image/search.png" alt="검색">
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- =========================== 고객센터 페이지 main ============================ -->
 
-    <div id="container">
-        <p class="pageTitle">고객지원</p>
-        <div id="contents">
-            <div class="customerBox">
-                <div class="guidement">
-                    <p>
-                        월요일 ~ 금요일: 08:30 ~ 17:30 | 점심시간: 12:00 ~ 13:00 | 주말 및 공휴일 휴무
-                        <br>
-                        <br>
-                        <span>
-                            매주 월, 화요일과 공휴일 다음날은 상담전화가 많아 고객응대가 다소 지연될 수 있습니다. <br>
-                            해당일을 제외하고 연락주시면 더욱 빠른 상담을 받으실 수 있으니 참고 부탁드립니다.
-                        </span>
-                        <br>
-                        <br>
-                        <span>
-                            고객센터 안내
-                            <span>1800-9977</span>
-                        </span>
-                    </p>
-                    <dl><a href="#" target="_blank">
-                            <dd><img src="" alt=""></dd>
-                            <dd>카카오톡 상담</dd>
-                        </a></dl>
+    <!-- ======================================= map ====================================== -->
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="mapWrap">
+        <div class="mapContainer">
+            <div>
+                <div class="directions">
+                    <h1>찾아오시는길</h1>
+                </div>
+                <div id="map"></div>
+                <div class="address_information">
+                    <div class="address_phone">
+                        <div>
+                            <img src="./image/map-location-dot-solid.svg" alt="">
+                        </div>
+                        <div class="address_text">
+                            <p>ADDRESS</p>
+                            <p>경기도 성남시 분당구 돌마로 47 5층</p>
+                        </div>
+                    </div>
+                    <div class="address_phone">
+                        <div>
+                            <img src="./image/phone-solid.svg" alt="">
+                        </div>
+                        <div class="address_text">
+                            <p>TEL</p>
+                            <p>031-712-7447</p>
+                        </div>
+                    </div>
+                    <div class="address_phone">
+                        <div>
+                            <img src="./image/fax-solid.svg" alt="">
+                        </div>
+                        <div class="address_text">
+                            <p>FAX</p>
+                            <p>031-711-8448</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="customerMenu">
-                <ul>
-                    <li class="menu1">
-                        <a href="../notice/notice.html">
-                            <span class="menuicon alert"></span>
-                            <span>공지사항</span>
-                        </a>
-                    </li>
-                    <li class="menu2">
-                        <a href="../eventboard/eventboard.html">
-                            <span class="menuicon event"></span>
-                            <span>이벤트</span>
-                        </a>
-                    </li>
-                    <li class="menu3">
-                        <a href="#">
-                            <span class="menuicon map"></span>
-                            <span>매장찾기</span>
-                        </a>
-                    </li>
-                    <li class="menu4">
-                        <a href="../myPage/myPage.html">
-                            <span class="menuicon myPage"></span>
-                            <span>마이페이지</span>
-                        </a>
-                    </li>
-                    <li class="menu5">
-                        <a href="../faq/faq.html">
-                            <span class="menuicon FAQ"></span>
-                            <span>QnA</span>
-                        </a>
-                    </li>
-                    <li class="menu6">
-                        <a href="../simple_inquiry/simple_inquiry.html">
-                            <span class="menuicon2 Simpleinquiry"></span>
-                            <span>간편문의</span>
-                        </a>
-                    </li>
-                </ul>
+            <div class="transportation">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>지하철</th>
+                            <td>신분당, 수인분당 / 미금역 7번출구, 약 100m</td>
+                        </tr>
+                        <tr>
+                            <th>버스</th>
+                            <td>
+                                <p class="bus_tag1">일반</p> 250, 310, 380, 700-2, 720-1 <br>
+                                <p class="bus_tag2">마을</p> 11, 14, 15, 16, 17(미금역-동천역), 32, 5(상현지구대,금호5단지-미금역,2001아울렛),
+                                7(보바스기념병원-서울대병원) <br>
+                                <p class="bus_tag3">직행</p> 1241
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-    <!-- ===================================================================================== -->
+    <!-- ======================================= footer ====================================== -->
     <div id="footer" style="width: 100%;">
         <div class="footer_cover">
             <div>
@@ -144,7 +140,6 @@
                         <strong>070-1111-2222</strong>
                         <p>평일 10:00 - 18:00, 주말휴무</p>
                     </div>
-
                     <div class="FamilySite">
                         <label for="family site" name="family"></label>
 
@@ -158,7 +153,6 @@
                         </select>
                     </div>
                 </div>
-
                 <div class="nf">
                     <div class="foot_margin_top2">수신자 부담전화:</div>
                     <ul class="foot_list1">
@@ -168,7 +162,6 @@
                         <li>032-222-2222</li>
                     </ul>
                 </div>
-
                 <div>
                     <ul class="foot_list2">
                         <li>인터넷 가구전용</li>
@@ -177,7 +170,6 @@
                         <li>032-555-5555</li>
                     </ul>
                 </div>
-
                 <div class="foot_margin_top3">
                     <ul class="sns_src">
                         <li>
@@ -203,21 +195,18 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="foot_margin_top4 foot_logo">
-                    <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
+                    <img src="../image/crop_logo_black2.png" alt="이미지. 로고">
                 </div>
-
                 <div class="foot_margin_top5 ">
                     <ul class="foot_list3">
-                        <li><a href="">제휴/제안 문의</a></li>
-                        <li><a href="">대리점 개설 문의</a></li>
-                        <li><a href="">이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">고객지원</a></li>
+                        <li><a href="#">제휴/제안 문의</a></li>
+                        <li><a href="#">대리점 개설 문의</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="../customerpage/customerpage.html">고객지원</a></li>
                     </ul>
                 </div>
-
                 <div class="top_margin_6">
                     <ul class="foot_list4">
                         <li>상호명: 도르리</li>
@@ -232,9 +221,7 @@
             </div>
         </div>
     </div>
-
     <a href="#" class="topfloatingbar"></a>
-
 </body>
 
 </html>
