@@ -661,20 +661,34 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     border: 1px lightgray solid;
-    padding: 10px 0;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.numofProduct input {
+.optOfProduct,
+.productPrice {
+    padding: 10px 0;
+}
+
+.numofProduct * {
     width: 45%;
+    padding: 10px 0;
+}
+
+.numofProduct div {
+    cursor: pointer;
+}
+
+.numofProduct input {
     height: 100%;
     border: none;
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     text-align: center;
+    outline: none;
+    cursor: default;
 }
 
 .guideofShipment {
@@ -697,6 +711,8 @@ header {
 .productBuy_btn {
     display: flex;
     justify-content: space-evenly;
+
+    position: relative;
 }
 
 .productBuy_btn button {
@@ -709,7 +725,60 @@ header {
     cursor: pointer;
 }
 
+.popupBasket {
+    background-color: white;
+    border: 1.7px solid rgb(194, 194, 194);
+    cursor: default;
 
+    position: absolute;
+    top: calc(100% + 10px);
+
+    display: none;
+}
+
+.popupBasket span {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.popupBasket span:last-child {
+    background-color: white;
+    border: 1.7px solid rgb(194, 194, 194);
+    border-bottom: none;
+    border-right: none;
+
+    bottom: 95%;
+    left: 50px;
+
+    transform: rotate(45deg);
+}
+
+.popupClose {
+    font-size: 12px;
+    top: 5px;
+    right: 5px;
+}
+
+.popupBasketCon {
+    white-space: nowrap;
+    padding: 15px 20px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.popupBasketBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.popupBasketBtn a {
+    border: 1px solid;
+    padding: 7px 10px;
+}
 
 /* ########################/////footer/////##################### */
 /* footer */

@@ -7,6 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>디테일페이지 | Tipsy - 다양한 술이 있는 곳</title>
       <link rel="stylesheet" href="./CSS/detailPage.css">
+      <script defer src="./JS/detail.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <div class="headerMenu">
                   <ul class="mainCategoryList">
                         <li class="bannerCategory">
-                              <a href="../mainPage/mainPage_all.html">카테고리
+                              <a href="../mainPage/mainPage_all.html"> 카테고리
                                     <div class="detailCategoryList">
                                           <ul>
                                                 <li class="drinkhover">
@@ -77,7 +78,7 @@
                                                 <img src="./image/1.jpg" alt="">
                                           </div>
                                           <div class="detail_tit">
-                                                <div class="detail_tit_top opa5">세인트하우스 복숭아 스파클링 와인</div>
+                                                <div class="detail_tit_top opa5"><span>세인트하우스 복숭아 스파클링 와인</span></div>
                                                 <div class="detail_tit_mid opa5">딸기와인 명인이 만든 복숭아 스파클링 와인</div>
                                                 <div class="detail_tit_bot opa5">#통조림 복숭아 같은 달콤한 향 #자두의 새콤한 맛</div>
                                                 <div class="detail_tit_star opa5">
@@ -90,7 +91,7 @@
                                                       <div class="opa5">배송기간: 3일 이내 배송</div>
                                                 </div>
                                                 <div>판매가격:</div>
-                                                <div class="price">23,000원</div>
+                                                <div class="price"><span>23,000</span>원</div>
                                                 <div class="blue opa5">유통기한: 유통기한 없음</div>
                                                 <div class="blue opa5">보관방법: 직사광선을 피해 냉장보관</div>
                                           </div>
@@ -350,7 +351,8 @@
                                                       </div>
                                                       <div class="numofProduct">
                                                             <div class="numfor minus">-</div>
-                                                            <input type="number" pattern="\d*" maxlength="3" value="1">
+                                                            <input type="text" id="pieces" pattern="\d*" value="0"
+                                                                  readonly>
                                                             <div class="numfor plus">+</div>
                                                       </div>
                                                 </div>
@@ -359,7 +361,7 @@
                                                             <label>총 상품가격</label>
                                                       </div>
                                                       <div class="productPrice">
-                                                            0원
+                                                            <span>0</span>원
                                                       </div>
                                                 </div>
                                                 <div class="guideofShipment">
@@ -372,7 +374,22 @@
                                                 <div class="productBuy_btn">
                                                       <button>장바구니</button>
                                                       <button>구매하기</button>
-                                                </div>
+
+                                                      <div class="popupBasket">
+                                                            <div class="popupBasketCon">
+                                                                  <p>
+                                                                        선택하신 상품이 장바구니에 담겼습니다.<br>
+                                                                        장바구니로 이동하시겠습니까?
+                                                                  </p>
+                                                                  <div class="popupBasketBtn">
+                                                                        <a href="#">쇼핑 계속하기</a>
+                                                                        <a href="../shopBasket/shopBasket.html">장바구니
+                                                                              가기</a>
+                                                                  </div>
+                                                            </div>
+                                                            <span class="popupClose">X</span>
+                                                            <span></span>
+                                                      </div>
                                           </form>
                                     </div>
                               </div>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디테일페이지 | Tipsy - 다양한 술이 있는 곳</title>
     <link rel="stylesheet" href="./CSS/detailPage.css">
+    <script defer src="./JS/detail.js"></script>
 </head>
 
 <body>
@@ -76,7 +77,7 @@
                                     alt="">
                             </div>
                             <div class="detail_tit">
-                                <div class="detail_tit_top opa5">한시울 40%</div>
+                                <div class="detail_tit_top opa5"><span>한시울 40%</span></div>
                                 <div class="detail_tit_mid opa5">물 좋기로 소문난 백족산의 지하 암반수로 빚은 증류주</div>
                                 <div class="detail_tit_bot opa5">#누룽지 같은 구수한 풍미 #고도수 증류주를 좋아하신다면</div>
                                 <div class="detail_tit_star opa5">
@@ -89,7 +90,7 @@
                                     <div class="opa5">배송기간: 2일 이내 배송</div>
                                 </div>
                                 <div>판매가격:</div>
-                                <div class="price">21,000원</div>
+                                <div class="price"><span>21,000</span>원</div>
                                 <div class="blue opa5">유통기한: 유통기한 없음</div>
                                 <div class="blue opa5">보관방법: 상온 보관 가능</div>
                             </div>
@@ -361,7 +362,7 @@
                                     </div>
                                     <div class="numofProduct">
                                         <div class="numfor minus">-</div>
-                                        <input type="number" pattern="\d*" maxlength="3" value="1">
+                                        <input type="text" id="pieces" pattern="\d*" value="0" readonly>
                                         <div class="numfor plus">+</div>
                                     </div>
                                 </div>
@@ -370,7 +371,7 @@
                                         <label>총 상품가격</label>
                                     </div>
                                     <div class="productPrice">
-                                        0원
+                                        <span>0</span>원
                                     </div>
                                 </div>
                                 <div class="guideofShipment">
@@ -383,7 +384,21 @@
                                 <div class="productBuy_btn">
                                     <button>장바구니</button>
                                     <button>구매하기</button>
-                                </div>
+
+                                    <div class="popupBasket">
+                                        <div class="popupBasketCon">
+                                            <p>
+                                                선택하신 상품이 장바구니에 담겼습니다.<br>
+                                                장바구니로 이동하시겠습니까?
+                                            </p>
+                                            <div class="popupBasketBtn">
+                                                <a href="#">쇼핑 계속하기</a>
+                                                <a href="../shopBasket/shopBasket.html">장바구니 가기</a>
+                                            </div>
+                                        </div>
+                                        <span class="popupClose">X</span>
+                                        <span></span>
+                                    </div>
                             </form>
                         </div>
                     </div>
