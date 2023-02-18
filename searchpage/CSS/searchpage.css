@@ -330,18 +330,13 @@ header {
     width: 170px;
     padding: 5px 0;
     box-sizing: border-box;
-    background-color: #e3f2fd;
     border: 1px solid lightgray;
 }
 
+/* 
 .searchPageCategories li:hover {
-    background-color: #084875b7;
-}
-
-.searchPageCategories li:hover * {
-    color: white;
-}
-
+    border-width: 2px;
+} */
 
 .searchCategory p {
     color: gray;
@@ -368,23 +363,43 @@ header {
 }
 
 .totalSearch table {
-    width: 100%;
-    margin-top: 10px;
+    border-collapse: collapse;
+    border-right: hidden;
+    border-left: hidden;
+    width: 95%;
+    margin: 10px auto;
 }
 
-.totalSearch thead {
+/* .totalSearch thead {
     height: 40px;
     background-color: #efefef;
+} */
+
+tr,
+td {
+    border: .5px solid rgba(166, 166, 166, 0.7);
+    border-right: none;
+    border-left: none;
 }
 
 .totalSearch tbody td {
-    padding: 10px;
+    /* padding: 10px; */
+    line-height: 50px;
+}
+
+th {
+    border-collapse: collapse;
+    border-bottom: 2px solid rgba(166, 166, 166, 0.7);
+    text-align: center;
+    line-height: 30px;
 }
 
 .totalSearch tbody img {
     width: 80px;
     vertical-align: middle;
+    padding: 10px;
     margin-right: 20px;
+    border-radius: 20px;
 }
 
 .totalSearch tbody td+td {

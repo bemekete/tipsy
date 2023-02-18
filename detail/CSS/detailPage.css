@@ -271,10 +271,14 @@ header {
     width: 1240px;
     box-sizing: border-box;
     margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .leftSide {
-    display: inline-block;
+    /* display: inline-block; */
     box-sizing: border-box;
     width: 70%;
     text-align: center;
@@ -291,9 +295,11 @@ header {
 }
 
 .rightSide {
-    display: inline-block;
+    /* display: inline-block; */
+    margin-top: 25%;
     position: sticky;
-    bottom: 27.5vh;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -641,7 +647,7 @@ header {
     border: 1px solid lightgray;
     border-radius: 30px;
     /* padding: 30px 10px; */
-    margin-left: 60px;
+    /* margin-left: 60px; */
     font-size: 14px;
     display: flex;
     justify-content: center;
