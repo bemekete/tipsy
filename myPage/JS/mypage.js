@@ -1,4 +1,5 @@
-const category = document.querySelector('.category'),
+const profileBox = document.querySelector('.profileBox'),
+    category = document.querySelector('.category'),
     categoryList = category.querySelector('.categoryList'),
     listContents = category.querySelector('.listContents');
 
@@ -12,19 +13,37 @@ const contentsImg = [
     './image/noun-style-4384241.png',
 ]
 
-let beforelist = categoryList.children[0];
+let beforelist = categoryList.children[0], nowPage,
+    i = 0;
+
+function changePage() {
+    beforelist.classList.remove('nowpage');
+    nowPage.classList.add('nowpage');
+    beforelist = nowPage;
+
+    for (let j = 0; j < categoryList.children.length; j++) {
+        if (nowPage === categoryList.children[j]) {
+            listContents.querySelector('img').src = `${contentsImg[j]}`
+        }
+    }
+    listContents.querySelector('span').innerText = nowPage.innerText;
+}
 
 categoryList.addEventListener('click', (e) => {
     const list = e.target.closest('LI');
+    nowPage = list;
 
-    beforelist.classList.remove('nowpage');
-    list.classList.add('nowpage');
-    beforelist = list;
+    changePage();
+})
 
-    for (let i = 0; i < categoryList.children.length; i++) {
-        if (list === categoryList.children[i]) {
-            listContents.querySelector('img').src = `${contentsImg[i]}`
-        }
+profileBox.addEventListener('click', (e) => {
+    const part = e.target.closest('A');
+    switch (part.parentNode.className) {
+        case 'profile part2': i = 1; break;
+        case 'profile part3': i = 2; break;
+        case 'profile part4': i = 6; break;
     }
-    listContents.querySelector('span').innerText = list.innerText;
+    nowPage = categoryList.children[i];
+
+    changePage();
 })
