@@ -334,54 +334,79 @@ header {
 table {
     width: 100%;
     border-collapse: collapse;
-}
-
-thead {
-    height: 50px;
-    background-color: #efefef;
-}
-
-tr {
-    height: 45px;
-}
-
-th,
-td {
-    border-bottom: 1px solid silver;
-}
-
-th {
-    font-weight: 600;
     font-size: smaller;
 }
 
-td {
-    text-align: start;
+thead {
+    background-color: #efefef;
+}
+
+thead th {
+    display: grid;
+    grid-template: 1fr / 2.5fr 7.5fr;
+    height: 50px;
+}
+
+thead div {
+    line-height: 50px;
+}
+
+tr {
+    border-bottom: 1px solid silver;
     position: relative;
 }
 
-
-col:nth-child(1) {
-    width: 20%;
+td{
+    text-align: start;
 }
 
-col:nth-child(2) {
+tbody tr {
+    height: 45px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas:
+        "a b"
+        ". c";
+}
+
+tbody th {
+    height: 45px;
+    line-height: 45px;
+    grid-area: a;
+}
+
+tbody tr td:nth-of-type(1) {
+    grid-area: b;
+}
+
+tbody tr td:nth-of-type(2) {
+    grid-area: c;
+
     width: 80%;
+    white-space: pre-line;
+    padding-bottom: 30px;
+    transition: all .5s;
 }
 
-tbody tr td button {
+tbody button {
+    height: 45px;
     border: none;
     background: none;
-    padding-left: 100px;
-
 }
 
-tbody tr td button img {
+tbody button img {
     height: 15px;
     vertical-align: middle;
 
     position: absolute;
     right: 10%;
+
+    transition: .3s;
+}
+
+.active {
+    height: auto;
 }
 
 /* <-1,2,3-> */
