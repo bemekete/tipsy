@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서 작성</title>
+
+    <link rel="stylesheet" href="./createOrder.css">
+</head>
+
+<body>
+    <!-- ============================== header ======================================== -->
+    <!-- ======================================================== header ================================================== -->
+    <div class="headertop_cover">
+
+        <div class="headerTop">
+            <a href="../index.html" class="mainLogo">tipsy</a>
+            <div class="serviceTab">
+                <ul class="serviceTabList">
+                    <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../join/join.html">회원가입</a></li>
+                    <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
+                    <li><a href="../customerpage/customerpage.html">고객지원</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_cover">
+        <div class="headerMenu">
+            <ul class="mainCategoryList">
+                <li class="bannerCategory">
+                    <a href="#">카테고리
+                        <div class="detailCategoryList">
+                            <ul>
+                                <li class="drinkhover">
+                                    <a href="./mainPage/mainPage_wine.html">주류</a>
+
+                                    <ul class="detailCategoryListof">
+                                        <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
+                                        <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
+                                        <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
+                                        <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
+                                        <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../mainPage/mainPage_side.html">안주</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="../searchpage/searchpage.html">매장찾기</a></li>
+                <li><a href="../eventboard/eventboard.html">이벤트</a></li>
+            </ul>
+            <div class="mainSearch">
+                <a href="#">
+                    <form action="./searchpage/searchpage.html">
+                        <input type="search" name="mainSearch" placeholder="검색">
+                        <button type="submit">
+                            <img src="./image/search.png" alt="검색">
+                        </button>
+                    </form>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ####################################### main ########################################## -->
+    <div id="main">
+        <!-- 맨 밖 선 -->
+        <div class="main_container">
+            <div class="mainTitle">주문 / 결제</div>
+
+            <form action="../index.html">
+                <div class="form_container main_marginTop20">
+                    <!-- Box -->
+                    <div class="box_container">
+                        <!-- 배송지 -->
+                        <div>
+                            <div class="main_bold">배송지</div>
+
+                            <div class="main_marginTop20">
+                                <div>홍길동</div>
+
+                                <div>010-1111-2222</div>
+
+                                <div class="main_marginTop20">
+                                    <span>경기 성남시 분당구 돌마로 47</span>
+                                    <span>5층 504호</span>
+                                </div>
+                            </div>
+
+                            <div class="defaultAddress main_marginTop20">기본 배송지</div>
+                        </div>
+
+                        <!-- 주문 예정 상품 -->
+                        <div>
+                            <div class="main_bold">주문 예정 상품</div>
+                            <div class="product_container main_marginTop20">
+                                <img src="https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/thumbnail/fWO1-1668403134296-1Z7A1584.jpg"
+                                    alt="막쿠르트img">
+                                <div class="product_text">
+                                    <div>막쿠르트</div>
+
+                                    <div>
+                                        <div class="main_bold">[ONLY 도르리] 막쿠르트[2...</div>
+                                        <div>[450ml X 2병] 막쿠르트</div>
+                                    </div>
+
+                                    <div class="price_text">
+                                        <span>13,000원 /</span>
+                                        <span>수량 1개</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_textAlign main_marginTop20 productHeight proHr1">3,000원</div>
+                            <div class="mainFlex productHeight proHr2">
+                                <div>주문 총액</div>
+                                <div>16,000원</div>
+                            </div>
+                        </div>
+
+                        <!-- 쿠폰, 포인트 -->
+                        <div>
+                            <div class="main_bold">쿠폰 / 포인트</div>
+
+                            <div class="mainFlex main_marginTop20">
+                                <div>쿠폰 입력</div>
+                                <div>
+                                    <input type="text" name="couponCode" size="25" placeholder="쿠폰 코드를 입력해주세요" class="main_input">
+                                    <button type="submit" class="couponBtn">등록</button>
+                                </div>
+                            </div>
+
+                            <div class="mainFlex couponHeight main_marginTop10">
+                                <div>쿠폰 선택</div>
+                                <div class="mainFlex flexGap">
+                                    <div>5개</div>
+                                    <img src="./image/down.svg" alt="접기 img" class="main_down">
+                                </div>
+                            </div>
+
+                            <div class="mainFlexAll main_btn couponclickBtn main_marginTop10">
+                                <div>
+                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <button type="button"></button>
+                                </div>
+                                <div>
+                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <button type="button"></button>
+                                </div>
+                                <div>
+                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <button type="button"></button>
+                                </div>
+                                <div>
+                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <button type="button"></button>
+                                </div>
+                            </div>
+
+                            <div class="mainFlex main_marginTop20">
+                                <div>포인트</div>
+                                <input type="text" name="points" size="35" placeholder="사용 할 포인트를 입력해 주세요" class="main_input">
+                            </div>
+
+                            <div class="pointAll main_marginTop10">
+                                <button type="button"></button>
+                                <div>전액 사용</div>
+                            </div>
+
+                            <div class="main_textAlign usePoint main_marginTop10 pointColor">
+                                <!-- &nbsp; pointAll이랑 묶을려고 공백 안주고 gap줌 -->
+                                <div>사용 가능한 포인트 :</div>
+                                <!-- js -->
+                                <div>2,000p</div>
+                            </div>
+                        </div>
+
+                        <!-- 결제 방법 -->
+                        <div class="main_bold">
+                            <div>결제 방법</div>
+
+                            <div class="paymentMethod main_marginTop20">
+                                <!-- click event -->
+                                <div>신용카드</div>
+                                <div>가상계좌</div>
+                                <div class="kakaoPay">카카오페이</div>
+                                <div class="naverPay">네이버페이</div>
+                            </div>
+                        </div>
+
+                        <!-- 계산서 -->
+                        <div>
+                            <div class="main_bold">계산서</div>
+
+                            <div class="mainFlexAll bill">
+                                <!-- js -->
+                                <div>
+                                    <div>결제방법</div>
+                                    <div>카카오페이</div>
+                                </div>
+                                <div>
+                                    <div>총 상품금액</div>
+                                    <div>13,000원</div>
+                                </div>
+                                <div>
+                                    <div>총 배송비</div>
+                                    <div>3,000원</div>
+                                </div>
+                                <div>
+                                    <div>포인트 사용</div>
+                                    <div>0원</div>
+                                </div>
+                                <div>
+                                    <div>쿠폰</div>
+                                    <div>[신규가입] 1만원 이상 10% 할인 쿠폰</div>
+                                </div>
+                                <div>
+                                    <div>총 할인</div>
+                                    <div>-1,300</div>
+                                </div>
+                            </div>
+
+                            <div class="mainFlex main_bold totalPaymentMoney">
+                                <div>총 결제 금액</div>
+                                <div>16,000원</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 이용 동의 -->
+                    <div>
+                        <div class="agreeUse">
+                            <input type="checkbox" name="agree_use" id="agree_use" value="agree_use" required>
+                            <label for="agree_use" class="information_agree">
+                                <div>
+                                    <span>구매자의 정보수집, 이용</span>
+                                    <span>(필수)</span>
+                                </div>
+                                <img src="./image/down.svg" alt="접기 이미지" class="main_down">
+                            </label>
+                        </div>
+
+                        <p class="agreeText">
+                            <b>개인정보 판매자 제공에 동의합니다.</b>
+
+                            제공받는 자 : “양조장”
+                            목적 : 판매자와 구매자 사이의 원활한 거래 진행, 상품의 배송을 위한
+                            배송지 확인, 고객상담 및 불만처리 등명
+                            정보 : 구매자 정보 (이름, 전화번호, 주소),
+                            수취인 정보(이름, 전화번호, 주소)
+                            보유기간 : 발송완료 후 90일
+
+                            <b>전통주 구매자의 정보수집·이용에 동의합니다.</b>
+
+                            제공받는 자 : 관할 세무서장
+                            목적 : 주류 통신판매기록부 관리 및 국세청 신고
+                            정보 : 구매자 정보 (이름, 주소, 생년월일(본인인증 정보를 이용함),
+                            주문상품, 수량, 주문금액)
+                            보유기간 : 회원 탈퇴 시까지
+                            단, 관계법령의 규정에 따라 보존할 의무가 있으며 해당 기간동안 보존
+
+                            <span class="agree_red">※ 동의하지 않으실 경우 구매가 제한됩니다.</span>
+                        </p>
+                    </div>
+
+                    <!-- 버튼 -->
+                    <div class="submitBtn">
+                        <!-- js -->
+                        <button type="submit">16,000원 결제하기</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ###################################### footer ########################################## -->
+    <div id="footer" style="width: 100%;">
+        <div class="footer_cover">
+            <div>
+                <!-- 고객센터 -->
+                <div class="CustomerService">
+                    <div class="foot_margin_top1">
+                        <span>고객센터</span>
+                        <strong>070-1111-2222</strong>
+                        <p>평일 10:00 - 18:00, 주말휴무</p>
+                    </div>
+
+                    <div class="FamilySite">
+                        <label for="family site" name="family"></label>
+
+                        <select name="family" id="family site">
+                            <option value="FAMILY SITE">FAMILY SITE</option>
+                            <option value="술칭구">술칭구</option>
+                            <option value="칭구칭구">칭구칭구</option>
+                            <option value="호이호이">호이호이</option>
+                            <option value="뇸뇸뇸">뇸뇸뇸</option>
+                            <option value="마지막 칭구">마지막 칭구</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="nf">
+                    <div class="foot_margin_top2">수신자 부담전화:</div>
+                    <ul class="foot_list1">
+                        <li>대리점 가구전용</li>
+                        <li>080-666-6666</li>
+                        <li>인천 본사전시장</li>
+                        <li>032-222-2222</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="foot_list2">
+                        <li>인터넷 가구전용</li>
+                        <li>080-444-4444</li>
+                        <li>대리점 개설문화</li>
+                        <li>032-555-5555</li>
+                    </ul>
+                </div>
+
+                <div class="foot_margin_top3">
+                    <ul class="sns_src">
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank">인스타그램
+                                <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com" target="_blank">유튜브
+                                <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank">페이스북
+                                <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank">트위터
+                                <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="foot_margin_top4 foot_logo">
+                    <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
+                </div>
+
+                <div class="foot_margin_top5 ">
+                    <ul class="foot_list3">
+                        <li><a href="#">제휴/제안 문의</a></li>
+                        <li><a href="#">대리점 개설 문의</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="../customerpage/customerpage.html">고객지원</a></li>
+                    </ul>
+                </div>
+
+                <div class="top_margin_6">
+                    <ul class="foot_list4">
+                        <li>상호명: 도르리</li>
+                        <li>대표: 이현배황</li>
+                        <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                        <li>이메일:
+                            <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+                        </li>
+                        <li>사업자등록번호: 100-21-12345</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="topfloatingbar"></a>
+</body>
+
+</html>
