@@ -236,7 +236,7 @@ header {
 /* ########################## main ################################ */
 .location {
     text-align: right;
-    margin: 20px 15px;
+    margin: 20px 0 20px 0;
 }
 
 .location span {
@@ -246,7 +246,7 @@ header {
 
 .order_tit {
     line-height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     width: 100%;
     position: relative;
 }
@@ -293,7 +293,7 @@ hr {
 
 
 .main_container {
-    width: 80%;
+    width: 1200px;
     /* min-width: 500px; */
     margin: auto;
     /* border: solid 1px; */
