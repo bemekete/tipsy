@@ -233,7 +233,6 @@ header {
     height: 100%;
     display: flex;
     background-color: #f7f7f7;
-    border-radius: 5px;
 }
 
 .mainSearch form {
@@ -294,10 +293,11 @@ input[type="checkbox"] {
     right: 0;
 }
 
-.order_tit li{
+.order_tit li {
     font-weight: bold;
 }
-.order_tit li:not(:nth-of-type(1)){
+
+.order_tit li:not(:nth-of-type(1)) {
     opacity: 0.4;
 }
 
@@ -315,7 +315,6 @@ hr {
     background: rgb(166, 166, 166);
     height: 4px;
     margin-bottom: 20px;
-    border-radius: 10%/10%;
 }
 
 /* //////////////////////////////////////////////////////장바구니 메인///////////////////////////////////////////////// */
@@ -331,7 +330,7 @@ hr {
 
 tr,
 td {
-    border: .5px solid rgba(166, 166, 166, 0.7);
+    border: 1px solid rgba(166, 166, 166, 0.7);
 }
 
 .cart_count_list tbody td {
@@ -371,7 +370,6 @@ tbody td:nth-of-type(2) img {
     vertical-align: middle;
     padding: 10px;
     margin-right: 20px;
-    border-radius: 20px;
 }
 
 tbody td:nth-of-type(2) {
@@ -547,7 +545,6 @@ tbody td:nth-of-type(2) {
 
 .pro_thumbnail {
     max-width: 100%;
-    border-radius: 5px;
 }
 
 /* //////////////////////////////////////상품 수량 변경/////////////////////////////////// */
@@ -577,8 +574,8 @@ tbody td:nth-of-type(2) {
 
 /* ===================================상품 수량 변경 레이어================================ */
 .goods_count_box {
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 500px;
 
     box-sizing: border-box;
     padding: 30px;
@@ -591,47 +588,110 @@ tbody td:nth-of-type(2) {
     transform: translate(-50%, -50%);
 }
 
+.goods_count_box>div{
+    height: 100%;
+}
+
+.goods_count_box p {
+    position: relative;
+    padding: 5px;
+}
+
 .overviewRemover img {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     opacity: 0.7;
 }
 
 .overviewRemover {
     position: absolute;
     left: 100%;
-    top: 0%;
-    transform: translate(-250%, 50%);
+    transform: translateX(-100%);
     cursor: pointer;
 }
 
+/* ===================수량 변경 창 메인 컨테이너==================*/
+/* 메인 컨테이너 테두리 */
+.count_box_main {
+    min-height: 80%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.option_tit {
+    padding-top: 10px;
+}
+
+.option_tit dd {
+    height: 20px;
+}
 
 /* ==========================이미지========================= */
-.count_box_main dl{
+
+
+.count_box_main dl {
     width: 100%;
     /* align-content: center; */
     overflow: hidden;
 }
-.count_box_main img{
+
+.count_box_main img {
     width: 80px;
     height: 100px;
 
     padding: 10px;
-    border-radius: 20px;
 }
 
-/* .count_box_main dt{
+.count_box_main>div>dl>dt {
     float: left;
     clear: left;
 
-} */
+}
 
-.count_box_main dd{
+.count_box_main dd {
     width: 100%;
-    margin-left: 130px;
-    border-bottom: 1px solid black;
+    margin-left: 100px;
+    border-bottom: 1px solid rgba(166, 166, 166, 0.7);
+    
     padding: 10px;
 }
+
+.count_button_box button {
+    width: 50px;
+    height: 30px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateY(-150%);
+
+    cursor: pointer;
+}
+
+.count_button_box button:nth-of-type(1) {
+    transform: translate(-112.5%, -150%);
+
+}
+
+.count_button_box button:nth-of-type(2) {
+
+    transform: translate(12.5%, -150%);
+    background-color: black;
+    color: white;
+}
+/* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
+
+.no_data{
+    width: 100%;
+    line-height: 250px;
+
+    text-align: center;
+
+    border-bottom: .5px solid rgba(166, 166, 166, 0.7);
+    margin-bottom: 20px;
+}
+
 
 
 /* ########################/////footer/////##################### */
