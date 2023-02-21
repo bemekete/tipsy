@@ -335,10 +335,21 @@ hr {
     text-align: right;
 }
 
+/* 기본값 */
 .main_down {
     width: 20px;
     height: 40px;
     opacity: .3;
+}
+
+/* js로 click시 추가 */
+.main_up {
+    transform: rotate(180deg);
+}
+
+.main_down,
+.main_up {
+    cursor: pointer;
 }
 
 
@@ -357,6 +368,11 @@ hr {
 
 .mainHr {
     border-bottom: solid 1px rgb(92, 91, 91);
+}
+
+/* 기본값 */
+.main_none {
+    display: none;
 }
 
 
