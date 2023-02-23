@@ -409,6 +409,10 @@ tbody button img {
     height: auto;
 }
 
+.rotate {
+    transform: rotateX(180deg);
+}
+
 /* <-1,2,3-> */
 
 .notice_page_button {
