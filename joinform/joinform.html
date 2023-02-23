@@ -69,7 +69,7 @@
         <div class="container">
             <p class="pageTitle">회원가입</p>
             <div class="contents">
-                <form action="../login/login.html" class="joinbox" onsubmit="return join_check();">
+                <form action="../login/login.html" class="joinbox">
                     <p><span>*</span> 필수 입력 사항</p>
                     <figure>
                         <table>
@@ -165,7 +165,7 @@
                         </table>
                     </figure>
                     <div class="joinButton">
-                        <button type="submit">회원가입</button>
+                        <button type="button" onclick="join_check();">회원가입</button>
                     </div>
                 </form>
             </div>
