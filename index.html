@@ -78,41 +78,21 @@
 
     <!-- ============================== main ======================================== -->
     <main>
-        <div class="slidebox">
-            <input type="radio" name="slide" id="slide01" checked>
-            <input type="radio" name="slide" id="slide02">
-            <input type="radio" name="slide" id="slide03">
-            <input type="radio" name="slide" id="slide04">
-            <ul class="slidelist">
-                <li class="slideitem">
-                    <div>
-                        <label for="slide04" class="left"></label>
-                        <label for="slide02" class="right"></label>
-                        <a href="./detail/detail_saint.html"><img src="./image/slide4.png" alt="slide1"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide01" class="left"></label>
-                        <label for="slide03" class="right"></label>
-                        <a href="./detail/detail_saint.html"><img src="./image/slide1.png" alt="slide1"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide02" class="left"></label>
-                        <label for="slide04" class="right"></label>
-                        <a href="./detail/detail_saint.html"><img src="./image/slide2.png" alt="slide1"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide03" class="left"></label>
-                        <label for="slide01" class="right"></label>
-                        <a href="./detail/detail_saint.html"><img src="./image/slide3.png" alt="slide1"></a>
-                    </div>
-                </li>
+        <div class="main_container">
+            <ul class="slide_list">
+              <li><img src="./image/slide1.png" alt="bg1"></li>
+              <li><img src="./image/slide2.png" alt="bg2"></li>
+              <li><img src="./image/slide3.png" alt="bg3"></li>
+              <li><img src="./image/slide4.png" alt="bg4"></li>
             </ul>
+        
+            <a class="btn_back" data-direction="-1" href="#">
+              <img src="./image/angle-left-solid.svg" alt="back_img">
+            </a>
+            <a class="btn_foward" data-direction="1" href="#">
+              <img src="./image/angle-right-solid.svg" alt="foward_img">
+            </a>
+            <div class="pager"></div>
         </div>
         <div class="wrap_triple">
             <div class="triple_tit">
@@ -266,6 +246,7 @@
                 </div>
             </div>
         </div>
+        <a href="#" class="topfloatingbar"></a>
     </main>
     <!-- ////////////////////////////////// 혜택 ///////////////////////////////////// -->
     <!-- <div class="intro_ad">

@@ -231,239 +231,91 @@ header {
 }
 
 /* ////////////////////////////////// 슬라이드쇼 ////////////////////////////////////// */
-ul,
-li {
-    list-style: none;
-}
-
-main {
-    margin: 30px 0 150px 0;
-}
-
-[name="slide"] {
-    display: none;
-}
-
-.slidebox {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.slidebox img {
+.main_container {
     width: 1200px;
-}
+    height: 400px;
+    margin: 10px auto 0 auto;
 
-.slidebox .slidelist {
-    white-space: nowrap;
-    font-size: 0;
-    overflow: hidden;
-}
-
-.slidebox .slideitem {
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    transition: all .35s;
 }
 
+.slide_list {
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
 
-/* 페이징 스타일 */
-.paginglist {
-    text-align: center;
-    padding: 30px 0;
+    display: flex;
+    position: relative;
 }
 
-.paginglist>li {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
+.slide_list li {
+    position: absolute;
+    left: 100%;
+}   
+
+.slide_list img {
+    width: 1200px;
+    height: 400px;
 }
 
-.paginglist>li>label {
-    display: block;
-    padding: 10px 30px;
-    border-radius: 10px;
-    background: #ccc;
+.main_container>a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main_container a img {
+    width: 50px;
+    height: 50px;
+    opacity: .3;
+    transition: .3s;
+}
+
+.main_container a img:hover {
+    opacity: 1;
+}
+
+.btn_back {
+    left: 0;
+}
+
+.btn_foward {
+    right: 0;
+}
+
+.pager {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: -1%;
+    transform: translateX(-50%);
+}
+
+.pager a {
+    /* width: 292.5px; */
+    width: 300px;
+    height: 4px;
+    background-color: gray;
+    opacity: .3;
     cursor: pointer;
+    transition:all .5s ease-in-out;
 }
 
-.paginglist>li:hover>label {
-    background: #333;
+p {
+    margin-top: 20px;
 }
 
-[id="slide01"]:checked~.slidelist .slideitem {
-    transform: translateX(0);
-    animation: slide01 10s infinite;
+.nonVisible {
+    visibility: hidden;
 }
 
-[id="slide02"]:checked~.slidelist .slideitem {
-    transform: translateX(-100%);
-    animation: slide02 10s infinite;
+.pager .nowPage {
+    opacity: 1;
+    cursor: default;
 }
 
-[id="slide03"]:checked~.slidelist .slideitem {
-    transform: translateX(-200%);
-    animation: slide03 10s infinite;
-}
-
-[id="slide04"]:checked~.slidelist .slideitem {
-    transform: translateX(-300%);
-    animation: slide04 10s infinite;
-}
-
-@keyframes slide01 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    73% {
-        left: -200%;
-    }
-
-    75% {
-        left: -300%;
-    }
-
-    98% {
-        left: -300%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-@keyframes slide02 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    73% {
-        left: -200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-@keyframes slide03 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    48% {
-        left: -100%;
-    }
-
-    50% {
-        left: 200%;
-    }
-
-    73% {
-        left: 200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
-}
-
-@keyframes slide04 {
-    0% {
-        left: 0%;
-    }
-
-    23% {
-        left: 0%;
-    }
-
-    25% {
-        left: 300%;
-    }
-
-    48% {
-        left: 300%;
-    }
-
-    50% {
-        left: 200%;
-    }
-
-    73% {
-        left: 200%;
-    }
-
-    75% {
-        left: 100%;
-    }
-
-    98% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    }
+.anime {
+    transition:all .5s ease-in-out;
 }
 
 /* //////////////////////////////////이미지 헤더////////////////////////////////////// */
