@@ -34,7 +34,7 @@ let idx = 0,
 let autoslide;
 
 let beforeTime = -new Date();
-let delayTime = 2000;
+let delayTime = 1000;
 
 // 페이지 태그
 for (let i = 0; i < slideList.children.length; i++) {
