@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     font-family: 'NEXON Lv2 Gothic';
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -46,6 +47,9 @@ a {
     position: fixed;
     bottom: 30px;
     right: 30px;
+
+    visibility: hidden;
+    transition: 0.5s;
 }
 
 /* ====================header 공통==================== */

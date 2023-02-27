@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     font-family: 'NEXON Lv2 Gothic';
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -32,6 +33,23 @@ a {
     text-decoration: none;
     outline: none;
 }
+/* /////// 탑플로팅바 //////// */
+.topfloatingbar {
+    width: 45px;
+    height: 45px;
+    background: url(../image/rightscroller.png) center/80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    opacity: 0.3;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    visibility: hidden;
+    transition: 0.5s;
+}
+
 
 /* ================================================================ find ================================================================ */
 
