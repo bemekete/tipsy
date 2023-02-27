@@ -55,15 +55,14 @@ a {
 /* ================================================================ find ================================================================ */
 
 main {
-    height: 100vh;
     text-align: center;
 }
 
 #find_container {
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .find_logo_div {
