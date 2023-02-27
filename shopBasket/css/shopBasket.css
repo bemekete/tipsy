@@ -641,11 +641,30 @@ tbody td:nth-of-type(2) {
 
 .option_tit {
     padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .option_tit dd {
     height: 20px;
 }
+
+.option_tit dd:nth-of-type(1){
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.count_box_main table {
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.count_box_main td {
+    border-right: hidden;
+    border-left: hidden;
+
+}
+
 
 /* ==========================이미지========================= */
 
@@ -670,11 +689,24 @@ tbody td:nth-of-type(2) {
 }
 
 .count_box_main dd {
-    width: 100%;
+    width: 80%;
     margin-left: 100px;
-    border-bottom: 1px solid rgba(166, 166, 166, 0.7);
+    
+    padding-top: 20px;
+    /* padding: 10px; */
+}
 
-    padding: 10px;
+.count_box_main dd:nth-of-type(2){
+    padding-top: 30px;
+    padding-left: 10px;
+    transform: translateY(-10%);
+    /* border-bottom: 1px solid rgba(166, 166, 166, 0.7); */
+
+}
+
+.count_box_main dd span{
+    font-weight: bold;
+    color: rgb(255, 132, 0);
 }
 
 .count_button_box button {
@@ -702,6 +734,23 @@ tbody td:nth-of-type(2) {
     color: white;
 }
 
+/* 수량 카운트 버튼 */
+.option_select button {
+    width: 20px;
+
+    text-align: center;
+    line-height: 15px;
+    border: solid 1px black;
+    border-radius: 0;
+
+}
+
+.option_select_btn {
+    display: grid
+}
+
+/* ============================옵션 변경============================== */
+
 /* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
 
 .no_data {
@@ -714,6 +763,39 @@ tbody td:nth-of-type(2) {
     margin-bottom: 20px;
 }
 
+/* 셀렉트 바 */
+.optionSelect {
+    width: 100%;
+}
+
+.optionSelect button,
+.optionSelect li{
+    width: 100%;
+    height: 100%;
+    border: hidden;
+}
+.optionSelect button{
+    padding-left: 10px;
+    text-align: left;
+
+    background-color: #f7f7f7;
+}
+
+.option_select td:nth-of-type(1){
+    position: relative;
+}
+
+.select_scroll_img{
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-250%, -60%);
+
+    background: url(../image/down.svg) no-repeat center/100% 100% ;
+}
 
 
 /* ########################/////footer/////##################### */
