@@ -178,7 +178,6 @@ header {
 }
 
 .detailCategoryListof {
-    visibility: hidden;
     width: 12em;
     border-left: 1px solid lightgray;
     padding-left: 50px;
@@ -192,9 +191,12 @@ header {
 }
 
 .bannerCategory:hover .detailCategoryList,
-.drinkhover:hover .detailCategoryListof,
 .detailCategoryListof:hover {
     visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* 우측 검색창 */
@@ -355,7 +357,7 @@ tr {
     position: relative;
 }
 
-td{
+td {
     text-align: start;
 }
 
@@ -387,7 +389,8 @@ tbody tr td:nth-of-type(2) {
     padding-bottom: 30px;
     transition: all .5s;
 }
-tbody .button_td{
+
+tbody .button_td {
     cursor: pointer;
 }
 

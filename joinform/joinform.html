@@ -34,7 +34,7 @@
                         <a href="../mainPage/mainPage_all.html">카테고리
                             <div class="detailCategoryList">
                                 <ul>
-                                    <li class="drinkhover">
+                                    <li class="hoverCategory">
                                         <a href="../mainPage/mainPage_wine.html">주류</a>
                                         <ul class="detailCategoryListof">
                                             <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
@@ -44,7 +44,7 @@
                                             <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="../mainpage/mainPage_side.html">안주</a></li>
+                                    <li class="hoverCategory"><a href="../mainpage/mainPage_side.html">안주</a></li>
                                 </ul>
                             </div>
                         </a>
@@ -88,13 +88,13 @@
                                 </tr>
                                 <tr>
                                     <th>비밀번호 <span>*</span></th>
-                                    <td><input type="text" minlength="6" maxlength="16" name="userPSW" id="userPSW" >
+                                    <td><input type="text" minlength="6" maxlength="16" name="userPSW" id="userPSW">
                                         <span>영대소문자 및 특별문자, 8자 이상</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>비밀번호 확인 <span>*</span></th>
-                                    <td><input type="text" minlength="6" maxlength="16" name="rePSW" id="rePSW" >
+                                    <td><input type="text" minlength="6" maxlength="16" name="rePSW" id="rePSW">
                                     </td>
                                 </tr>
                                 <tr>
@@ -123,7 +123,8 @@
                                 </tr>
                                 <tr>
                                     <th>이름 <span>*</span></th>
-                                    <td><input type="text" minlength="2" maxlength="10" name="userName" id="userName" ></td>
+                                    <td><input type="text" minlength="2" maxlength="10" name="userName" id="userName">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>주소</th>
@@ -131,13 +132,14 @@
                                         <input type="text" name="userPostcode1" size="10px" readonly><a
                                             href="#">우편번호</a><br>
                                         <input type="text" name="userPostcode2" size="50" readonly><span>기본주소</span><br>
-                                        <input type="text" name="userPostcode3" size="50" id="address"><span>상세주소 (선택입력)</span>
+                                        <input type="text" name="userPostcode3" size="50" id="address"><span>상세주소
+                                            (선택입력)</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>휴대전화 <span>*</span></th>
                                     <td>
-                                        <select name="userPhone[]" >
+                                        <select name="userPhone[]">
                                             <option value="010">010</option>
                                             <option value="011">011</option>
                                             <option value="016">016</option>
@@ -150,7 +152,7 @@
                                             id="secondNum">
                                         -
                                         <input type="text" name="userPhone[]" minlength="3" maxlength="4" size="5px"
-                                        id="thirdNum">
+                                            id="thirdNum">
                                         <a href="#">인증번호전송</a><br>
                                         <input type="text" name="userPhoneVerification" minlength="6" maxlength="6"
                                             size="24px" id="verificationCode">
@@ -175,9 +177,9 @@
         <div id="footer" style="width: 100%;">
             <div class="footer_cover">
                 <div>
-                    <div class="foot_logo">
+                    <a class="foot_logo" href="../index.html">
                         <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
-                    </div>
+                    </a>
 
                     <div class="foot_margin_top1">
                         <ul class="foot_list3">

@@ -186,7 +186,6 @@ header {
 }
 
 .detailCategoryListof {
-    visibility: hidden;
     width: 12em;
     border-left: 1px solid lightgray;
     padding-left: 50px;
@@ -200,9 +199,12 @@ header {
 }
 
 .bannerCategory:hover .detailCategoryList,
-.drinkhover:hover .detailCategoryListof,
 .detailCategoryListof:hover {
     visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* 우측 검색창 */

@@ -1,4 +1,24 @@
 'use strict';
+// header category
+
+const detailCategoryList = document.querySelector('.detailCategoryList'),
+    drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
+
+detailCategoryList.addEventListener('mouseover', (e) => {
+    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+
+    if (e.target === drinkhover) {
+        drinkhoverOf.classList.remove('hidden')
+    } else if (e.target === snackhover) {
+        drinkhoverOf.classList.add('hidden');
+    } else return;
+})
+
+detailCategoryList.addEventListener('mouseleave', () => {
+    drinkhoverOf.classList.remove('hidden')
+})
+
+
 
 const bodyHidden = document.querySelector('body'),
     td_count_Pdt = bodyHidden.querySelectorAll('.td_count_Pdt'),

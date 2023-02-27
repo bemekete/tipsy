@@ -181,7 +181,6 @@ header {
 }
 
 .detailCategoryListof {
-    visibility: hidden;
     width: 12em;
     border-left: 1px solid lightgray;
     padding-left: 50px;
@@ -195,9 +194,12 @@ header {
 }
 
 .bannerCategory:hover .detailCategoryList,
-.drinkhover:hover .detailCategoryListof,
 .detailCategoryListof:hover {
     visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* 우측 검색창 */
@@ -246,6 +248,7 @@ header {
     height: 17px;
     width: 210px;
 }
+
 /* ///////////////////////// 탑플로팅바 ///////////////////////// */
 
 .topfloatingbar {
@@ -263,6 +266,7 @@ header {
     visibility: hidden;
     transition: 0.5s;
 }
+
 /* ####################################/////main/////############################################## */
 /* ////////////////////////////////////////////// main 공통/////////////////////////////////////////////////////// */
 
@@ -605,7 +609,7 @@ tbody td:nth-of-type(2) {
     transform: translate(-50%, -50%);
 }
 
-.goods_count_box>div{
+.goods_count_box>div {
     height: 100%;
 }
 
@@ -669,7 +673,7 @@ tbody td:nth-of-type(2) {
     width: 100%;
     margin-left: 100px;
     border-bottom: 1px solid rgba(166, 166, 166, 0.7);
-    
+
     padding: 10px;
 }
 
@@ -697,9 +701,10 @@ tbody td:nth-of-type(2) {
     background-color: black;
     color: white;
 }
+
 /* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
 
-.no_data{
+.no_data {
     width: 100%;
     line-height: 250px;
 
