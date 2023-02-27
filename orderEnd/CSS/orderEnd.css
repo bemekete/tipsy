@@ -17,6 +17,7 @@ div {
     font-style: normal;
 }
 
+
 a {
     text-decoration: none;
     color: #333;
@@ -234,6 +235,13 @@ header {
 }
 
 /* ########################## main ################################ */
+/* main 상단 */
+#main {
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
 .location {
     text-align: right;
     margin: 20px 0 20px 0;
@@ -265,7 +273,7 @@ header {
     font-weight: bold;
 }
 
-.order_tit li:not(:nth-of-type(2)){
+.order_tit li:not(:nth-of-type(3)){
     opacity: 0.4;
 }
 
@@ -291,113 +299,74 @@ hr {
 
 
 
-
+/* ============= main_container ============= */
 .main_container {
-    width: 1200px;
-    /* min-width: 500px; */
-    margin: auto;
-    /* border: solid 1px; */
-    /* border-radius: 10px; */
-    /* padding: 50px; */
-    /* margin-top: 40px; */
-    margin-bottom: 40px;
-}
-
-.form_container {
-    width: 450px;
+    width: 800px;
     margin: auto;
 }
 
-.box_container>div,
-.agreeUse {
+.box1,
+.box2 {
     border: solid 1px silver;
-    padding: 30px;
-    margin-top: 15px;
+    margin-top: 45px;
 }
 
-.agreeUse {
-    padding: 20px;
-}
-
-.main_bold {
-    font-weight: bold;
-}
-
-.mainFlex,
-.mainFlexAll div,
-.agreeUse label {
-    display: flex;
-    justify-content: space-between;
-    /* border: solid pink; */
-}
-
-.main_textAlign {
-    text-align: right;
-}
-
-/* 기본값 */
-.main_down {
-    width: 20px;
-    height: 40px;
-    opacity: .3;
-}
-
-/* js로 click시 추가 */
-.main_up {
-    transform: rotate(180deg);
-}
-
-.main_down,
-.main_up {
-    cursor: pointer;
-}
-
-
-.box_container>div>div:nth-of-type(1) {
+.rowHeight {
     line-height: 40px;
-    border-bottom: solid 1px rgb(92, 91, 91);
 }
 
-.main_marginTop20 {
-    margin-top: 20px;
-}
-
-.main_marginTop10 {
-    margin-top: 10px;
-}
-
-.mainHr {
-    border-bottom: solid 1px rgb(92, 91, 91);
-}
-
-/* 기본값 */
-.main_none {
-    display: none;
-}
-
-
-
-/* ========= 주문 / 결제 ========== */
-.mainTitle {
-    line-height: 50px;
-    border-bottom: solid 1px #115c91b7;
-
-}
-
-
-/* =========== 배송지 =========== */
-.defaultAddress {
-    border: solid 1px;
-    width: 90px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 30px;
-    font-size: 14px;
+.pointColor {
     color: #115c91b7;
 }
 
 
-/* ============= 주문 예정 상품 ============ */
+/* flex, 정렬 */
+.mainFlex>div,
+.paymentAmount {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------- Box1 ----------------- */
+.box1_container {
+    width: 400px;
+    margin: auto;
+    /* border: solid 1px silver; */
+}
+
+.box1 {
+    padding: 50px 0;
+}
+
+col:nth-child(1) {
+    width: 30%;
+}
+
+tr>th {
+    text-align: start;
+}
+
+/* table 간격 */
+.tablepad {
+    padding-top: 25px;
+}
+
+.box1header {
+    font-size: 25px;
+}
+
+
+
+
+/* ------------------ Box2 -------------------- */
+.box2 {
+    padding: 50px 80px 30px 80px;
+}
+/* .box2_container {
+    width: 600px;
+    margin: auto;
+} */
+
 .product_container img {
     width: 100%;
     height: 100%;
@@ -405,9 +374,9 @@ hr {
 
 .product_container {
     display: grid;
-    grid-template-columns: 75px auto;
-    grid-template-rows: 85px;
-    gap: 15px;
+    grid-template-columns: 110px auto;
+    grid-template-rows: 125px;
+    gap: 20px;
 }
 
 .product_text {
@@ -420,178 +389,67 @@ hr {
     font-size: 14px;
 }
 
-.productHeight {
-    line-height: 40px;
+.paymentAmount {
+    font-size: 20px;
 }
 
-.proHr1 {
-    border-top: solid 1px rgb(200, 197, 197);
-}
-
-.proHr2 {
-    border-top: solid 1px rgb(92, 91, 91);
-}
-
-
-/* ================ 쿠폰, 포인트 ================ */
-.flexGap {
-    gap: 5px;
-}
-
-.main_input {
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px silver;
-}
-
-.couponBtn {
-    padding: 10px 17px;
-    border-radius: 5px;
-    border: solid 1px #4f80a3b7;
-    background-color: #0e4f7eb7;
-    color: aliceblue;
-}
-
-.pointAll>button,
-.main_btn>div button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: solid rgb(226, 226, 226);
-    background-color: #f7f7f7;
-    cursor: pointer;
-}
-
-.pointAll,
-.usePoint {
-    display: flex;
-    gap: 5px;
-    justify-content: end;
-}
-
-.pointAll>button {
-    width: 20px;
-    height: 20px;
-}
-
-.couponHeight {
-    line-height: 40px;
-}
-
-.couponclickBtn {
-    background-color: rgba(219, 217, 217, 0.589);
-    padding: 20px 20px 5px 20px;
-    line-height: 25px;
-}
-
-.couponclickBtn>div {
-    margin-bottom: 15px;
-}
-
-.pointColor {
-    color: #115c91b7;
-    font-size: 14px;
-}
-
-
-/* =============== 결제 방법 ================== */
-.paymentMethod {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    grid-template-areas: 
-    "a b c"
-    "d . .";
-    gap: 12px;
-}
-
-.paymentMethod>div {
-    border: solid 1px rgb(226, 226, 226);
-    border-radius: 5px;
-    width: 120px;
-    line-height: 45px;
-    text-align: center;
-    margin: auto;
-}
-
-.kakaoPay {
-    color: rgb(241, 177, 3);
-}
-
-.naverPay {
-    color: rgb(85, 182, 0);
-}
-
-
-/* =================== 계산서 ===================== */
-.bill>div>div:nth-of-type(1) {
-    color: rgba(60, 59, 59, 0.589);
-}
-
-.bill>div>div:nth-of-type(2) {
+.paymentAmount span {
+    font-size: 24px;
     font-weight: bold;
 }
 
-.bill {
-    line-height: 40px;
+.borderBottom {
+    border-bottom: solid 1px rgb(92, 91, 91);
     padding: 10px 0;
+
 }
 
-.totalPaymentMoney {
-    color: #0e4f7eb7;
-    font-size: 18px;
-    line-height: 60px;
-    border-top: solid rgb(92, 91, 91) 1px;
+.box2Padding {
+    padding: 20px 0;
 }
 
 
-/* ================== 이용 동의 ===================== */
-.agreeUse {
-    display: flex;
-    gap: 10px;
-    line-height: 40px;
-}
 
-.agreeUse span:nth-child(2) {
-    color: rgb(115, 115, 115);
-}
 
-.agreeUse label {
-    width: 100%;
-}
-
-.agreeText {
-    padding: 20px;
+/* -------------------- 적립 ----------------------- */
+.box3 {
+    /* padding-right: 25px; */
+    /* text-align: end; */
     font-size: 14px;
-    white-space: pre-line;
-}
-
-.agreeText {
-    color: rgb(116, 117, 117);
-}
-
-.agreeText b {
-    color: rgb(13, 13, 13);
-}
-
-.agree_red {
-    color: rgb(244, 83, 83);
+    line-height: 25px;
+    margin-top: 10px;
+    opacity: .7;
 }
 
 
-/* =================== 버튼 ========================== */
-.submitBtn button {
+
+
+
+
+
+
+/* --------------------- 버튼 ------------------------ */
+.mainbtn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mainbtn>a {
+    padding: 15px 0;
+    border-radius: 5px;
     border: none;
     background-color: #115c91b7;
-    padding: 15px 0;
-    width: 100%;
     color: aliceblue;
-    border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-
-    margin: 25px 0 60px 0;
+    width: 35%;
+    text-align: center;
 }
 
+.btnTop {
+    margin: 80px 0 100px 0;
+}
 
 
 
