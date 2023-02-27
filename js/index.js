@@ -1,4 +1,5 @@
 'use strict';
+
 // header category
 
 const detailCategoryList = document.querySelector('.detailCategoryList'),
@@ -17,7 +18,6 @@ detailCategoryList.addEventListener('mouseover', (e) => {
 detailCategoryList.addEventListener('mouseleave', () => {
     drinkhoverOf.classList.remove('hidden')
 })
-
 
 
 // const event_main = document.querySelectorAll('.event_main');
@@ -41,8 +41,6 @@ document.addEventListener('scroll', function () {
 });
 
 ////////////////////////////////// 슬라이드 ///////////////////////////////////
-('use strict');
-
 const main = document.querySelector('.main_container'),
     slideList = main.querySelector('.slide_list'),
     slideImg = slideList.getElementsByTagName('li'),
@@ -70,7 +68,7 @@ btn[beforeIdx].classList.add('nowPage');
 // 자동 슬라이드
 autoSlide();
 function autoSlide() {
-    setInterval(() => {
+    autoslide = setInterval(() => {
         beforeIdx = idx;
         idx++;
         idx %= slideImg.length;
@@ -141,3 +139,11 @@ function delay() {
         return true;
     }
 }
+
+slideList.addEventListener('mouseenter', () => {
+    clearInterval(autoslide);
+})
+
+slideList.addEventListener('mouseleave', () => {
+    autoSlide();
+})
