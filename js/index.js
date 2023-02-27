@@ -20,12 +20,7 @@ detailCategoryList.addEventListener('mouseleave', () => {
 })
 
 
-// const event_main = document.querySelectorAll('.event_main');
-
-// event_main[0].addEventListener('mouserover',function(){
-
-// });
-
+// 플로팅바////////////////////////////
 const topfloatingbar = document.querySelector('.topfloatingbar');
 
 document.addEventListener('scroll', function () {
