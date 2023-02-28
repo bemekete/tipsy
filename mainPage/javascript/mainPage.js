@@ -81,3 +81,25 @@ document.addEventListener('scroll', function () {
         topfloatingbar.style.opacity = '.3';
     }
 });
+
+// 더보기 버튼
+
+const contents = document.querySelector('#contents'),
+    btnMore = contents.querySelector('.btnMore');
+
+btnMore.addEventListener('click', (e) => {
+    e.preventDefault();
+    const collapse_img = contents.querySelectorAll('.collapse_img');
+    if (collapse_img.length >= 9) {
+        for (let i = 0; i < 9; i++) {
+            collapse_img[i].classList.remove('collapse_img');
+        }
+    } 
+    else if (collapse_img) {
+        for (let i = 0; i < collapse_img.length; i++) {
+            collapse_img[i].classList.remove('collapse_img');
+        }
+        btnMore.classList.add('collapse_img');
+    }
+
+})

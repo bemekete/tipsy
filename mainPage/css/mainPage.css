@@ -453,13 +453,6 @@ div[class="img"]>img {
 }
 
 /* =======================================더보기 버튼============================ */
-#expand_input {
-    display: none;
-}
-
-.collapse_img {
-    display: none;
-}
 
 .btnSection {
     margin-top: 50px;
@@ -474,8 +467,8 @@ div[class="img"]>img {
     box-sizing: border-box;
 }
 
-#expand_input:checked~* .collapse_img {
-    display: flex;
+.collapse_img {
+    display: none;
 }
 
 
