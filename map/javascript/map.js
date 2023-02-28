@@ -5,20 +5,19 @@ const detailCategoryList = document.querySelector('.detailCategoryList'),
     drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
 
 detailCategoryList.addEventListener('mouseover', (e) => {
-    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
 
     if (e.target === drinkhover) {
-        drinkhoverOf.classList.remove('hidden')
+        drinkhoverOf.classList.remove('hidden');
     } else if (e.target === snackhover) {
         drinkhoverOf.classList.add('hidden');
     } else return;
-})
+});
 
 detailCategoryList.addEventListener('mouseleave', () => {
-    drinkhoverOf.classList.remove('hidden')
-})
-
-
+    drinkhoverOf.classList.remove('hidden');
+});
 
 let mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
@@ -53,7 +52,7 @@ marker.setMap(map);
 
 // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 let iwContent =
-        '<div style="padding:5px;"><p style="font-weight: bold; font-size: 20px; margin-bottom: 10px">Tipsy</p><p style="margin-bottom: 5px">경기도 성남시 분당구 돌마로 47 5층</p><a href="https://map.kakao.com/link/map/Tipsy,37.3503814,127.1072135" style="color:blue; text-decoration: underline;" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Tipsy,37.3503814,127.1072135" style="color:blue; text-decoration: underline;" target="_blank">길찾기</a></div>',
+        '<div style="padding:5px;"><p style="font-weight: bold; font-size: 25px; margin-bottom: 10px">Tipsy</p><p style="margin-bottom: 5px;">경기도 성남시 분당구 돌마로 47 5층</p><a href="https://map.kakao.com/link/map/Tipsy,37.3503814,127.1072135" style="color:blue; font-size: 15px;" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Tipsy,37.3503814,127.1072135" style="color:blue; font-size: 15px;" target="_blank">길찾기</a></div>',
     iwPosition = new kakao.maps.LatLng(37.3503814, 127.1072135); //인포윈도우 표시 위치입니다
 
 // 인포윈도우를 생성합니다

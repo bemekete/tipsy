@@ -289,19 +289,41 @@ header {
     display: flex;
     position: absolute;
     left: 50%;
-    bottom: -1%;
+    bottom: -2.5%;
     transform: translateX(-50%);
+    gap: 3px;
 }
 
 .pager a {
-    /* width: 292.5px; */
-    width: 300px;
-    height: 4px;
+    width: calc((1200px - 9px)/4);
+    /* width: 300px; */
+    height: 10px;
     background-color: gray;
     opacity: .3;
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
+
+.pageOfPages {
+    text-align: center;
+    width: 70px;
+    height: 35px;
+    line-height: 37px;
+
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 40px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.pageOfPages a {
+    color: white;
+    width: 100%;
+    text-align:center;
+    }
 
 p {
     margin-top: 20px;

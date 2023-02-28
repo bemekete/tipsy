@@ -6,19 +6,19 @@ const detailCategoryList = document.querySelector('.detailCategoryList'),
     drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
 
 detailCategoryList.addEventListener('mouseover', (e) => {
-    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
 
     if (e.target === drinkhover) {
-        drinkhoverOf.classList.remove('hidden')
+        drinkhoverOf.classList.remove('hidden');
     } else if (e.target === snackhover) {
         drinkhoverOf.classList.add('hidden');
     } else return;
-})
+});
 
 detailCategoryList.addEventListener('mouseleave', () => {
-    drinkhoverOf.classList.remove('hidden')
-})
-
+    drinkhoverOf.classList.remove('hidden');
+});
 
 // 플로팅바////////////////////////////
 const topfloatingbar = document.querySelector('.topfloatingbar');
@@ -42,6 +42,8 @@ const main = document.querySelector('.main_container'),
     [back, foward] = main.querySelectorAll('.main_container a'),
     pager = main.querySelector('.pager');
 
+const pageOfPages = main.querySelector('.pageOfPages');
+
 let idx = 0,
     beforeIdx = 0;
 let autoslide;
@@ -60,7 +62,11 @@ btn[beforeIdx].classList.add('nowPage');
 
 // 각자 idx값 지정 후 슬라이드 구조 통일
 
+// 페이지번호 나타내주기
+pageOfPages.children[0].innerText = `${idx + 1} / ${slideImg.length}`;
+
 // 자동 슬라이드
+
 autoSlide();
 function autoSlide() {
     autoslide = setInterval(() => {
@@ -69,6 +75,11 @@ function autoSlide() {
         idx %= slideImg.length;
 
         slide(false);
+        setTimeout(() => {
+            pageOfPages.children[0].innerText = `${idx + 1} / ${
+                slideImg.length
+            }`;
+        }, delayTime / 2);
     }, 3000);
 }
 
@@ -115,6 +126,12 @@ function slide(rev1) {
 
         btn[beforeIdx].classList.remove('nowPage');
         btn[idx].classList.add('nowPage');
+
+        setTimeout(() => {
+            pageOfPages.children[0].innerText = `${idx + 1} / ${
+                slideImg.length
+            }`;
+        }, delayTime / 2);
     }
 }
 
@@ -137,8 +154,8 @@ function delay() {
 
 slideList.addEventListener('mouseenter', () => {
     clearInterval(autoslide);
-})
+});
 
 slideList.addEventListener('mouseleave', () => {
     autoSlide();
-})
+});
