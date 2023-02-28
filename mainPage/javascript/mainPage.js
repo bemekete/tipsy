@@ -5,19 +5,19 @@ const detailCategoryList = document.querySelector('.detailCategoryList'),
     drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
 
 detailCategoryList.addEventListener('mouseover', (e) => {
-    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
 
     if (e.target === drinkhover) {
-        drinkhoverOf.classList.remove('hidden')
+        drinkhoverOf.classList.remove('hidden');
     } else if (e.target === snackhover) {
         drinkhoverOf.classList.add('hidden');
     } else return;
-})
+});
 
 detailCategoryList.addEventListener('mouseleave', () => {
-    drinkhoverOf.classList.remove('hidden')
-})
-
+    drinkhoverOf.classList.remove('hidden');
+});
 
 // 클릭하는 이벤트 a태그에 클래스 추가
 
@@ -29,9 +29,28 @@ sortListCon.addEventListener('click', function (e) {
 
     if (this.contains(eventTarget) && !(eventTarget.classList == 'btnClick')) {
         eventTarget.classList.add('btnClick');
-    }
-    else if (this.contains(eventTarget) && eventTarget.classList == 'btnClick') {
+    } else if (
+        this.contains(eventTarget) &&
+        eventTarget.classList == 'btnClick'
+    ) {
         eventTarget.classList.remove('btnClick');
+    }
+});
+
+// 왼쪽 네비게이션바 초기화 버튼
+// 초기화버튼
+const sortFilter = document.querySelector('.sortFilter'),
+    sortFilter_btn = sortFilter.querySelector('a');
+// 필터버튼
+const allA = sortListCon.getElementsByTagName('a');
+
+sortFilter.addEventListener('click', function (e) {
+    e.preventDefault();
+    let eventTarget = e.target.closest('a');
+    if (this.contains(eventTarget)) {
+        for (let i = 0; i < allA.length; i++) {
+            allA[i].classList.remove('btnClick');
+        }
     }
 });
 
@@ -54,21 +73,6 @@ const listLeng = document.querySelector('.listLeng'),
     price = document.getElementsByClassName('price');
 
 listLeng.innerHTML = `<p>총 <b>${price.length}</b>개의 상품이 있습니다.</p>`;
-
-// 왼쪽 네비게이션바 초기화 버튼
-const sortFilter = document.querySelector('.sortFilter'),
-    sortFilter_btn = sortFilter.querySelector('a');
-const allA = sortListCon.getElementsByTagName('a');
-
-sortFilter.addEventListener('click', function (e) {
-    let eventTarget = e.target.closest('a');
-    if (this.contains(eventTarget)) {
-        for (let i = 0; i < allA.length; i++) {
-            allA[i].style.backgroundColor = '#f9f9f9';
-            allA[i].style.color = 'black';
-        }
-    }
-});
 
 // 탑플로팅바
 const topfloatingbar = document.querySelector('.topfloatingbar');
@@ -97,12 +101,10 @@ btnMore.addEventListener('click', (e) => {
         for (let i = 0; i < 9; i++) {
             collapse_img[i].classList.remove('collapse_img');
         }
-    }
-    else if (collapse_img) {
+    } else if (collapse_img) {
         for (let i = 0; i < collapse_img.length; i++) {
             collapse_img[i].classList.remove('collapse_img');
         }
         btnMore.classList.add('collapse_img');
     }
-
-})
+});
