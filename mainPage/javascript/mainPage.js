@@ -90,7 +90,7 @@ const contents = document.querySelector('#contents'),
 btnMore.addEventListener('click', (e) => {
     e.preventDefault();
     const collapse_img = contents.querySelectorAll('.collapse_img');
-    if (collapse_img.length >= 9) {
+    if (collapse_img.length > 9) {
         for (let i = 0; i < 9; i++) {
             collapse_img[i].classList.remove('collapse_img');
         }
