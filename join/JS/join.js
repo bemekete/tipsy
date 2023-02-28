@@ -23,19 +23,19 @@ const confirmAge = document.querySelector('#agree_age');
 
 function checkAll() {
     if (checkbox[0].checked === true) {
-        for (let i = 1; i < checkbox.length - 1; i++) {
+        for (let i = 1; i < checkbox.length; i++) {
             checkbox[i].checked = true;
         }
         confirmpop();
     } else {
-        for (let i = 1; i < checkbox.length - 1; i++) {
+        for (let i = 1; i < checkbox.length; i++) {
             checkbox[i].checked = false;
         }
     }
 }
 
 confirmAge.addEventListener('click', () => {
-    confirmAge.checked = false;
+    // confirmAge.checked = false;
     confirmpop();
 });
 

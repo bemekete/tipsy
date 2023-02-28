@@ -344,6 +344,10 @@ td {
     margin-left: 5px;
 }
 
+.joinbox td .notice {
+    color: gray;
+}
+
 /* 입력박스 */
 .joinbox input,
 .joinbox select {

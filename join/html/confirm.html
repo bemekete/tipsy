@@ -6,13 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/join.css">
-    <script defer src="../JS/join.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        a {
+            margin: auto;
+        }
+
+        img {
+            height: 100%;
+        }
+    </style>
+    <script>
+        function closeConfirm() {
+            window.close();
+        }
+    </script>
 </head>
 
 <body>
-    본인인증창
-    <a href="#" class="topfloatingbar"></a>
+    <a href="#" onClick="closeConfirm();"><img src="./image/niceID.jpg" alt="본인인증"></a>
 </body>
 
 </html>

@@ -18,11 +18,27 @@ detailCategoryList.addEventListener('mouseleave', () => {
     drinkhoverOf.classList.remove('hidden');
 });
 
+// 비밀번호 확인
+const rePSW = document.getElementById('rePSW');
+
+rePSW.onchange = () => {
+    const userPSW = document.getElementById('userPSW'),
+        comparePSW = document.querySelector('.confirmPSW');
+
+    comparePSW.innerText = '일치하지 않음';
+    comparePSW.classList.add('notice');
+
+    if (rePSW.value === userPSW.value) {
+        comparePSW.innerText = '일치함';
+        comparePSW.classList.remove('notice');
+    }
+}
+
 // 회원가입 유효성검사
 function join_check() {
     let userID = document.getElementById('userID');
     let userPSW = document.getElementById('userPSW');
-    let rePSW = document.getElementById('rePSW');
+    // let rePSW = document.getElementById('rePSW');
     let ckpwa = document.getElementById('ckpwa');
     let userName = document.getElementById('userName');
     let address = document.getElementById('address');
