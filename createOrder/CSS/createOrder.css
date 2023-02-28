@@ -450,9 +450,10 @@ hr {
     border: solid 1px #4f80a3b7;
     background-color: #0e4f7eb7;
     color: aliceblue;
+    cursor: pointer;
 }
 
-.pointAll>button,
+.pointAllBtn,
 .main_btn>div button {
     width: 25px;
     height: 25px;
@@ -469,9 +470,13 @@ hr {
     justify-content: end;
 }
 
-.pointAll>button {
+.pointAllBtn {
     width: 20px;
     height: 20px;
+}
+
+.pointBtnd {
+    background-color: red;
 }
 
 .couponHeight {
@@ -519,6 +524,10 @@ hr {
 
 .naverPay {
     color: rgb(85, 182, 0);
+}
+
+.paymentBackColor {
+    background-color: rgb(234, 234, 234);
 }
 
 

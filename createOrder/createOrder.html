@@ -140,14 +140,14 @@
                         </div>
 
                         <!-- 쿠폰, 포인트 -->
-                        <div>
+                        <div class="couponPoint">
                             <div class="main_bold">쿠폰 / 포인트</div>
 
                             <div class="mainFlex main_marginTop20">
                                 <div>쿠폰 입력</div>
                                 <div>
                                     <input type="text" name="couponCode" size="25" placeholder="쿠폰 코드를 입력해주세요" class="main_input">
-                                    <button type="text" class="couponBtn">등록</button>
+                                    <button type="button" class="couponBtn">등록</button>
                                 </div>
                             </div>
 
@@ -184,7 +184,7 @@
                             </div>
 
                             <div class="pointAll main_marginTop10">
-                                <button type="button"></button>
+                                <button type="button" class="pointAllBtn"></button>
                                 <div>전액 사용</div>
                             </div>
 
@@ -192,7 +192,7 @@
                                 <!-- &nbsp; pointAll이랑 묶을려고 공백 안주고 gap줌 -->
                                 <div>사용 가능한 포인트 :</div>
                                 <!-- js -->
-                                <div>2,000p</div>
+                                <div><span class="point">2,000</span>p</div>
                             </div>
                         </div>
 
@@ -217,7 +217,7 @@
                                 <!-- js -->
                                 <div>
                                     <div>결제방법</div>
-                                    <div>카카오페이</div>
+                                    <div><span class="payment">-</span></div>
                                 </div>
                                 <div>
                                     <div>총 상품금액</div>
@@ -229,21 +229,22 @@
                                 </div>
                                 <div>
                                     <div>포인트 사용</div>
-                                    <div>0원</div>
+                                    <div><span  class="point">0</span>원</div>
                                 </div>
                                 <div>
                                     <div>쿠폰</div>
-                                    <div>[신규가입] 1만원 이상 10% 할인 쿠폰</div>
+                                    <div><span class="coupon">[신규가입] 1만원 이상 10% 할인 쿠폰</span></div>
                                 </div>
                                 <div>
                                     <div>총 할인</div>
-                                    <div>-1,300</div>
+                                    <!-- <div>-1,300</div> -->
+                                    <div><span class="totalDiscount">-</span></div>
                                 </div>
                             </div>
 
                             <div class="mainFlex main_bold totalPaymentMoney">
                                 <div>총 결제 금액</div>
-                                <div>16,000원</div>
+                                <div><span class="totalMoney"></span>원</div>
                             </div>
                         </div>
                     </div>
