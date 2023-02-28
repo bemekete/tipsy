@@ -23,12 +23,15 @@ detailCategoryList.addEventListener('mouseleave', () => {
 
 // 클릭하면 백그라운드, 글자색 바뀜
 const sortListCon = document.querySelector('.sortListCon');
-
 sortListCon.addEventListener('click', function (e) {
+    e.preventDefault();
     let eventTarget = e.target.closest('a');
-    if (this.contains(eventTarget)) {
-        eventTarget.style.backgroundColor = '#333';
-        eventTarget.style.color = 'white';
+
+    if (this.contains(eventTarget) && !(eventTarget.classList == 'btnClick')) {
+        eventTarget.classList.add('btnClick');
+    }
+    else if (this.contains(eventTarget) && eventTarget.classList == 'btnClick') {
+        eventTarget.classList.remove('btnClick');
     }
 });
 
@@ -94,7 +97,7 @@ btnMore.addEventListener('click', (e) => {
         for (let i = 0; i < 9; i++) {
             collapse_img[i].classList.remove('collapse_img');
         }
-    } 
+    }
     else if (collapse_img) {
         for (let i = 0; i < collapse_img.length; i++) {
             collapse_img[i].classList.remove('collapse_img');

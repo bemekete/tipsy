@@ -1,4 +1,4 @@
-/* =========공통 속성=========== */
+/* =========공통 속성===========     */
 
 * {
     margin: 0;
@@ -361,12 +361,15 @@ header {
     line-height: 30px;
 }
 
+
+
 .sortList a {
     display: inline-block;
     width: 100%;
 }
 
-.sortList a:hover {
+.sortList a:hover,
+.btnClick {
     background-color: #333;
     color: white;
 }
