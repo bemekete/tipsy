@@ -4,19 +4,19 @@ const detailCategoryList = document.querySelector('.detailCategoryList'),
     drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
 
 detailCategoryList.addEventListener('mouseover', (e) => {
-    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
 
     if (e.target === drinkhover) {
-        drinkhoverOf.classList.remove('hidden')
+        drinkhoverOf.classList.remove('hidden');
     } else if (e.target === snackhover) {
         drinkhoverOf.classList.add('hidden');
     } else return;
-})
+});
 
 detailCategoryList.addEventListener('mouseleave', () => {
-    drinkhoverOf.classList.remove('hidden')
-})
-
+    drinkhoverOf.classList.remove('hidden');
+});
 
 // 회원가입 유효성검사
 function join_check() {
@@ -33,6 +33,14 @@ function join_check() {
 
     if (userID.value == '') {
         alert('아이디를 입력하세요.');
+        userID.focus();
+        return false;
+    }
+
+    let idCheck = /^[a-z0-9]{4,}$/;
+
+    if (!idCheck.test(userID.value)) {
+        alert('아이디를 다시 확인하세요.');
         userID.focus();
         return false;
     }

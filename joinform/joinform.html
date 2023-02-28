@@ -1,242 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입 | Tipsy - 다양한 술이 있는 곳</title>
+        <script defer src="./javascript/joinform.js"></script>
+        <link rel="stylesheet" href="./CSS/joinform.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 | Tipsy - 다양한 술이 있는 곳</title>
-    <script defer src="./javascript/joinform.js"></script>
-    <link rel="stylesheet" href="./CSS/joinform.css">
-</head>
-
-<body>
-    <div class="wrap">
-        <!-- ======================================================== header ================================================== -->
-        <div class="headertop_cover">
-
-            <div class="headerTop">
-                <a href="../index.html" class="mainLogo">tipsy</a>
-                <div class="serviceTab">
-                    <ul class="serviceTabList">
-                        <li><a href="../login/login.html">로그인</a></li>
-                        <li><a href="../join/join.html">회원가입</a></li>
-                        <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
-                        <li><a href="../customerpage/customerpage.html">고객지원</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="header_cover">
-            <div class="headerMenu">
-                <ul class="mainCategoryList">
-                    <li class="bannerCategory">
-                        <a href="../mainPage/mainPage_all.html">카테고리
-                            <div class="detailCategoryList">
-                                <ul>
-                                    <li class="hoverCategory">
-                                        <a href="../mainPage/mainPage_wine.html">주류</a>
-                                        <ul class="detailCategoryListof">
-                                            <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
-                                            <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
-                                            <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
-                                            <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
-                                            <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="hoverCategory"><a href="../mainpage/mainPage_side.html">안주</a></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </li>
-                    <li><a href="../map/map.html">매장찾기</a></li>
-                    <li><a href="../eventboard/eventboard.html">이벤트</a></li>
-
-                </ul>
-                <div class="mainSearch">
-                    <a href="#">
-                        <form action="../searchpage/searchpage.html">
-                            <input type="search" name="mainSearch" placeholder="검색">
-                            <button type="submit">
-                                <img src="./image/search.png" alt="검색">
-                            </button>
-                        </form>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- ==================main================== -->
-        <div class="container">
-            <p class="pageTitle">회원가입</p>
-            <div class="contents">
-                <form action="../login/login.html" class="joinbox">
-                    <p><span>*</span> 필수 입력 사항</p>
-                    <figure>
-                        <table>
-                            <figcaption>기본정보</figcaption>
-                            <colgroup>
-                                <col>
-                                <col>
-                            </colgroup>
-
-                            <tbody>
-                                <tr>
-                                    <th>아이디 <span>*</span></th>
-                                    <td><input type="text" minlength="4" maxlength="16" name="userID" id="userID">
-                                        <span>영소문자, 4~16자</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>비밀번호 <span>*</span></th>
-                                    <td><input type="text" minlength="6" maxlength="16" name="userPSW" id="userPSW">
-                                        <span>영대소문자 및 특별문자, 8자 이상</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>비밀번호 확인 <span>*</span></th>
-                                    <td><input type="text" minlength="6" maxlength="16" name="rePSW" id="rePSW">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>비밀번호 확인 질문 <span>*</span></th>
-                                    <td><select name="userPSWhintQ">
-                                            <option value="pswQ1">기억에 남는 추억의 장소는?</option>
-                                            <option value="pswQ2">자신의 인생 좌우명은?</option>
-                                            <option value="pswQ3">자신의 보물 제 1호는?</option>
-                                            <option value="pswQ4">가장 기억에 남는 선생님 성함은?</option>
-                                            <option value="pswQ5">타인이 모르는 자신만의 신체 비밀이 있다면?</option>
-                                            <option value="pswQ6">추억하고 싶은 날짜가 있다면?</option>
-                                            <option value="pswQ7">받았던 선물 중 기억에 남는 독특한 선물은?</option>
-                                            <option value="pswQ8">유년시절 가장 생각나는 친구 이름은?</option>
-                                            <option value="pswQ9">인상 깊게 읽은 책 이름은?</option>
-                                            <option value="pswQ10">읽은 책 중에서 좋아하는 구절이 있다면?</option>
-                                            <option value="pswQ11">자신이 두 번째로 존경하는 인물은?</option>
-                                            <option value="pswQ12">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
-                                            <option value="pswQ13">초등학교 때 기억에 남는 짝꿍 이름은?</option>
-                                            <option value="pswQ14">다시 태어나면 되고 싶은 것은?</option>
-                                            <option value="pswQ15">내가 좋아하는 캐릭터는?</option>
-                                        </select></td>
-                                </tr>
-                                <tr>
-                                    <th>비밀번호 확인 답변 <span>*</span></th>
-                                    <td><input type="text" name="userPSWhintA" size="70px" id="ckpwa"></td>
-                                </tr>
-                                <tr>
-                                    <th>이름 <span>*</span></th>
-                                    <td><input type="text" minlength="2" maxlength="10" name="userName" id="userName">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>주소</th>
-                                    <td>
-                                        <input type="text" name="userPostcode1" size="10px" readonly><a
-                                            href="#">우편번호</a><br>
-                                        <input type="text" name="userPostcode2" size="50" readonly><span>기본주소</span><br>
-                                        <input type="text" name="userPostcode3" size="50" id="address"><span>상세주소
-                                            (선택입력)</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>휴대전화 <span>*</span></th>
-                                    <td>
-                                        <select name="userPhone[]">
-                                            <option value="010">010</option>
-                                            <option value="011">011</option>
-                                            <option value="016">016</option>
-                                            <option value="017">017</option>
-                                            <option value="018">018</option>
-                                            <option value="019">019</option>
-                                        </select>
-                                        -
-                                        <input type="text" name="userPhone[]" minlength="3" maxlength="4" size="5px"
-                                            id="secondNum">
-                                        -
-                                        <input type="text" name="userPhone[]" minlength="3" maxlength="4" size="5px"
-                                            id="thirdNum">
-                                        <a href="#">인증번호전송</a><br>
-                                        <input type="text" name="userPhoneVerification" minlength="6" maxlength="6"
-                                            size="24px" id="verificationCode">
-                                        <a href="#">인증번호확인</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>이메일 <span>*</span></th>
-                                    <td><input type="email" name="userEmail" size=30px id="email"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
-                    <div class="joinButton">
-                        <button type="button" onclick="join_check();">회원가입</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- ===================================================================================== -->
-        <div id="footer" style="width: 100%;">
-            <div class="footer_cover">
-                <div>
-                    <a class="foot_logo" href="../index.html">
-                        <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
-                    </a>
-
-                    <div class="foot_margin_top1">
-                        <ul class="foot_list3">
-                            <li><a href="#">제휴/제안 문의</a></li>
-                            <li><a href="#">대리점 개설 문의</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보취급방침</a></li>
-                            <li><a href="../customerpage/customerpage.html">고객지원</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="foot_margin_top2">
-                        <ul class="foot_list4">
-                            <li>상호명: 도르리</li>
-                            <li>대표: 이현배황</li>
-                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
-                            <li>이메일:
-                                <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+    <body>
+        <div class="wrap">
+            <!-- ======================================================== header ================================================== -->
+            <div class="headertop_cover">
+                <div class="headerTop">
+                    <a href="../index.html" class="mainLogo">tipsy</a>
+                    <div class="serviceTab">
+                        <ul class="serviceTabList">
+                            <li><a href="../login/login.html">로그인</a></li>
+                            <li><a href="../join/join.html">회원가입</a></li>
+                            <li>
+                                <a href="../shopBasket/shopBasket.html"
+                                    >장바구니</a
+                                >
                             </li>
-                            <li>사업자등록번호: 100-21-12345</li>
+                            <li>
+                                <a href="../customerpage/customerpage.html"
+                                    >고객지원</a
+                                >
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer_customer">
-                    <div>
-                        <span>고객센터</span>
-                        <strong>070-1111-2222</strong>
-                        <p>평일 10:00 - 18:00, 주말휴무</p>
-                    </div>
-                    <ul class="sns_src">
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank">인스타그램
-                                <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+            </div>
+            <div class="header_cover">
+                <div class="headerMenu">
+                    <ul class="mainCategoryList">
+                        <li class="bannerCategory">
+                            <a href="../mainPage/mainPage_all.html"
+                                >카테고리
+                                <div class="detailCategoryList">
+                                    <ul>
+                                        <li class="hoverCategory">
+                                            <a
+                                                href="../mainPage/mainPage_wine.html"
+                                                >주류</a
+                                            >
+                                            <ul class="detailCategoryListof">
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_wine.html"
+                                                        >와인</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_soju.html"
+                                                        >소주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_makgeolli.html"
+                                                        >막걸리, 탁주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_cheongju.html"
+                                                        >약주, 청주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_fruit.html"
+                                                        >과실주</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="hoverCategory">
+                                            <a
+                                                href="../mainpage/mainPage_side.html"
+                                                >안주</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </a>
                         </li>
+                        <li><a href="../map/map.html">매장찾기</a></li>
                         <li>
-                            <a href="https://www.youtube.com" target="_blank">유튜브
-                                <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank">페이스북
-                                <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="https://twitter.com" target="_blank">트위터
-                                <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
-                            </a>
+                            <a href="../eventboard/eventboard.html">이벤트</a>
                         </li>
                     </ul>
+                    <div class="mainSearch">
+                        <a href="#">
+                            <form action="../searchpage/searchpage.html">
+                                <input
+                                    type="search"
+                                    name="mainSearch"
+                                    placeholder="검색"
+                                />
+                                <button type="submit">
+                                    <img src="./image/search.png" alt="검색" />
+                                </button>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ==================main================== -->
+            <div class="container">
+                <p class="pageTitle">회원가입</p>
+                <div class="contents">
+                    <form action="../login/login.html" class="joinbox">
+                        <p><span>*</span> 필수 입력 사항</p>
+                        <figure>
+                            <table>
+                                <figcaption>기본정보</figcaption>
+                                <colgroup>
+                                    <col />
+                                    <col />
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <th>아이디 <span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                minlength="4"
+                                                maxlength="16"
+                                                name="userID"
+                                                id="userID"
+                                            />
+                                            <span
+                                                >영소문자 및 숫자, 4자
+                                                이상</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>비밀번호 <span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                minlength="6"
+                                                maxlength="16"
+                                                name="userPSW"
+                                                id="userPSW"
+                                            />
+                                            <span
+                                                >영대소문자 및 특수문자, 8자
+                                                이상</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>비밀번호 확인 <span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                minlength="6"
+                                                maxlength="16"
+                                                name="rePSW"
+                                                id="rePSW"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            비밀번호 확인 질문 <span>*</span>
+                                        </th>
+                                        <td>
+                                            <select name="userPSWhintQ">
+                                                <option value="pswQ1">
+                                                    기억에 남는 추억의 장소는?
+                                                </option>
+                                                <option value="pswQ2">
+                                                    자신의 인생 좌우명은?
+                                                </option>
+                                                <option value="pswQ3">
+                                                    자신의 보물 제 1호는?
+                                                </option>
+                                                <option value="pswQ4">
+                                                    가장 기억에 남는 선생님
+                                                    성함은?
+                                                </option>
+                                                <option value="pswQ5">
+                                                    타인이 모르는 자신만의 신체
+                                                    비밀이 있다면?
+                                                </option>
+                                                <option value="pswQ6">
+                                                    추억하고 싶은 날짜가 있다면?
+                                                </option>
+                                                <option value="pswQ7">
+                                                    받았던 선물 중 기억에 남는
+                                                    독특한 선물은?
+                                                </option>
+                                                <option value="pswQ8">
+                                                    유년시절 가장 생각나는 친구
+                                                    이름은?
+                                                </option>
+                                                <option value="pswQ9">
+                                                    인상 깊게 읽은 책 이름은?
+                                                </option>
+                                                <option value="pswQ10">
+                                                    읽은 책 중에서 좋아하는
+                                                    구절이 있다면?
+                                                </option>
+                                                <option value="pswQ11">
+                                                    자신이 두 번째로 존경하는
+                                                    인물은?
+                                                </option>
+                                                <option value="pswQ12">
+                                                    친구들에게 공개하지 않은
+                                                    어릴 적 별명이 있다면?
+                                                </option>
+                                                <option value="pswQ13">
+                                                    초등학교 때 기억에 남는 짝꿍
+                                                    이름은?
+                                                </option>
+                                                <option value="pswQ14">
+                                                    다시 태어나면 되고 싶은
+                                                    것은?
+                                                </option>
+                                                <option value="pswQ15">
+                                                    내가 좋아하는 캐릭터는?
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            비밀번호 확인 답변 <span>*</span>
+                                        </th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                name="userPSWhintA"
+                                                size="70px"
+                                                id="ckpwa"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>이름 <span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                minlength="2"
+                                                maxlength="10"
+                                                name="userName"
+                                                id="userName"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                name="userPostcode1"
+                                                size="10px"
+                                                readonly
+                                            /><a href="#">우편번호</a><br />
+                                            <input
+                                                type="text"
+                                                name="userPostcode2"
+                                                size="50"
+                                                readonly
+                                            /><span>기본주소</span><br />
+                                            <input
+                                                type="text"
+                                                name="userPostcode3"
+                                                size="50"
+                                                id="address"
+                                            /><span>상세주소 (선택입력)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>휴대전화 <span>*</span></th>
+                                        <td>
+                                            <select name="userPhone[]">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                            -
+                                            <input
+                                                type="text"
+                                                name="userPhone[]"
+                                                minlength="3"
+                                                maxlength="4"
+                                                size="5px"
+                                                id="secondNum"
+                                            />
+                                            -
+                                            <input
+                                                type="text"
+                                                name="userPhone[]"
+                                                minlength="3"
+                                                maxlength="4"
+                                                size="5px"
+                                                id="thirdNum"
+                                            />
+                                            <a href="#">인증번호전송</a><br />
+                                            <input
+                                                type="text"
+                                                name="userPhoneVerification"
+                                                minlength="6"
+                                                maxlength="6"
+                                                size="24px"
+                                                id="verificationCode"
+                                            />
+                                            <a href="#">인증번호확인</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>이메일 <span>*</span></th>
+                                        <td>
+                                            <input
+                                                type="email"
+                                                name="userEmail"
+                                                size="30px"
+                                                id="email"
+                                            />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                        <div class="joinButton">
+                            <button type="button" onclick="join_check();">
+                                회원가입
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ===================================================================================== -->
+            <div id="footer" style="width: 100%">
+                <div class="footer_cover">
+                    <div>
+                        <a class="foot_logo" href="../index.html">
+                            <img
+                                src="./image/crop_logo_black2.png"
+                                alt="이미지. 로고"
+                            />
+                        </a>
+
+                        <div class="foot_margin_top1">
+                            <ul class="foot_list3">
+                                <li><a href="#">제휴/제안 문의</a></li>
+                                <li><a href="#">대리점 개설 문의</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보취급방침</a></li>
+                                <li>
+                                    <a href="../customerpage/customerpage.html"
+                                        >고객지원</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="foot_margin_top2">
+                            <ul class="foot_list4">
+                                <li>상호명: 도르리</li>
+                                <li>대표: 이현배황</li>
+                                <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                                <li>
+                                    이메일:
+                                    <a
+                                        href="mailto:seul8975@naver.com"
+                                        title="스팸성 메일 차단"
+                                        >seul8975@naver.com</a
+                                    >
+                                </li>
+                                <li>사업자등록번호: 100-21-12345</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_customer">
+                        <div>
+                            <span>고객센터</span>
+                            <strong>070-1111-2222</strong>
+                            <p>평일 10:00 - 18:00, 주말휴무</p>
+                        </div>
+                        <ul class="sns_src">
+                            <li>
+                                <a
+                                    href="https://www.instagram.com"
+                                    target="_blank"
+                                    >인스타그램
+                                    <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com"
+                                    target="_blank"
+                                    >유튜브
+                                    <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com"
+                                    target="_blank"
+                                    >페이스북
+                                    <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank"
+                                    >트위터
+                                    <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <a href="#" class="topfloatingbar"></a>
-</body>
-
+        <a href="#" class="topfloatingbar"></a>
+    </body>
 </html>
