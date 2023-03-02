@@ -37,6 +37,27 @@ sortListCon.addEventListener('click', function (e) {
     }
 });
 
+// 좌측메뉴 세부사항 접기
+sortListCon.addEventListener('click', function (e) {
+    let target = e.target.closest('img');
+
+    if (
+        this.contains(target) &&
+        !(target.parentNode.parentNode.children[1].classList == 'collapse_img')
+    ) {
+        target.parentNode.parentNode.children[1].classList.add('collapse_img');
+        target.classList.add('rotate');
+    } else if (
+        this.contains(target) &&
+        target.parentNode.parentNode.children[1].classList == 'collapse_img'
+    ) {
+        target.parentNode.parentNode.children[1].classList.remove(
+            'collapse_img'
+        );
+        target.classList.remove('rotate');
+    }
+});
+
 // 왼쪽 네비게이션바 초기화 버튼
 // 초기화버튼
 const sortFilter = document.querySelector('.sortFilter'),

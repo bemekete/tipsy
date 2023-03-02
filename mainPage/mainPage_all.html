@@ -1,686 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상품목록페이지 | Tipsy - 다양한 술이 있는 곳</title>
+        <link rel="stylesheet" href="./css/mainPage.css" />
+        <script defer src="./javascript/mainPage.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품목록페이지 | Tipsy - 다양한 술이 있는 곳</title>
-    <link rel="stylesheet" href="./css/mainPage.css">
-    <script defer src="./javascript/mainPage.js"></script>
-</head>
-
-<body>
-    <div id="wrap">
-        <!-- ======================================================== header ================================================== -->
-        <div class="headertop_cover">
-
-            <div class="headerTop">
-                <a href="../index.html" class="mainLogo">tipsy</a>
-                <div class="serviceTab">
-                    <ul class="serviceTabList">
-                        <li><a href="../login/login.html">로그인</a></li>
-                        <li><a href="../join/join.html">회원가입</a></li>
-                        <li><a href="../shopBasket/shopBasket.html">장바구니</a></li>
-                        <li><a href="../customerpage/customerpage.html">고객지원</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="header_cover">
-            <div class="headerMenu">
-                <ul class="mainCategoryList">
-                    <li class="bannerCategory">
-                        <a href="#">카테고리
-                            <div class="detailCategoryList">
-                                <ul>
-                                    <li class="hoverCategory">
-                                        <a href="../mainPage/mainPage_wine.html">주류</a>
-                                        <ul class="detailCategoryListof">
-                                            <li><a href="../mainPage/mainPage_wine.html">와인</a></li>
-                                            <li><a href="../mainPage/mainPage_soju.html">소주</a></li>
-                                            <li><a href="../mainPage/mainPage_makgeolli.html">막걸리, 탁주</a></li>
-                                            <li><a href="../mainPage/mainPage_cheongju.html">약주, 청주</a></li>
-                                            <li><a href="../mainPage/mainPage_fruit.html">과실주</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="hoverCategory"><a href="../mainpage/mainPage_side.html">안주</a></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </li>
-                    <li><a href="../map/map.html">매장찾기</a></li>
-                    <li><a href="../eventboard/eventboard.html">이벤트</a></li>
-
-                </ul>
-                <div class="mainSearch">
-                    <form action="../searchpage/searchpage.html">
-                        <input type="search" name="mainSearch" placeholder="검색">
-                        <button type="submit">
-                            <img src="./image/search.png" alt="검색">
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="location_wrap">
-            <div class="location_con">
-                <a href="">홈</a> > 전체상품
-            </div>
-        </div>
-        <div id="container">
-            <div id="search">
-                <div class="search_tit pageTit">카테고리</div>
-                <div class="search_list cate_list">
-                    <div class="cate_list_item"><a href="./mainPage_wine.html">주류</a></div>
-                    <div class="cate_list_item"><a href="./mainPage_side.html">안주</a></div>
-                </div>
-                <div class="searchSorter">
-                    <div class="sortListCon">
-                        <dl>
-                            <dt>가격</dt>
-                            <dd>
-                                <ul class="sortList">
-                                    <li><a href="#">0만원 ~ 1만원</a></li>
-                                    <li><a href="#">1만원 ~ 3만원</a></li>
-                                    <li><a href="#">3만원 ~ 5만원</a></li>
-                                    <li><a href="#">5만원 ~ 10만원</a></li>
-                                    <li><a href="#">10만원 이상</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>종류</dt>
-                            <dd>
-                                <ul class="sortList">
-                                    <li><a href="#">약주</a></li>
-                                    <li><a href="#">청주</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>도수</dt>
-                            <dd>
-                                <ul class="sortList">
-                                    <li><a href="#">0%~10%</a></li>
-                                    <li><a href="#">10%~20%</a></li>
-                                    <li><a href="#">20%~30%</a></li>
-                                    <li><a href="#">30%이상</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>단맛</dt>
-                            <dd>
-                                <ul class="sortList">
-                                    <li><a href="#">약한</a></li>
-                                    <li><a href="#">중간</a></li>
-                                    <li><a href="#">강한</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>신맛</dt>
-                            <dd>
-                                <ul class="sortList">
-                                    <li><a href="#">약한</a></li>
-                                    <li><a href="#">중간</a></li>
-                                    <li><a href="#">강한</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="sortFilter">
-                        <a href="#">전체 필터 초기화</a>
-                    </div>
-                </div>
-            </div>
-            <div id="contents">
-                <p class="pageTit">전체상품</p>
-                <div class="listStyle1" id="prod_schview">
-                    <div class="listInfo1">
-                        <p class="listLeng"></p>
-                        <ul class="listSort">
-                            <li><a class="txt_bold" href="#">인기순</a></li>
-                            <li><a href="#">등록순</a></li>
-                            <li><a href="#">시리즈순</a></li>
-                        </ul>
-                    </div>
-                    <ul id="productList" class="list">
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/cheongju1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>천비향 약주</p>
-                                </div>
-                                <p class="price">30,400원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/sidemenu1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>직화 무뼈 닭발 160g</p>
-                                </div>
-                                <p class="price">6,900원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/fruit1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>장수 오미자주 4병 선물세트</p>
-                                </div>
-                                <p class="price">26,100원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/makgeolli1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>나루 생 막걸리 11.5% [3병/8병]</p>
-                                </div>
-                                <p class="price">29,700원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/soju1.png" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>진맥소주 22%</p>
-                                </div>
-                                <p class="price">22,000원</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../detail/detail_saint.html">
-                                <div class="img">
-                                    <img src="./image/wine1.jpg" alt="상품 이미지">
-                                </div>
-                                <div class="tit">
-                                    <p>오미로제 프리미어 와인 선물세트</p>
-                                </div>
-                                <p class="price">51,000원</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="btnSection">
-                    <a href="#" id="btnMore" class="btnMore btnMore_prod">더보기</a>
-                </div>
-            </div>
-        </div>
-        <!-- ===================================================================================== -->
-        <div id="footer" style="width: 100%;">
-            <div class="footer_cover">
-                <div>
-                    <a class="foot_logo" href="../index.html">
-                        <img src="./image/crop_logo_black2.png" alt="이미지. 로고">
-                    </a>
-
-                    <div class="foot_margin_top1">
-                        <ul class="foot_list3">
-                            <li><a href="#">제휴/제안 문의</a></li>
-                            <li><a href="#">대리점 개설 문의</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보취급방침</a></li>
-                            <li><a href="../customerpage/customerpage.html">고객지원</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="foot_margin_top2">
-                        <ul class="foot_list4">
-                            <li>상호명: 도르리</li>
-                            <li>대표: 이현배황</li>
-                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
-                            <li>이메일:
-                                <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+    <body>
+        <div id="wrap">
+            <!-- ======================================================== header ================================================== -->
+            <div class="headertop_cover">
+                <div class="headerTop">
+                    <a href="../index.html" class="mainLogo">tipsy</a>
+                    <div class="serviceTab">
+                        <ul class="serviceTabList">
+                            <li><a href="../login/login.html">로그인</a></li>
+                            <li><a href="../join/join.html">회원가입</a></li>
+                            <li>
+                                <a href="../shopBasket/shopBasket.html"
+                                    >장바구니</a
+                                >
                             </li>
-                            <li>사업자등록번호: 100-21-12345</li>
+                            <li>
+                                <a href="../customerpage/customerpage.html"
+                                    >고객지원</a
+                                >
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer_customer">
-                    <div>
-                        <span>고객센터</span>
-                        <strong>070-1111-2222</strong>
-                        <p>평일 10:00 - 18:00, 주말휴무</p>
-                    </div>
-                    <ul class="sns_src">
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank">인스타그램
-                                <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+            </div>
+            <div class="header_cover">
+                <div class="headerMenu">
+                    <ul class="mainCategoryList">
+                        <li class="bannerCategory">
+                            <a href="#"
+                                >카테고리
+                                <div class="detailCategoryList">
+                                    <ul>
+                                        <li class="hoverCategory">
+                                            <a
+                                                href="../mainPage/mainPage_wine.html"
+                                                >주류</a
+                                            >
+                                            <ul class="detailCategoryListof">
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_wine.html"
+                                                        >와인</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_soju.html"
+                                                        >소주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_makgeolli.html"
+                                                        >막걸리, 탁주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_cheongju.html"
+                                                        >약주, 청주</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="../mainPage/mainPage_fruit.html"
+                                                        >과실주</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="hoverCategory">
+                                            <a
+                                                href="../mainpage/mainPage_side.html"
+                                                >안주</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
                             </a>
                         </li>
+                        <li><a href="../map/map.html">매장찾기</a></li>
                         <li>
-                            <a href="https://www.youtube.com" target="_blank">유튜브
-                                <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank">페이스북
-                                <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="https://twitter.com" target="_blank">트위터
-                                <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
-                            </a>
+                            <a href="../eventboard/eventboard.html">이벤트</a>
                         </li>
                     </ul>
+                    <div class="mainSearch">
+                        <form action="../searchpage/searchpage.html">
+                            <input
+                                type="search"
+                                name="mainSearch"
+                                placeholder="검색"
+                            />
+                            <button type="submit">
+                                <img src="./image/search.png" alt="검색" />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="location_wrap">
+                <div class="location_con"><a href="">홈</a> > 전체상품</div>
+            </div>
+            <div id="container">
+                <div id="search">
+                    <div class="search_tit pageTit">카테고리</div>
+                    <div class="search_list cate_list">
+                        <div class="cate_list_item">
+                            <a href="./mainPage_wine.html">주류</a>
+                        </div>
+                        <div class="cate_list_item">
+                            <a href="./mainPage_side.html">안주</a>
+                        </div>
+                    </div>
+                    <div class="searchSorter">
+                        <div class="sortListCon">
+                            <dl>
+                                <dt>
+                                    가격<img src="./image/down.svg" alt="" />
+                                </dt>
+                                <dd>
+                                    <ul class="sortList">
+                                        <li><a href="#">0만원 ~ 1만원</a></li>
+                                        <li><a href="#">1만원 ~ 3만원</a></li>
+                                        <li><a href="#">3만원 ~ 5만원</a></li>
+                                        <li><a href="#">5만원 ~ 10만원</a></li>
+                                        <li><a href="#">10만원 이상</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    종류<img src="./image/down.svg" alt="" />
+                                </dt>
+                                <dd>
+                                    <ul class="sortList">
+                                        <li><a href="#">약주</a></li>
+                                        <li><a href="#">청주</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    도수<img src="./image/down.svg" alt="" />
+                                </dt>
+                                <dd>
+                                    <ul class="sortList">
+                                        <li><a href="#">0%~10%</a></li>
+                                        <li><a href="#">10%~20%</a></li>
+                                        <li><a href="#">20%~30%</a></li>
+                                        <li><a href="#">30%이상</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    단맛<img src="./image/down.svg" alt="" />
+                                </dt>
+                                <dd>
+                                    <ul class="sortList">
+                                        <li><a href="#">약한</a></li>
+                                        <li><a href="#">중간</a></li>
+                                        <li><a href="#">강한</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    신맛<img src="./image/down.svg" alt="" />
+                                </dt>
+                                <dd>
+                                    <ul class="sortList">
+                                        <li><a href="#">약한</a></li>
+                                        <li><a href="#">중간</a></li>
+                                        <li><a href="#">강한</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sortFilter">
+                            <a href="#">전체 필터 초기화</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="contents">
+                    <p class="pageTit">전체상품</p>
+                    <div class="listStyle1" id="prod_schview">
+                        <div class="listInfo1">
+                            <p class="listLeng"></p>
+                            <ul class="listSort">
+                                <li><a class="txt_bold" href="#">인기순</a></li>
+                                <li><a href="#">등록순</a></li>
+                                <li><a href="#">시리즈순</a></li>
+                            </ul>
+                        </div>
+                        <ul id="productList" class="list">
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/cheongju1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>천비향 약주</p>
+                                    </div>
+                                    <p class="price">30,400원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/sidemenu1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>직화 무뼈 닭발 160g</p>
+                                    </div>
+                                    <p class="price">6,900원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/fruit1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>장수 오미자주 4병 선물세트</p>
+                                    </div>
+                                    <p class="price">26,100원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/makgeolli1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>나루 생 막걸리 11.5% [3병/8병]</p>
+                                    </div>
+                                    <p class="price">29,700원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/soju1.png"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>진맥소주 22%</p>
+                                    </div>
+                                    <p class="price">22,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../detail/detail_saint.html">
+                                    <div class="img">
+                                        <img
+                                            src="./image/wine1.jpg"
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div class="tit">
+                                        <p>오미로제 프리미어 와인 선물세트</p>
+                                    </div>
+                                    <p class="price">51,000원</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btnSection">
+                        <a href="#" id="btnMore" class="btnMore btnMore_prod"
+                            >더보기</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <!-- ===================================================================================== -->
+            <div id="footer" style="width: 100%">
+                <div class="footer_cover">
+                    <div>
+                        <a class="foot_logo" href="../index.html">
+                            <img
+                                src="./image/crop_logo_black2.png"
+                                alt="이미지. 로고"
+                            />
+                        </a>
+
+                        <div class="foot_margin_top1">
+                            <ul class="foot_list3">
+                                <li><a href="#">제휴/제안 문의</a></li>
+                                <li><a href="#">대리점 개설 문의</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보취급방침</a></li>
+                                <li>
+                                    <a href="../customerpage/customerpage.html"
+                                        >고객지원</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="foot_margin_top2">
+                            <ul class="foot_list4">
+                                <li>상호명: 도르리</li>
+                                <li>대표: 이현배황</li>
+                                <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                                <li>
+                                    이메일:
+                                    <a
+                                        href="mailto:seul8975@naver.com"
+                                        title="스팸성 메일 차단"
+                                        >seul8975@naver.com</a
+                                    >
+                                </li>
+                                <li>사업자등록번호: 100-21-12345</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_customer">
+                        <div>
+                            <span>고객센터</span>
+                            <strong>070-1111-2222</strong>
+                            <p>평일 10:00 - 18:00, 주말휴무</p>
+                        </div>
+                        <ul class="sns_src">
+                            <li>
+                                <a
+                                    href="https://www.instagram.com"
+                                    target="_blank"
+                                    >인스타그램
+                                    <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com"
+                                    target="_blank"
+                                    >유튜브
+                                    <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com"
+                                    target="_blank"
+                                    >페이스북
+                                    <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_blank"
+                                    >트위터
+                                    <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <a href="#" class="topfloatingbar"></a>
-
-</body>
-
+        <a href="#" class="topfloatingbar"></a>
+    </body>
 </html>

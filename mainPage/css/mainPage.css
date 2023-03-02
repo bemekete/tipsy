@@ -10,7 +10,8 @@
 
 @font-face {
     font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -124,8 +125,8 @@ header {
     color: grey;
 }
 
-.serviceTabList li+li::before {
-    content: " | ";
+.serviceTabList li + li::before {
+    content: ' | ';
     color: grey;
 }
 
@@ -143,11 +144,11 @@ header {
     display: flex;
 }
 
-.mainCategoryList>li {
+.mainCategoryList > li {
     padding: 20px;
 }
 
-.mainCategoryList>li>a {
+.mainCategoryList > li > a {
     color: black;
     font-weight: bold;
 }
@@ -170,7 +171,7 @@ header {
     left: 0;
 }
 
-.detailCategoryList>ul {
+.detailCategoryList > ul {
     width: 12em;
     height: 16.25em;
 
@@ -182,7 +183,6 @@ header {
 .detailCategoryList li {
     padding: 15px;
 }
-
 
 .detailCategoryList a {
     display: block;
@@ -269,7 +269,6 @@ header {
 
 /* =================================container 공통======================================== */
 .searchSorter .sortFilter,
-
 .btnSection {
     text-align: center;
 }
@@ -322,7 +321,7 @@ header {
 .searchSorter dl dd ul li {
     display: inline-block;
     margin-bottom: 4px;
-    font-size: .9em;
+    font-size: 0.9em;
     background-color: #f9f9f9;
 }
 
@@ -342,7 +341,20 @@ header {
 }
 
 .sortListCon dl dt {
+    display: flex;
     font-weight: bold;
+    justify-content: space-between;
+}
+
+.sortListCon dl dt img {
+    height: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+.rotate {
+    transform: rotateX(180deg);
 }
 
 .sortListCon dl:first-child li {
@@ -360,8 +372,6 @@ header {
     height: 30px;
     line-height: 30px;
 }
-
-
 
 .sortList a {
     display: inline-block;
@@ -396,20 +406,16 @@ header {
     justify-content: space-between;
 }
 
-
-#productList li:nth-of-type(n+4) {
+#productList li:nth-of-type(n + 4) {
     margin-top: 65px;
 }
-
 
 .listInfo1 {
     display: flex;
     justify-content: space-between;
     background-color: #f9f9f9;
     padding: 25px 5px;
-
 }
-
 
 .listLeng {
     margin-left: 20px;
@@ -419,16 +425,16 @@ header {
     min-width: 800px;
 }
 
-.listStyle1 .list>li {
+.listStyle1 .list > li {
     width: 32%;
 }
 
-div[class="img"]>img {
+div[class='img'] > img {
     width: 100%;
     border-radius: 10px;
 }
 
-.tit>p,
+.tit > p,
 .price {
     /* float: left; */
     padding: 10px;
@@ -473,7 +479,6 @@ div[class="img"]>img {
     display: none;
 }
 
-
 /* ########################/////footer/////##################### */
 /* footer */
 
@@ -502,7 +507,7 @@ div[class="img"]>img {
     margin-top: 10px;
 }
 
-.foot_logo>img {
+.foot_logo > img {
     width: 130px;
 }
 
@@ -512,8 +517,8 @@ div[class="img"]>img {
     margin-top: 20px;
 }
 
-.foot_list3>li:nth-of-type(n+2),
-.foot_list4>li:nth-of-type(n+2) {
+.foot_list3 > li:nth-of-type(n + 2),
+.foot_list4 > li:nth-of-type(n + 2) {
     margin-left: 20px;
 }
 
