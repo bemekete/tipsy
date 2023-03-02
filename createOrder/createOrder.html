@@ -127,15 +127,17 @@
                                     </div>
 
                                     <div class="price_text">
-                                        <span>13,000원 /</span>
+                                        <!-- 이거 주문 총액이 아니라 상품 금액으로 해야함. 지금은
+                                        상품이 1개라서 총액이랑 상품금액 같이 씀 -->
+                                        <span class="totalProductMoney"></span>원 /
                                         <span>수량 1개</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="main_textAlign main_marginTop20 productHeight proHr1">3,000원</div>
+                            <div class="main_textAlign main_marginTop20 productHeight proHr1"><span class="deliveryMoney"></span>원</div>
                             <div class="mainFlex productHeight proHr2">
                                 <div>주문 총액</div>
-                                <div>16,000원</div>
+                                <div><span class="totalProductMoney"></span>원</div>
                             </div>
                         </div>
 
@@ -159,21 +161,21 @@
                                 </div>
                             </div>
 
-                            <div class="mainFlexAll main_btn couponclickBtn main_marginTop10 main_none">
+                            <div class="mainFlexAll couponClickBtn main_marginTop10 main_none">
                                 <div>
-                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <div>[신규가입] 3,000원 배송비 할인 쿠폰</div>
                                     <button type="button"></button>
                                 </div>
                                 <div>
-                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <div>[신규가입] 3,000원 배송비 할인 쿠폰</div>
                                     <button type="button"></button>
                                 </div>
                                 <div>
-                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <div>[신규가입] 3,000원 배송비 할인 쿠폰</div>
                                     <button type="button"></button>
                                 </div>
                                 <div>
-                                    <div>[신규가입] 2만원 이상 배송비 지원 쿠폰</div>
+                                    <div>[신규가입] 3,000원 배송비 할인 쿠폰</div>
                                     <button type="button"></button>
                                 </div>
                             </div>
@@ -221,11 +223,12 @@
                                 </div>
                                 <div>
                                     <div>총 상품금액</div>
-                                    <div>13,000원</div>
+                                    <div><span class="totalProductMoney"></span>원</div>
                                 </div>
                                 <div>
                                     <div>총 배송비</div>
-                                    <div>3,000원</div>
+                                    <!-- 기본값 3,000원. 얼마 이상은 0원뜨게 if문 -->
+                                    <div><span class="deliveryMoney"></span>원</div>
                                 </div>
                                 <div>
                                     <div>포인트 사용</div>
@@ -233,17 +236,19 @@
                                 </div>
                                 <div>
                                     <div>쿠폰</div>
-                                    <div><span class="coupon">[신규가입] 1만원 이상 10% 할인 쿠폰</span></div>
+                                    <div><span class="coupon">-</span></div>
                                 </div>
                                 <div>
                                     <div>총 할인</div>
                                     <!-- <div>-1,300</div> -->
-                                    <div><span class="totalDiscount">-</span></div>
+                                    <!-- 포인트 + 쿠폰 -->
+                                    <div><span class="totalDiscount"></span>원</div>
                                 </div>
                             </div>
 
                             <div class="mainFlex main_bold totalPaymentMoney">
                                 <div>총 결제 금액</div>
+                                <!-- 총 상품금액 + 총 배송비 - 총 할인 -->
                                 <div><span class="totalMoney"></span>원</div>
                             </div>
                         </div>
@@ -288,7 +293,7 @@
                     <!-- 버튼 -->
                     <div class="submitBtn">
                         <!-- js -->
-                        <button type="submit">16,000원 결제하기</button>
+                        <button type="submit"><span class="totalMoney"></span>원 결제하기</button>
                     </div>
                 </div>
             </form>

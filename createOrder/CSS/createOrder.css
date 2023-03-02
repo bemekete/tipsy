@@ -454,7 +454,7 @@ hr {
 }
 
 .pointAllBtn,
-.main_btn>div button {
+.couponClickBtn button {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -475,21 +475,21 @@ hr {
     height: 20px;
 }
 
-.pointBtnd {
-    background-color: red;
+#main .pointBtnd {
+    background-color: rgb(244, 121, 121);
 }
 
 .couponHeight {
     line-height: 40px;
 }
 
-.couponclickBtn {
+.couponClickBtn {
     background-color: rgba(219, 217, 217, 0.589);
     padding: 20px 20px 5px 20px;
     line-height: 25px;
 }
 
-.couponclickBtn>div {
+.couponClickBtn>div {
     margin-bottom: 15px;
 }
 
@@ -516,6 +516,7 @@ hr {
     line-height: 45px;
     text-align: center;
     margin: auto;
+    cursor: pointer;
 }
 
 .kakaoPay {
