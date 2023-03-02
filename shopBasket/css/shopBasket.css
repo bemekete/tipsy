@@ -722,13 +722,14 @@ tbody td:nth-of-type(2) {
 
 .count_button_box button:nth-of-type(1) {
     transform: translate(-112.5%, -150%);
-
 }
 
 .count_button_box button:nth-of-type(2) {
 
     transform: translate(12.5%, -150%);
     background-color: black;
+    border: 1px solid black;
+    border-radius: 2px;
     color: white;
 }
 
@@ -745,6 +746,11 @@ tbody td:nth-of-type(2) {
 
 .option_select_btn {
     display: grid
+}
+
+.option_select_btn button:hover {
+    cursor: pointer;
+    background-color: #a0a0a0;
 }
 
 /* ============================옵션 변경============================== */
