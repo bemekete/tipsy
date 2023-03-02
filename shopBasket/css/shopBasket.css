@@ -55,15 +55,13 @@ dl {
 }
 
 /* ======================header====================== */
+
 /* ====================header 공통==================== */
 header {
     /* height: 120px; */
     margin-bottom: 50px;
 }
 
-/* .headertop_cover {
-    background-color: rgba(223, 223, 223, 0.4);
-} */
 
 .headerTop {
     height: 70px;
@@ -81,7 +79,7 @@ header {
     /* height: 60px; */
     padding: 0 10px 0 10px;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 9999;
 }
 
@@ -123,6 +121,7 @@ header {
 
 /* ----------- 하단 헤더 ----------- */
 .headerMenu {
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +202,6 @@ header {
 
 /* 우측 검색창 */
 .mainSearch {
-
     box-sizing: border-box;
     width: 250px;
     height: 40px;
@@ -212,11 +210,10 @@ header {
 }
 
 .mainSearch input {
-    outline: none;
-
     box-sizing: border-box;
     width: 90%;
     border: none;
+    outline: none;
 }
 
 .mainSearch button {
@@ -235,11 +232,13 @@ header {
     height: 100%;
     display: flex;
     background-color: #f7f7f7;
+    border-radius: 5px;
 }
 
 .mainSearch form {
     display: flex;
     align-items: center;
+    height: 30px;
 }
 
 .mainSearch form input {
