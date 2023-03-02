@@ -1,4 +1,5 @@
 'use strict';
+
 // header category
 
 const detailCategoryList = document.querySelector('.detailCategoryList'),
