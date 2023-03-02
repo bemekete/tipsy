@@ -86,7 +86,8 @@ main.addEventListener('click', (e) => {
         }
     }
 })
-console.log(pointNum)
+// 이 값 안나옴
+// console.log(pointNum)
 
 // 이거 리액트로 onChange로 값 변하는거 비동기로 받고 어쩌구 해야할듯
 // 입력 받은 값으로 계산서의 포인트 사용도 바꿔야함
@@ -123,10 +124,11 @@ const totalProductMoneyTxt = document.getElementsByClassName('totalProductMoney'
     totalMoneyTxt = document.getElementsByClassName('totalMoney');
 
 let couponDiscount = 3000;
+// 쿠폰이 있을때만 총 할인 금액에 넣고싶었으나 안됨
 // if (coupon.textContent !== '-') {
 //     couponDiscount = +totalProductMoney/0.9;
 // }
-console.log(couponDiscount);
+// console.log(couponDiscount);
 
 let totalProductMoney = 13000,
     deliveryMoney = 3000,
@@ -149,15 +151,3 @@ totalDiscountTxt[0].textContent = totalDiscount.toLocaleString(); // 계산서
 totalMoneyTxt[0].textContent = totalMoney.toLocaleString(); // 계산서
 totalMoneyTxt[1].textContent = totalMoney.toLocaleString(); // 버튼
 
-
-
-
-
-
-
-
-
-
-
-// 총할인
-// 쿠폰 + 포인트 사용
