@@ -451,13 +451,7 @@ thead {
 }
 
 thead th {
-    display: grid;
-    grid-template: 1fr / 2.5fr 7.5fr;
     height: 50px;
-}
-
-thead div {
-    line-height: 50px;
 }
 
 tr {
@@ -469,39 +463,29 @@ td {
     text-align: start;
 }
 
-tbody tr {
-    height: 45px;
-    overflow: hidden;
-
-    display: grid;
-    grid-template-areas:
-        "a b"
-        ". c";
-}
-
 tbody th {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+tbody th,
+tbody td button {
     height: 45px;
-    line-height: 45px;
-    grid-area: a;
 }
 
-tbody tr td:nth-of-type(1) {
-    grid-area: b;
-}
-
-tbody tr td:nth-of-type(2) {
-    grid-area: c;
-
-    width: 80%;
-    white-space: pre-line;
-    padding-bottom: 30px;
-    transition: all .5s;
-}
-
-tbody button {
-    height: 45px;
+tbody td button {
     border: none;
     background: none;
+    cursor: pointer;
+}
+
+tbody .innerCon {
+    height: 0;
+    overflow: hidden;
+    white-space: pre-line;
+
+    transition: .5s;
 }
 
 tbody button img {
@@ -512,10 +496,12 @@ tbody button img {
     right: 10%;
 
     transition: .3s;
+    cursor: pointer;
 }
 
-.active {
-    height: auto;
+tbody .active {
+    height: 300px;
+    padding-bottom: 30px;
 }
 
 .rotate {
