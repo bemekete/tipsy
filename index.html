@@ -1,409 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tipsy - 다양한 술이 있는 곳</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/index.css" />
-        <script defer src="./js/index.js"></script>
-    </head>
 
-    <body>
-        <!-- ============================== header ======================================== -->
-        <!-- ======================================================== header ================================================== -->
-        <div class="headertop_cover">
-            <div class="headerTop">
-                <a href="#" class="mainLogo">tipsy</a>
-                <div class="serviceTab">
-                    <ul class="serviceTabList">
-                        <li><a href="./login/login.html">로그인</a></li>
-                        <li><a href="./join/join.html">회원가입</a></li>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipsy - 다양한 술이 있는 곳</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <!-- ============================== header ======================================== -->
+    <!-- ======================================================== header ================================================== -->
+    <div class="headertop_cover">
+        <div class="headerTop">
+            <a href="#" class="mainLogo">tipsy</a>
+            <div class="serviceTab">
+                <ul class="serviceTabList">
+                    <li><a href="./login/login.html">로그인</a></li>
+                    <li><a href="./join/join.html">회원가입</a></li>
+                    <li>
+                        <a href="./shopBasket/shopBasket.html">장바구니</a>
+                    </li>
+                    <li>
+                        <a href="./customerpage/customerpage.html">고객지원</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_cover">
+        <div class="headerMenu">
+            <ul class="mainCategoryList">
+                <li class="bannerCategory">
+                    <a href="./mainPage/mainPage_all.html">카테고리
+                        <div class="detailCategoryList">
+                            <ul>
+                                <li class="hoverCategory">
+                                    <a href="./mainPage/mainPage_wine.html">주류</a>
+                                    <ul class="detailCategoryListof">
+                                        <li>
+                                            <a href="./mainPage/mainPage_wine.html">와인</a>
+                                        </li>
+                                        <li>
+                                            <a href="./mainPage/mainPage_soju.html">소주</a>
+                                        </li>
+                                        <li>
+                                            <a href="./mainPage/mainPage_makgeolli.html">막걸리, 탁주</a>
+                                        </li>
+                                        <li>
+                                            <a href="./mainPage/mainPage_cheongju.html">약주, 청주</a>
+                                        </li>
+                                        <li>
+                                            <a href="./mainPage/mainPage_fruit.html">과실주</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hoverCategory">
+                                    <a href="./mainpage/mainPage_side.html">안주</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="./map/map.html">매장찾기</a></li>
+                <li><a href="./eventboard/eventboard.html">이벤트</a></li>
+            </ul>
+            <div class="mainSearch">
+                <a href="#">
+                    <form action="./searchpage/searchpage.html">
+                        <input type="search" name="mainSearch" placeholder="검색" />
+                        <button type="submit">
+                            <img src="./image/search.png" alt="검색" />
+                        </button>
+                    </form>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== main ======================================== -->
+    <main>
+        <div class="main_container">
+            <ul class="slide_list">
+                <li><img src="./image/slide4.png" alt="bg4" /></li>
+                <li><img src="./image/slide1.png" alt="bg1" /></li>
+                <li><img src="./image/slide2.png" alt="bg2" /></li>
+                <li><img src="./image/slide3.png" alt="bg3" /></li>
+            </ul>
+
+            <div class="pageOfPages">
+                <a href="./eventboard/eventboard.html"></a>
+            </div>
+            <div class="pager"></div>
+        </div>
+        <div class="wrap_triple">
+            <div class="triple_tit">BEST PRODUCT</div>
+            <div class="triple_main">
+                <div class="triple_main1">
+                    <!-- <div class="drinkKinds_wrap"> -->
+                    <div>
+                        <p>술취한 원숭이</p>
+                        <p>
+                            <span>10.8% |&nbsp; </span><strong> 36,000</strong>원
+                        </p>
+                        <a href="./detail/detail_monkey.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                    <div>
+                        <p>동학 1957</p>
+                        <p>
+                            <span>13% |&nbsp; </span><strong> 2,980</strong>원
+                        </p>
+                        <a href="./detail/detail_donghak.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                    <div>
+                        <p>오미로제 연</p>
+                        <p>
+                            <span>8% |&nbsp; </span><strong> 50,000</strong>원
+                        </p>
+                        <a href="./detail/detail_yeon.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                </div>
+
+                <div class="triple_main2">
+                    <div>
+                        <p>한스 오차드</p>
+                        <p>
+                            <span>11% |&nbsp; </span><strong> 20,160</strong>원
+                        </p>
+                        <a href="./detail/detail_hans.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                    <div>
+                        <p>한시울</p>
+                        <p>
+                            <span>40% |&nbsp; </span><strong> 21,000</strong>원
+                        </p>
+                        <a href="./detail/detail_hansiwool.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                    <div>
+                        <p>밀담</p>
+                        <p>
+                            <span>40% |&nbsp; </span><strong> 17,910</strong>원
+                        </p>
+                        <a href="./detail/detail_mildam.html" class="winePageButton">자세히 알아보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ######################### event ######################################## -->
+        <div class="wrap_event">
+            <div class="event_tit">EVENT</div>
+            <div class="event_main event_img1">
+                <div>
+                    <a href="./detail/detail_saint.html" class="winePageButton">자세히 알아보기</a>
+                </div>
+                <div></div>
+            </div>
+            <div class="event_main event_img2">
+                <div></div>
+                <div>
+                    <a href="./detail/detail_monkey.html" class="winePageButton">자세히 알아보기</a>
+                </div>
+            </div>
+            <div class="event_main event_img3">
+                <div>
+                    <a href="./detail/detail_hansiwool.html" class="winePageButton">자세히 알아보기</a>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <!-- ////////////////////////////////// board,notice ///////////////////////////////////// -->
+        <div class="intro_board_wrap">
+            <div class="board_wrap">
+                <div class="board_notice_top">
+                    <div class="intro_board_tit">
+                        <div>상품후기보기</div>
+                    </div>
+                    <div>
+                        <a href="./reviewboard/reviewboard.html">More+</a>
+                    </div>
+                </div>
+                <div class="intro_board">
+                    <div>
+                        <div>
+                            <p><b>tipsy 특별회원 가입하기</b></p>
+                        </div>
+                        <div>
+                            <p class="intro_board_txt">
+                                그 어떤 특별회원 혜택보다도 가성비 높은
+                                사은품 입니다.<br />
+                                감사합니다.
+                            </p>
+                        </div>
+                        <div class="star"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><b>tipsy 국순당여주 려 25도 375ml</b></p>
+                        </div>
+                        <div>
+                            <p class="intro_board_txt">
+                                일본 고구마소주와는 조금 다릅니다.
+                                캐치하려했던 향이<br />
+                                단맛이나 곡향보다는 좀 더 드라이하고 풋향이
+                                강해서<br />
+                                별개의 고구마소주로 봐야할 듯 합니다
+                            </p>
+                        </div>
+                        <div class="star"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="board_wrap">
+                <div class="board_notice_top">
+                    <div class="intro_board_tit">
+                        <div>공지사항</div>
+                    </div>
+                    <div>
+                        <a href="./notice/notice.html">More+</a>
+                    </div>
+                </div>
+                <div class="intro_board_notice">
+                    <ul>
                         <li>
-                            <a href="./shopBasket/shopBasket.html">장바구니</a>
+                            <a href="#">공지사항 입니다 6</a>
+                            <span class="date">2022.12.10</span>
                         </li>
                         <li>
-                            <a href="./customerpage/customerpage.html"
-                                >고객지원</a
-                            >
+                            <a href="#">공지사항 입니다 5</a>
+                            <span class="date">2022.12.09</span>
+                        </li>
+                        <li>
+                            <a href="#">공지사항 입니다 4</a>
+                            <span class="date">2022.12.08</span>
+                        </li>
+                        <li>
+                            <a href="#">공지사항 입니다 3</a>
+                            <span class="date">2022.12.07</span>
+                        </li>
+                        <li>
+                            <a href="#">공지사항 입니다 2</a>
+                            <span class="date">2022.12.06</span>
+                        </li>
+                        <li>
+                            <a href="#">공지사항 입니다 1</a>
+                            <span class="date">2022.12.05</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="header_cover">
-            <div class="headerMenu">
-                <ul class="mainCategoryList">
-                    <li class="bannerCategory">
-                        <a href="../mainPage/mainPage_all.html"
-                            >카테고리
-                            <div class="detailCategoryList">
-                                <ul>
-                                    <li class="hoverCategory">
-                                        <a href="../mainPage/mainPage_wine.html"
-                                            >주류</a
-                                        >
-                                        <ul class="detailCategoryListof">
-                                            <li>
-                                                <a
-                                                    href="../mainPage/mainPage_wine.html"
-                                                    >와인</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="../mainPage/mainPage_soju.html"
-                                                    >소주</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="../mainPage/mainPage_makgeolli.html"
-                                                    >막걸리, 탁주</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="../mainPage/mainPage_cheongju.html"
-                                                    >약주, 청주</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="../mainPage/mainPage_fruit.html"
-                                                    >과실주</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="hoverCategory">
-                                        <a href="../mainpage/mainPage_side.html"
-                                            >안주</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
+        <a href="#" class="topfloatingbar"></a>
+    </main>
+    <!-- ===================================================================================== -->
+    <div id="footer" style="width: 100%">
+        <div class="footer_cover">
+            <div>
+                <a href="./index.html" class="foot_logo">
+                    <img src="./image/crop_logo_black2.png" alt="이미지. 로고" />
+                </a>
+
+                <div class="foot_margin_top1">
+                    <ul class="foot_list3">
+                        <li><a href="#">제휴/제안 문의</a></li>
+                        <li><a href="#">대리점 개설 문의</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li>
+                            <a href="../customerpage/customerpage.html">고객지원</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="foot_margin_top2">
+                    <ul class="foot_list4">
+                        <li>상호명: 도르리</li>
+                        <li>대표: 이현배황</li>
+                        <li>주소: 경기 성남시 분당구 돌마로 47</li>
+                        <li>
+                            이메일:
+                            <a href="mailto:seul8975@naver.com" title="스팸성 메일 차단">seul8975@naver.com</a>
+                        </li>
+                        <li>사업자등록번호: 100-21-12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_customer">
+                <div>
+                    <span>고객센터</span>
+                    <strong>070-1111-2222</strong>
+                    <p>평일 10:00 - 18:00, 주말휴무</p>
+                </div>
+                <ul class="sns_src">
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">인스타그램
+                            <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
                         </a>
                     </li>
-                    <li><a href="../map/map.html">매장찾기</a></li>
-                    <li><a href="../eventboard/eventboard.html">이벤트</a></li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">유튜브
+                            <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">페이스북
+                            <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">트위터
+                            <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
+                        </a>
+                    </li>
                 </ul>
-                <div class="mainSearch">
-                    <a href="#">
-                        <form action="./searchpage/searchpage.html">
-                            <input
-                                type="search"
-                                name="mainSearch"
-                                placeholder="검색"
-                            />
-                            <button type="submit">
-                                <img src="./image/search.png" alt="검색" />
-                            </button>
-                        </form>
-                    </a>
-                </div>
             </div>
         </div>
+    </div>
+</body>
 
-        <!-- ============================== main ======================================== -->
-        <main>
-            <div class="main_container">
-                <ul class="slide_list">
-                    <li><img src="./image/slide4.png" alt="bg4" /></li>
-                    <li><img src="./image/slide1.png" alt="bg1" /></li>
-                    <li><img src="./image/slide2.png" alt="bg2" /></li>
-                    <li><img src="./image/slide3.png" alt="bg3" /></li>
-                </ul>
-
-                <div class="pageOfPages">
-                    <a href="./eventboard/eventboard.html"></a>
-                </div>
-                <div class="pager"></div>
-            </div>
-            <div class="wrap_triple">
-                <div class="triple_tit">BEST PRODUCT</div>
-                <div class="triple_main">
-                    <div class="triple_main1">
-                        <!-- <div class="drinkKinds_wrap"> -->
-                        <div>
-                            <p>술취한 원숭이</p>
-                            <p>
-                                <span>10.8% |&nbsp; </span
-                                ><strong> 36,000</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_monkey.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                        <div>
-                            <p>동학 1957</p>
-                            <p>
-                                <span>13% |&nbsp; </span
-                                ><strong> 2,980</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_donghak.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                        <div>
-                            <p>오미로제 연</p>
-                            <p>
-                                <span>8% |&nbsp; </span
-                                ><strong> 50,000</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_yeon.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                    </div>
-
-                    <div class="triple_main2">
-                        <div>
-                            <p>한스 오차드</p>
-                            <p>
-                                <span>11% |&nbsp; </span
-                                ><strong> 20,160</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_hans.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                        <div>
-                            <p>한시울</p>
-                            <p>
-                                <span>40% |&nbsp; </span
-                                ><strong> 21,000</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_hansiwool.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                        <div>
-                            <p>밀담</p>
-                            <p>
-                                <span>40% |&nbsp; </span
-                                ><strong> 17,910</strong>원
-                            </p>
-                            <a
-                                href="./detail/detail_mildam.html"
-                                class="winePageButton"
-                                >자세히 알아보기</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ######################### event ######################################## -->
-            <div class="wrap_event">
-                <div class="event_tit">EVENT</div>
-                <div class="event_main event_img1">
-                    <div>
-                        <a
-                            href="./detail/detail_saint.html"
-                            class="winePageButton"
-                            >자세히 알아보기</a
-                        >
-                    </div>
-                    <div></div>
-                </div>
-                <div class="event_main event_img2">
-                    <div></div>
-                    <div>
-                        <a
-                            href="./detail/detail_monkey.html"
-                            class="winePageButton"
-                            >자세히 알아보기</a
-                        >
-                    </div>
-                </div>
-                <div class="event_main event_img3">
-                    <div>
-                        <a
-                            href="./detail/detail_hansiwool.html"
-                            class="winePageButton"
-                            >자세히 알아보기</a
-                        >
-                    </div>
-                    <div></div>
-                </div>
-            </div>
-            <!-- ////////////////////////////////// board,notice ///////////////////////////////////// -->
-            <div class="intro_board_wrap">
-                <div class="board_wrap">
-                    <div class="board_notice_top">
-                        <div class="intro_board_tit">
-                            <div>상품후기보기</div>
-                        </div>
-                        <div>
-                            <a href="./reviewboard/reviewboard.html">More+</a>
-                        </div>
-                    </div>
-                    <div class="intro_board">
-                        <div>
-                            <div>
-                                <p><b>tipsy 특별회원 가입하기</b></p>
-                            </div>
-                            <div>
-                                <p class="intro_board_txt">
-                                    그 어떤 특별회원 혜택보다도 가성비 높은
-                                    사은품 입니다.<br />
-                                    감사합니다.
-                                </p>
-                            </div>
-                            <div class="star"></div>
-                        </div>
-                        <div>
-                            <div>
-                                <p><b>tipsy 국순당여주 려 25도 375ml</b></p>
-                            </div>
-                            <div>
-                                <p class="intro_board_txt">
-                                    일본 고구마소주와는 조금 다릅니다.
-                                    캐치하려했던 향이<br />
-                                    단맛이나 곡향보다는 좀 더 드라이하고 풋향이
-                                    강해서<br />
-                                    별개의 고구마소주로 봐야할 듯 합니다
-                                </p>
-                            </div>
-                            <div class="star"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="board_wrap">
-                    <div class="board_notice_top">
-                        <div class="intro_board_tit">
-                            <div>공지사항</div>
-                        </div>
-                        <div>
-                            <a href="./notice/notice.html">More+</a>
-                        </div>
-                    </div>
-                    <div class="intro_board_notice">
-                        <ul>
-                            <li>
-                                <a href="#">공지사항 입니다 6</a>
-                                <span class="date">2022.12.10</span>
-                            </li>
-                            <li>
-                                <a href="#">공지사항 입니다 5</a>
-                                <span class="date">2022.12.09</span>
-                            </li>
-                            <li>
-                                <a href="#">공지사항 입니다 4</a>
-                                <span class="date">2022.12.08</span>
-                            </li>
-                            <li>
-                                <a href="#">공지사항 입니다 3</a>
-                                <span class="date">2022.12.07</span>
-                            </li>
-                            <li>
-                                <a href="#">공지사항 입니다 2</a>
-                                <span class="date">2022.12.06</span>
-                            </li>
-                            <li>
-                                <a href="#">공지사항 입니다 1</a>
-                                <span class="date">2022.12.05</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="topfloatingbar"></a>
-        </main>
-        <!-- ===================================================================================== -->
-        <div id="footer" style="width: 100%">
-            <div class="footer_cover">
-                <div>
-                    <a href="./index.html" class="foot_logo">
-                        <img
-                            src="./image/crop_logo_black2.png"
-                            alt="이미지. 로고"
-                        />
-                    </a>
-
-                    <div class="foot_margin_top1">
-                        <ul class="foot_list3">
-                            <li><a href="#">제휴/제안 문의</a></li>
-                            <li><a href="#">대리점 개설 문의</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보취급방침</a></li>
-                            <li>
-                                <a href="../customerpage/customerpage.html"
-                                    >고객지원</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="foot_margin_top2">
-                        <ul class="foot_list4">
-                            <li>상호명: 도르리</li>
-                            <li>대표: 이현배황</li>
-                            <li>주소: 경기 성남시 분당구 돌마로 47</li>
-                            <li>
-                                이메일:
-                                <a
-                                    href="mailto:seul8975@naver.com"
-                                    title="스팸성 메일 차단"
-                                    >seul8975@naver.com</a
-                                >
-                            </li>
-                            <li>사업자등록번호: 100-21-12345</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer_customer">
-                    <div>
-                        <span>고객센터</span>
-                        <strong>070-1111-2222</strong>
-                        <p>평일 10:00 - 18:00, 주말휴무</p>
-                    </div>
-                    <ul class="sns_src">
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank"
-                                >인스타그램
-                                <!-- <img src="./image/instagram.svg" alt="인스타 링크 입니다"> -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com" target="_blank"
-                                >유튜브
-                                <!-- <img src="./image/youtube.svg" alt="유튜브 링크 입니다"> -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank"
-                                >페이스북
-                                <!-- <img src="./image/facebook.svg" alt="페이스북 링크 입니다"> -->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com" target="_blank"
-                                >트위터
-                                <!-- <img src="./image/twitter.svg" alt="트위터 링크 입니다"> -->
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </body>
 </html>

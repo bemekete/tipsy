@@ -152,10 +152,10 @@ function delay() {
     }
 }
 
-slideList.addEventListener('mouseenter', () => {
+main.addEventListener('mouseenter', () => {
     clearInterval(autoslide);
 });
 
-slideList.addEventListener('mouseleave', () => {
+main.addEventListener('mouseleave', () => {
     autoSlide();
 });
