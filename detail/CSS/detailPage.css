@@ -793,6 +793,284 @@ header {
     padding: 7px 10px;
 }
 
+
+/* 하단 바 */
+.bottomSide {
+    /* display: none; */
+
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    transition: 0.5s;
+}
+
+.bottomFloat {
+    width: 90%;
+    height: 100%;
+
+    margin: auto;
+
+    display: grid;
+    grid-template: 1fr / 2fr 3fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottomFloat div {
+    height: 70%;
+    line-height: 56px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.bottomFloat div:nth-of-type(1) {
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.bottomFloat div:nth-of-type(2) {
+    background-color: #e3f2fd;
+}
+
+
+
+/* //////////////////////////////////////상품 수량 변경/////////////////////////////////// */
+/* ======================================어두운 배경=========================================== */
+.optionView {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+    background-color: rgba(150, 150, 150, 0.25);
+    z-index: 99999;
+}
+
+
+.nonOverscroll {
+    overflow: hidden;
+}
+
+.displayNone {
+    /* display: none; */
+}
+
+
+/* ===================================상품 수량 변경 레이어================================ */
+.goods_count_box {
+    width: 600px;
+    height: 500px;
+
+    box-sizing: border-box;
+    padding: 30px;
+
+    background-color: #f7f7f7;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.goods_count_box>div {
+    height: 100%;
+}
+
+.goods_count_box p {
+    position: relative;
+    padding: 5px;
+}
+
+.overviewRemover img {
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+}
+
+.overviewRemover {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    cursor: pointer;
+}
+
+/* ===================수량 변경 창 메인 컨테이너==================*/
+/* 메인 컨테이너 테두리 */
+.count_box_main {
+    min-height: 80%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.option_tit {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.option_tit dd {
+    height: 20px;
+}
+
+.option_tit dd:nth-of-type(1) {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.count_box_main table {
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.count_box_main td {
+    border-right: hidden;
+    border-left: hidden;
+
+}
+
+
+/* ==========================이미지========================= */
+
+
+.count_box_main dl {
+    width: 100%;
+    /* align-content: center; */
+    overflow: hidden;
+}
+
+.count_box_main img {
+    width: 80px;
+    height: 100px;
+
+    padding: 10px;
+}
+
+.count_box_main>div>dl>dt {
+    float: left;
+    clear: left;
+
+}
+
+.count_box_main dd {
+    width: 80%;
+    margin-left: 100px;
+
+    padding-top: 20px;
+    /* padding: 10px; */
+}
+
+.count_box_main dd:nth-of-type(2) {
+    padding-top: 30px;
+    padding-left: 10px;
+    transform: translateY(-10%);
+    /* border-bottom: 1px solid rgba(166, 166, 166, 0.7); */
+
+}
+
+.count_box_main dd span {
+    font-weight: bold;
+    color: rgb(255, 132, 0);
+}
+
+.count_button_box button {
+    width: 50px;
+    height: 30px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateY(-150%);
+
+    cursor: pointer;
+}
+
+.count_button_box button:nth-of-type(1) {
+    transform: translate(-112.5%, -150%);
+
+}
+
+.count_button_box button:nth-of-type(2) {
+
+    transform: translate(12.5%, -150%);
+    background-color: black;
+    color: white;
+}
+
+/* 수량 카운트 버튼 */
+.option_select button {
+    width: 20px;
+
+    text-align: center;
+    line-height: 15px;
+    border: solid 1px black;
+    border-radius: 0;
+
+}
+
+.option_select_btn {
+    display: grid
+}
+
+/* ============================옵션 변경============================== */
+
+/* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
+
+.no_data {
+    width: 100%;
+    line-height: 250px;
+
+    text-align: center;
+
+    border-bottom: .5px solid rgba(166, 166, 166, 0.7);
+    margin-bottom: 20px;
+}
+
+/* 셀렉트 바 */
+.optionSelect {
+    width: 100%;
+}
+
+.optionSelect button,
+.optionSelect li {
+    width: 100%;
+    height: 100%;
+    border: hidden;
+}
+
+.optionSelect button {
+    padding-left: 10px;
+    text-align: left;
+
+    background-color: #f7f7f7;
+}
+
+.option_select td:nth-of-type(1) {
+    position: relative;
+}
+
+.select_scroll_img {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-250%, -60%);
+
+    background: url(../image/down.svg) no-repeat center/100% 100%;
+}
+
+
+
 /* ########################/////footer/////##################### */
 /* footer */
 
@@ -903,6 +1181,7 @@ header {
     margin-top: 2px;
 }
 
+
 /* 애니메이션 */
 @media screen and (max-width:77.5em) {
     .rightSide {
@@ -911,12 +1190,21 @@ header {
 
     .detailScriptPage {
         width: auto;
+        justify-content: center;
         text-align: center;
     }
 
     .leftSide {
         width: 95%;
         font-size: 1.2em;
+    }
+
+    .bottomSide {
+        height: 80px;
+    }
+
+    .topfloatingbar {
+        bottom: 90px;
     }
 }
 

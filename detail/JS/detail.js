@@ -73,3 +73,22 @@ document.addEventListener('scroll', function () {
         topfloatingbar.style.opacity = '.3';
     }
 });
+
+
+// 하단 바
+const bottomFloat = document.querySelector('.bottomFloat'),
+    [basketBtn, purchaseBtn] = bottomFloat.getElementsByTagName('div');
+
+bottomFloat.addEventListener('click', (e) => {
+    const optionView = document.querySelector('.optionView');
+    const count_button_box = optionView.querySelector('.count_button_box');
+
+    if (e.target === basketBtn || e.target === purchaseBtn) {
+        optionView.classList.remove('displayNone');
+
+        if (e.target === basketBtn) {
+            // count_button_box.
+        } else {
+        }
+    } else return;
+})
