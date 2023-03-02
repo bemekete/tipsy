@@ -29,7 +29,8 @@ const bodyHidden = document.querySelector('body'),
 
 const checkedInput = 'input:checked';
 
-let checkedElementCnt;
+let checkedElementCnt,
+    Counting = 2;
 // 체크박스 함수 //
 function otherCheckbox(value) {
     for (let i = 0; i < CartBodyInput.length; i++) {
@@ -105,7 +106,7 @@ option_select_btn.addEventListener('click', function (e) {
     goodsCount(e);
     for (let i = 0; i < (goods_num.length * 2 - 1); i += 2) {
         console.log(order_sum_price[1].textContent.split('원', [1]))
-        option_select.children[0].children[3].textContent = order_sum_price[0].textContent.replace(',', '').split('원', [1]) * Counting;
+        option_select.children[0].children[3].textContent = (order_sum_price[0].textContent.replace(',', '').split('원', [1]) * Counting).toLocaleString();
     }
 
 
@@ -167,7 +168,7 @@ goods_delete_btn.addEventListener('click', function (e) {
     if (confirm('정말 삭제하시겠습니까?')) {
         for (let i = 0; i < CartBodyInput.length; i++) {
             if (CartBodyInput[i].checked) {
-                CartBody.children[i].style.display='none';
+                CartBody.children[i].style.display = 'none';
                 reloadSum();
                 CheckedBlock();
             }
