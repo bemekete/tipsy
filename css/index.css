@@ -322,12 +322,9 @@ header {
 .pageOfPages a {
     color: white;
     width: 100%;
-    text-align:center;
-    }
-
-p {
-    margin-top: 20px;
+    text-align: center;
 }
+
 
 .nonVisible {
     visibility: hidden;
@@ -734,7 +731,7 @@ p {
 .intro_board_wrap {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     width: 1200px;
     /* border: 1px solid; */
     margin-top: 20px;
@@ -759,7 +756,31 @@ p {
     font-size: .8em;
 }
 
+.intro_board {
+
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    align-content: center;
+
+    overflow: hidden;
+
+}
+
+.reviewBoard div {
+    padding-top: 10px;
+}
+
+.reviewBoard div:nth-of-type(2) {
+    padding-left: 15px;
+}
+
+
+
 /* --------------------------- 상품후기 ---------------------------*/
+.board_wrap_review {
+    position: relative;
+}
+
 .intro_board_tit {
     margin-bottom: 10px;
     font-size: 1.5em;
@@ -767,28 +788,104 @@ p {
 
 .intro_board>div {
     margin: 0 auto;
-    width: 500px;
+    width: 100%;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
-}
-
-.star::after {
-    padding: 0 10px;
-    content: "★★☆☆☆";
-    color: red;
-    display: inline-flex;
-    position: relative;
-    font-size: 1em;
     margin-bottom: 10px;
 }
 
-.intro_board p {
+.review_goods_name {
+    font-weight: bold;
+    padding-bottom: 10px;
+
+    font-size: 1.1em;
+}
+
+.intro_board>p {
     margin-left: 12px;
     margin-bottom: 10px;
 }
 
 .intro_board_txt {
     font-size: .8em;
+}
+
+.reviewBoard {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 200px;
+
+    position: relative;
+
+}
+
+
+.review1>div:nth-of-type(1),
+.review2>div:nth-of-type(1) {
+    transform: translateY(-10%);
+}
+
+
+.review1>div:nth-of-type(1) {
+    background: url(../image/1.jpg) center/130px no-repeat;
+
+}
+
+.review2>div:nth-of-type(1) {
+    background: url("https://d38cxpfv0ljg7q.cloudfront.net/admin_contents/detail/fe1w-1631180181351-hsocd+ap0.jpg") center/130px no-repeat;
+
+}
+
+/* 리뷰 스크롤 하단 현재 페이지 */
+.scrollDot {
+    width: 25px;
+    
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    justify-content: space-between;
+    
+    
+    border: none;
+}
+
+.scrollDot li {
+    width: 10px;
+    height: 10px;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    background-color: gray;
+}
+
+/* 마우스 enter 시 페이지 전환 블럭 생성 */
+.review1::before,
+.review1::after,
+.review2::before,
+.review2::after {
+    content: "";
+    width: 10px;
+    height: inherit;
+    position: absolute;
+
+}
+
+.review1::before,
+.review2::before {
+    left: 0;
+}
+
+.review1::after,
+.review2::after {
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.scrollDotOpacity{
+    opacity: 0.3;
 }
 
 /* --------------------------- 공지사항 ---------------------------*/
@@ -799,6 +896,8 @@ p {
 
 .intro_board_notice ul {
     width: 540px;
+    height: 200px;
+    border-bottom: 1px solid #ccc;
 }
 
 .intro_board_notice li {
@@ -809,6 +908,12 @@ p {
 
 .intro_board_notice li a {
     font-weight: bold;
+}
+
+.star {
+    /* margin-left: none; */
+    color: red;
+    padding-bottom: 10px;
 }
 
 /* --------------------------- 인트로이벤트 ---------------------------*/
