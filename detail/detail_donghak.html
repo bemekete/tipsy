@@ -338,7 +338,7 @@
                     <!------------------------------ 플로팅바 ---------------------------------->
                     <div class="rightSide">
                         <div class="rightFloat">
-                            <form action="../shopBasket/shopBasket.html">
+                            <form>
                                 <div>
                                     <div class="label">
                                         <label>옵션</label>
@@ -376,8 +376,8 @@
                                     </p>
                                 </div>
                                 <div class="productBuy_btn">
-                                    <button>장바구니</button>
-                                    <button>구매하기</button>
+                                    <div>장바구니</div>
+                                    <a href="../createOrder/createOrder.html">구매하기</a>
 
                                     <div class="popupBasket">
                                         <div class="popupBasketCon">
@@ -402,6 +402,21 @@
                         <div class="bottomFloat">
                             <div>장바구니</div>
                             <div>구매하기</div>
+                        </div>
+
+                        <div class="bottomPopupBasket displayNone">
+                            <div class="popupBasketCon">
+                                <p>
+                                    선택하신 상품이 장바구니에 담겼습니다.<br>
+                                    장바구니로 이동하시겠습니까?
+                                </p>
+                                <div class="popupBasketBtn">
+                                    <a href="#">쇼핑 계속하기</a>
+                                    <a href="../shopBasket/shopBasket.html">장바구니 가기</a>
+                                </div>
+                            </div>
+                            <span class="popupClose">X</span>
+                            <span></span>
                         </div>
                     </div>
 
@@ -437,22 +452,23 @@
                                                     </ul>
                                                     <a href="" class="select_scroll_img"></a>
                                                 </td>
-                                                <td></td>
+                                                <td><input type="text" id="bottomPieces" pattern="\d*" value="0"
+                                                        readonly>개</td>
                                                 <td>
                                                     <div class="option_select_btn">
-                                                        <button data-count-value="1">+</button>
-                                                        <button data-count-value="-1">-</button>
+                                                        <button>+</button>
+                                                        <button>-</button>
                                                     </div>
                                                 </td>
-                                                <td></td>
+                                                <td><span class="bottomCalcPrice">0</span>원</td>
                                             </tr>
                                         </tbody>
                                     </table>
 
                                 </div>
                                 <div class="count_button_box">
-                                    <button><span>취소</span></button>
-                                    <button><span>확인</span></button>
+                                    <div>취소</div>
+                                    <a href="#">확인</a>
                                 </div>
 
                             </div>

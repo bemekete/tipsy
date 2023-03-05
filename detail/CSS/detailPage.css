@@ -728,7 +728,8 @@ header {
     position: relative;
 }
 
-.productBuy_btn button {
+.productBuy_btn>div:nth-of-type(1),
+.productBuy_btn>a {
     padding: 10px 20px;
     font-size: 100%;
     font-weight: bold;
@@ -793,16 +794,45 @@ header {
     padding: 7px 10px;
 }
 
+.bottomPopupBasket {
+    background-color: white;
+    border: 1.7px solid rgb(194, 194, 194);
+    cursor: default;
+
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 10%;
+
+    display: none;
+}
+
+.bottomPopupBasket span {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.bottomPopupBasket span:last-child {
+    background-color: white;
+    border: 1.7px solid rgb(194, 194, 194);
+    border-bottom: none;
+    border-right: none;
+
+    top: 95%;
+    left: 50px;
+
+    transform: rotate(225deg);
+}
 
 /* 하단 바 */
 .bottomSide {
-    /* display: none; */
-
     width: 100%;
     height: 0;
     background-color: rgba(255, 255, 255, 0.9);
+
     position: fixed;
     left: 0;
+    right: 0;
     bottom: 0;
 
     transition: 0.5s;
@@ -843,35 +873,31 @@ header {
 /* //////////////////////////////////////상품 수량 변경/////////////////////////////////// */
 /* ======================================어두운 배경=========================================== */
 .optionView {
-    position: fixed;
-
     width: 100vw;
     height: 100vh;
 
+    position: fixed;
     top: 0;
     left: 0;
+
     background-color: rgba(150, 150, 150, 0.25);
     z-index: 99999;
 }
 
-
-.nonOverscroll {
+/* .nonOverscroll {
     overflow: hidden;
-}
+} */
 
 .displayNone {
-    /* display: none; */
+    display: none;
 }
-
 
 /* ===================================상품 수량 변경 레이어================================ */
 .goods_count_box {
+    box-sizing: border-box;
     width: 600px;
     height: 500px;
-
-    box-sizing: border-box;
     padding: 30px;
-
     background-color: #f7f7f7;
 
     position: absolute;
@@ -936,10 +962,7 @@ header {
 
 }
 
-
 /* ==========================이미지========================= */
-
-
 .count_box_main dl {
     width: 100%;
     /* align-content: center; */
@@ -972,18 +995,21 @@ header {
     padding-left: 10px;
     transform: translateY(-10%);
     /* border-bottom: 1px solid rgba(166, 166, 166, 0.7); */
-
 }
+
 
 .count_box_main dd span {
     font-weight: bold;
     color: rgb(255, 132, 0);
 }
 
-.count_button_box button {
+.count_button_box>* {
     width: 50px;
     height: 30px;
+    line-height: 30px;
     box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
 
     position: absolute;
     top: 100%;
@@ -993,16 +1019,17 @@ header {
     cursor: pointer;
 }
 
-.count_button_box button:nth-of-type(1) {
+.count_button_box div {
     transform: translate(-112.5%, -150%);
+    border: 1px solid lightgray;
 
 }
 
-.count_button_box button:nth-of-type(2) {
-
-    transform: translate(12.5%, -150%);
-    background-color: black;
+.count_button_box a {
+    display: in;
     color: white;
+    background-color: black;
+    transform: translate(12.5%, -150%);
 }
 
 /* 수량 카운트 버튼 */
@@ -1023,7 +1050,6 @@ header {
 /* ============================옵션 변경============================== */
 
 /* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
-
 .no_data {
     width: 100%;
     line-height: 250px;
@@ -1055,6 +1081,15 @@ header {
 
 .option_select td:nth-of-type(1) {
     position: relative;
+}
+
+.option_select input {
+    font-size: inherit;
+    width: 25px;
+    background: none;
+    border: none;
+    text-align: right;
+    padding-right: 3px;
 }
 
 .select_scroll_img {
