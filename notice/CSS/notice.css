@@ -8,7 +8,8 @@
 
 @font-face {
     font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -113,8 +114,8 @@ header {
     color: grey;
 }
 
-.serviceTabList li+li::before {
-    content: " | ";
+.serviceTabList li + li::before {
+    content: ' | ';
     color: grey;
 }
 
@@ -132,11 +133,11 @@ header {
     display: flex;
 }
 
-.mainCategoryList>li {
+.mainCategoryList > li {
     padding: 20px;
 }
 
-.mainCategoryList>li>a {
+.mainCategoryList > li > a {
     color: black;
     font-weight: bold;
 }
@@ -159,7 +160,7 @@ header {
     left: 0;
 }
 
-.detailCategoryList>ul {
+.detailCategoryList > ul {
     width: 12em;
     height: 16.25em;
 
@@ -171,7 +172,6 @@ header {
 .detailCategoryList li {
     padding: 15px;
 }
-
 
 .detailCategoryList a {
     display: block;
@@ -257,24 +257,16 @@ header {
 
 .notice_search {
     display: inline-block;
-    width: 570px;
+    width: 600px;
     line-height: 80px;
     margin: 10px;
-}
-
-.notice_search form {
-    border-bottom: 1px solid;
-    height: 65px;
-    /* border: solid; */
 }
 
 .notice_search input {
     border: none;
     width: 500px;
     height: 40px;
-    padding: 0 5px;
-    /* border: red solid; */
-    font-size: 20px;
+    border-bottom: 1px solid;
 }
 
 .notice_search button {
@@ -285,15 +277,10 @@ header {
 .notice_search button img {
     height: 40px;
     vertical-align: middle;
-    opacity: .7;
 }
 
 /* ======================# main 문의 #================================================== */
 /* 문의(notice) box */
-
-#notice_main a:not([href*="#"]) {
-    background-color: white;
-}
 
 .notice_box {
     display: flex;
@@ -315,17 +302,17 @@ header {
 
 .notice_box a {
     display: flex;
-    
+
+    /* 이거 안먹음 왜지 뭐야 width랑 height 여기에 주니까 됨*/
     justify-content: center;
     align-items: center;
-    
+
     width: 150px;
     height: 50px;
 }
 
 .notice_box1 {
     margin-right: 5px;
-    background-color: #f1f1f1eb;
 }
 
 .notice_box3,
@@ -388,7 +375,7 @@ tbody .innerCon {
     overflow: hidden;
     white-space: pre-line;
 
-    transition: .5s;
+    transition: 0.5s;
 }
 
 tbody button img {
@@ -398,7 +385,7 @@ tbody button img {
     position: absolute;
     right: 10%;
 
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -428,8 +415,13 @@ tbody .active {
     line-height: 30px;
 }
 
+/* 푸터 이미지 화이트 */
+a:not([href*='#']) {
+    /* background-color: white; */
+}
+
 .notice_page_button::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -439,7 +431,7 @@ tbody .active {
 }
 
 .notice_page_button::after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -447,7 +439,6 @@ tbody .active {
     vertical-align: middle;
     margin-left: 5px;
 }
-
 
 /* ########################/////footer/////##################### */
 /* footer */
@@ -477,7 +468,7 @@ tbody .active {
     margin-top: 10px;
 }
 
-.foot_logo>img {
+.foot_logo > img {
     width: 130px;
 }
 
@@ -487,8 +478,8 @@ tbody .active {
     margin-top: 20px;
 }
 
-.foot_list3>li:nth-of-type(n+2),
-.foot_list4>li:nth-of-type(n+2) {
+.foot_list3 > li:nth-of-type(n + 2),
+.foot_list4 > li:nth-of-type(n + 2) {
     margin-left: 20px;
 }
 

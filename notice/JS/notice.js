@@ -4,19 +4,19 @@ const detailCategoryList = document.querySelector('.detailCategoryList'),
     drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
 
 detailCategoryList.addEventListener('mouseover', (e) => {
-    const [drinkhover, snackhover] = detailCategoryList.getElementsByClassName('hoverCategory');
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
 
     if (e.target === drinkhover) {
-        drinkhoverOf.classList.remove('hidden')
+        drinkhoverOf.classList.remove('hidden');
     } else if (e.target === snackhover) {
         drinkhoverOf.classList.add('hidden');
     } else return;
-})
+});
 
 detailCategoryList.addEventListener('mouseleave', () => {
-    drinkhoverOf.classList.remove('hidden')
-})
-
+    drinkhoverOf.classList.remove('hidden');
+});
 
 // 아코디언
 const tbody = document.querySelector('tbody');
@@ -36,7 +36,6 @@ tbody.addEventListener('click', (e) => {
     target.querySelector('img').classList.toggle('rotate');
 });
 
-
 // 탑플로팅바
 const topfloatingbar = document.querySelector('.topfloatingbar');
 
@@ -50,4 +49,10 @@ document.addEventListener('scroll', function () {
         topfloatingbar.style.visibility = 'visible';
         topfloatingbar.style.opacity = '.3';
     }
+});
+
+const notice_box = document.querySelector('.notice_box');
+
+notice_box.addEventListener('click', (e) => {
+    e.preventDefault();
 });
