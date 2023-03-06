@@ -232,7 +232,13 @@ header {
     width: 210px;
 }
 
+/* #########################################메인############################################# */
+main {
+    margin-bottom: 40px;
+}
+
 /* ////////////////////////////////// 슬라이드쇼 ////////////////////////////////////// */
+
 .main_container {
     width: 1200px;
     height: 400px;
@@ -757,13 +763,17 @@ header {
 }
 
 .intro_board {
-
     display: grid;
     grid-template-columns: repeat(2, 100%);
     align-content: center;
 
-    overflow: hidden;
 
+    overflow: hidden;
+}
+
+.reviewBoard {
+    position: relative;
+    left: 0;
 }
 
 .reviewBoard div {
@@ -838,16 +848,16 @@ header {
 /* 리뷰 스크롤 하단 현재 페이지 */
 .scrollDot {
     width: 25px;
-    
+
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     display: flex;
     justify-content: space-between;
-    
-    
+
+    z-index: 2;
     border: none;
 }
 
@@ -859,6 +869,8 @@ header {
     border-radius: 50%;
 
     background-color: gray;
+
+    cursor: pointer;
 }
 
 /* 마우스 enter 시 페이지 전환 블럭 생성 */
@@ -867,9 +879,10 @@ header {
 .review2::before,
 .review2::after {
     content: "";
-    width: 10px;
+    width: 30px;
     height: inherit;
     position: absolute;
+
 
 }
 
@@ -884,9 +897,10 @@ header {
     transform: translateX(-100%);
 }
 
-.scrollDotOpacity{
+.scrollDotOpacity {
     opacity: 0.3;
 }
+
 
 /* --------------------------- 공지사항 ---------------------------*/
 .intro_board_notice {

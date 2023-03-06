@@ -76,9 +76,8 @@ function autoSlide() {
 
         slide(false);
         setTimeout(() => {
-            pageOfPages.children[0].innerText = `${idx + 1} / ${
-                slideImg.length
-            }`;
+            pageOfPages.children[0].innerText = `${idx + 1} / ${slideImg.length
+                }`;
         }, delayTime / 2);
     }, 3000);
 }
@@ -128,9 +127,8 @@ function slide(rev1) {
         btn[idx].classList.add('nowPage');
 
         setTimeout(() => {
-            pageOfPages.children[0].innerText = `${idx + 1} / ${
-                slideImg.length
-            }`;
+            pageOfPages.children[0].innerText = `${idx + 1} / ${slideImg.length
+                }`;
         }, delayTime / 2);
     }
 }
@@ -158,4 +156,32 @@ main.addEventListener('mouseenter', () => {
 
 main.addEventListener('mouseleave', () => {
     autoSlide();
+});
+
+
+const scrollDot = document.querySelector('.scrollDot'),
+    scrollDotLi = scrollDot.querySelectorAll('li'),
+    intro_board = document.querySelector('.intro_board'),
+    reviewBoard = intro_board.querySelectorAll('.reviewBoard');
+
+
+scrollDot.addEventListener('click', (e) => {
+    let targetDot = e.target.closest('li');
+
+    if (targetDot === null) return;
+
+    let move = targetDot.dataset.reviewPage;
+
+    if (move != 0) {
+        console.log(move);
+        scrollDotLi[0].classList.add('scrollDotOpacity');
+        scrollDotLi[1].classList.remove('scrollDotOpacity');
+    } else if (move == 0) {
+        scrollDotLi[0].classList.remove('scrollDotOpacity');
+        scrollDotLi[1].classList.add('scrollDotOpacity');
+
+    }
+
+    reviewBoard[0].style.left = `${-move * 100}%`;
+    reviewBoard[1].style.left = `${-move * 100}%`;
 });
