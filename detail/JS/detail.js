@@ -52,17 +52,6 @@ function calculation(target, pieces, numDown, numUp, calcPrice) {
     calcPrice.innerText = Number(calc).toLocaleString('ko-KR'); // 반점 넣는 함수
 }
 
-
-function errorInput(option, pieces, elseText) {
-    if (!(option.value) || +pieces.value === 0) {
-        e.preventDefault();
-        alert('옵션 및 수량을 입력해주세요.');
-    } else {
-        elseText;
-    }
-}
-
-
 // 우측 플로팅바
 const floatBar = document.querySelector('.rightFloat');
 
@@ -112,7 +101,6 @@ unHref = !unHref; // e.preventDefault() 여부 결정 변수
 
 bottomSide.addEventListener('click', (e) => {
     const target = e.target,
-        count_button_box_a = optionView.querySelector('.count_button_box').getElementsByTagName('A')[0], // 옵션뷰 확인 버튼
         [basketBtn, purchaseBtn] = bottomSide.querySelectorAll('.bottomFloat div'); // 하단 바 버튼
 
     if (target === basketBtn || target === purchaseBtn) {
@@ -121,11 +109,9 @@ bottomSide.addEventListener('click', (e) => {
 
         // 확인 버튼
         if (target === purchaseBtn) {
-            count_button_box_a.href = "../createOrder/createOrder.html";
             unHref = !unHref;
             // 구매하기 - 페이지 전환
         } else {
-            count_button_box_a.getElementsByTagName('A')[0].href = "#";
             unHref = unHref;
             // 장바구니 - 페이지 전환X
         }
@@ -167,7 +153,6 @@ const option_select_btn = option_select.querySelector('.option_select_btn');
 
 option_select_btn.addEventListener('click', (e) => {
     const target = e.target,
-        // pieces = document.getElementById('bottomPieces'),
         [numUp, numDown] = option_select_btn.getElementsByTagName('button'),
         calcPrice = option_select.querySelector('.bottomCalcPrice');
 
