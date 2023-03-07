@@ -257,16 +257,22 @@ header {
 
 .notice_search {
     display: inline-block;
-    width: 600px;
+    width: 570px;
     line-height: 80px;
     margin: 10px;
+}
+
+.notice_search form {
+    border-bottom: 1px solid;
+    height: 65px;
 }
 
 .notice_search input {
     border: none;
     width: 500px;
     height: 40px;
-    border-bottom: 1px solid;
+    padding: 0 5px;
+    font-size: 20px;
 }
 
 .notice_search button {
@@ -277,10 +283,14 @@ header {
 .notice_search button img {
     height: 40px;
     vertical-align: middle;
+    opacity: .7;
 }
 
 /* ======================# main 문의 #================================================== */
 /* 문의(notice) box */
+#notice_main a:not([href*='#']) {
+    background-color: white;
+}
 
 .notice_box {
     display: flex;
@@ -313,6 +323,8 @@ header {
 
 .notice_box1 {
     margin-right: 5px;
+    /* 페이지 여러게 없어서 box1로 지정해줌 배경색 */
+    background-color: #f1f1f1eb;
 }
 
 .notice_box3,
@@ -413,11 +425,6 @@ tbody .active {
     width: 30px;
     height: 30px;
     line-height: 30px;
-}
-
-/* 푸터 이미지 화이트 */
-a:not([href*='#']) {
-    /* background-color: white; */
 }
 
 .notice_page_button::before {
