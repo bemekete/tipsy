@@ -300,7 +300,6 @@ header {
 
 table {
     border-collapse: collapse;
-    /* width: 95%; */
     margin: 0 auto;
 }
 
@@ -327,11 +326,8 @@ th {
     padding: 20px;
 }
 
-td {
-    padding-left: 20px;
-}
-
-.contens span {
+.contens span,
+.agree_container>p span {
     color: lightsalmon;
     margin-left: 10px;
 }
@@ -366,11 +362,6 @@ td {
     margin-left: 10px;
 }
 
-.agree_submit button {
-    margin: auto;
-    margin: 30px 0 50px;
-}
-
 /* margin */
 .contens p {
     margin: 30px;
@@ -394,7 +385,7 @@ td {
     margin-top: 15px;
 }
 
-.agree_submit button {
+.agree_submit * {
     font-size: 85%;
     color: white;
     padding: 20px 70px;
@@ -402,6 +393,9 @@ td {
     border: none;
     background-color: #084875b7;
     cursor: pointer;
+
+    /* margin: auto; */
+    margin-bottom: 60px;
 }
 
 .agree_submit {

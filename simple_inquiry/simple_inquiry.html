@@ -143,14 +143,14 @@
                                     <tr>
                                         <th>비밀번호<span>&#42;</span></th>
                                         <td>
-                                            <input type="password" name="inquiryPSW" minlength="3" maxlength="4" size="10px"
-                                                required>
+                                            <input type="password" name="inquiryPSW" minlength="3" maxlength="4" size="20px"
+                                            placeholder="비밀번호를 입력해 주세요." required>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th>제목<span>&#42;</span></th>
-                                        <td><input type="text" name="Title" maxlength="50" size="60" required
+                                        <td><input type="text" name="Title" maxlength="50" size="60" minlength="5" required
                                                 placeholder="제목을 입력 하세요." required></td>
                                     </tr>
 
@@ -177,7 +177,7 @@
                     </div>
 
                     <div class="agree_container">
-                        <p>개인정보 수집 및 이용동의</p>
+                        <p>개인정보 수집 및 이용동의<span>&#42;</span></p>
                         <div class="agree_text">
                             <p>
                                 1. 수집 항목 이름, 휴대전화번호, 주소
@@ -189,13 +189,13 @@
                                 ※ 위 항목 ’개인정보 수집 및 이용동의‘를 거부하실 수 있습니다 . 동의를 거부하실 경우, 온라인을 통한 고객문의 접수가 되지 않습니다.
                             </p>
                             <div class="agree_use">
-                                <label for="agree_use"><span>개인정보 수집 및 이용동의</span></label>
+                                <label for="agree_use"><span>개인정보 수집 및 이용동의 확인</span></label>
                                 <input type="checkbox" name="agree_use" id="agree_use" value="agree_use" required>
                             </div>
                         </div>
 
                         <div class="agree_submit">
-                            <button type="button">취소</button>
+                            <a href="../customerpage/customerpage.html">취소</a>
                             <button type="submit">확인</button>
                         </div>
                     </div>

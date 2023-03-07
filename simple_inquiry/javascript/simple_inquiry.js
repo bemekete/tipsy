@@ -31,3 +31,5 @@ document.addEventListener('scroll', function () {
         topfloatingbar.style.opacity = '.3';
     }
 });
+
+// 취소 버튼 클릭시 메인화면으로 
