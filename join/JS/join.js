@@ -20,6 +20,7 @@ detailCategoryList.addEventListener('mouseleave', () => {
 
 const checkbox = document.querySelectorAll('.joinbox input');
 const confirmAge = document.querySelector('#agree_age');
+let popup;
 
 function checkAll() {
     if (checkbox[0].checked === true) {
@@ -36,7 +37,9 @@ function checkAll() {
 
 confirmAge.addEventListener('click', () => {
     // confirmAge.checked = false;
-    confirmpop();
+    if(confirmAge.checked === true){
+        confirmpop();
+    }
 });
 
 function confirmpop() {
@@ -47,9 +50,9 @@ function confirmpop() {
     );
 }
 
-if (popup.close()) {
-    confirmAge.checked = true;
-}
+// if (popup.close()) {
+// confirmAge.checked = true;
+// }
 
 // 탑플로팅바
 const topfloatingbar = document.querySelector('.topfloatingbar');
