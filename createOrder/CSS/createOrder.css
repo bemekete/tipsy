@@ -8,21 +8,33 @@
 
 @font-face {
     font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff')
+        format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
 .headerTop,
 .headerMenu,
+#container,
 #footer .footer_cover {
     max-width: 1400px;
     margin: 0 auto;
+}
+
+#notice_main {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    outline: none;
+}
+
+#maincontainer {
+    text-align: center;
 }
 
 .topfloatingbar {
@@ -47,6 +59,9 @@ header {
     margin-bottom: 50px;
 }
 
+/* .headertop_cover {
+    background-color: rgba(223, 223, 223, 0.4);
+} */
 
 .headerTop {
     height: 70px;
@@ -99,8 +114,8 @@ header {
     color: grey;
 }
 
-.serviceTabList li+li::before {
-    content: " | ";
+.serviceTabList li + li::before {
+    content: ' | ';
     color: grey;
 }
 
@@ -118,11 +133,11 @@ header {
     display: flex;
 }
 
-.mainCategoryList>li {
+.mainCategoryList > li {
     padding: 20px;
 }
 
-.mainCategoryList>li>a {
+.mainCategoryList > li > a {
     color: black;
     font-weight: bold;
 }
@@ -145,7 +160,7 @@ header {
     left: 0;
 }
 
-.detailCategoryList>ul {
+.detailCategoryList > ul {
     width: 12em;
     height: 16.25em;
 
@@ -157,7 +172,6 @@ header {
 .detailCategoryList li {
     padding: 15px;
 }
-
 
 .detailCategoryList a {
     display: block;
@@ -216,7 +230,7 @@ header {
 .mainSearch {
     height: 100%;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: rgba(211, 211, 211, 0.4);
     border-radius: 5px;
 }
 
@@ -390,8 +404,6 @@ hr {
 
 .rightContainer {
     width: 45%;
-    position: sticky;
-    top: 80px;
 }
 
 
@@ -554,6 +566,11 @@ hr {
 
 
 /* =================== 계산서 ===================== */
+.receiptCon {
+    position: sticky;
+    top: 100px;
+}
+
 .bill>div>div:nth-of-type(1) {
     color: rgba(60, 59, 59, 0.589);
 }

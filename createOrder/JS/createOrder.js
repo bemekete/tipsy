@@ -1,4 +1,28 @@
 'use strict';
+// header category
+
+const detailCategoryList = document.querySelector('.detailCategoryList'),
+    drinkhoverOf = detailCategoryList.querySelector('.detailCategoryListof');
+
+detailCategoryList.addEventListener('mouseover', (e) => {
+    const [drinkhover, snackhover] =
+        detailCategoryList.getElementsByClassName('hoverCategory');
+
+    if (e.target === drinkhover) {
+        drinkhoverOf.classList.remove('hidden');
+    } else if (e.target === snackhover) {
+        drinkhoverOf.classList.add('hidden');
+    } else return;
+});
+
+detailCategoryList.addEventListener('mouseleave', () => {
+    drinkhoverOf.classList.remove('hidden');
+});
+
+
+
+
+
 
 // 열고 닫기
 const main = document.getElementById('main'),
@@ -51,6 +75,35 @@ couponClickBtn.addEventListener('click', (e) => {
 })
 
 
+// 쿠폰 등록
+const inputCouponBtn = main.querySelector(".couponBtn");
+
+main.addEventListener('click', (e) => {
+    const targetEvent = e.target;
+
+    if (targetEvent === inputCouponBtn) {
+        alert('쿠폰 존재하지 않음');
+    }
+})
+
+// 결제하기 결제방법 
+const submitBtn = main.querySelector('.submitBtn button');
+
+main.addEventListener('click', (e) => {
+    const targetEvent = e.target
+
+    if (targetEvent === submitBtn) {
+        e.preventDefault();
+
+        if (payment.textContent == '-') {
+            alert('결제방법을 선택해주세요.');
+        }
+    }
+})
+
+
+
+
 // 포인트 전액 사용
 const pointAllBtn = main.querySelector('.pointAllBtn'),
     usePoint = main.querySelector('.usePoint'),
@@ -59,39 +112,70 @@ const pointAllBtn = main.querySelector('.pointAllBtn'),
     inputAll = couponPoint.getElementsByTagName('input'),
     point = main.getElementsByClassName('point');
 
-let originalPoint = point[0].textContent,
-    pointNum = 2000;
+// let originalPoint2 = point[0].textContent,
+const originalPoint = 2000;
+point[0].textContent = originalPoint.toLocaleString();
+const originalPoint2 = point[0].textContent;
 
-// 사용 가능한 포인트에서 originalPoint값 뽑아서 변수에 저쟝해둠
-// 그 값을 클릭했을때 value값에 넣어줌 but, 사용할 포인트에 입력하면 값이 valu에
-// 안들어가는듯. 초기화가 안됨. 그래서 이정도만 해둠
+
 main.addEventListener('click', (e) => {
     const targetEvent = e.target;
 
     if (targetEvent === pointAllBtn) {
 
         if (pointAllBtn.classList.toggle('pointBtnd')) {
+            // inputValue 기본값으로 초기화 해주기
+            inputAll[1].value = originalPoint2;
+
             // input에 point 변수값 넣어주기.
-            inputAll[1].setAttribute('value', originalPoint);
+            inputAll[1].setAttribute('value', originalPoint2);
             point[0].textContent = 0;
-            point[1].textContent = originalPoint;
-            
-            // pointNum = originalPoint;
+            point[1].textContent = originalPoint2;
+
         } else {
-            point[0].textContent = originalPoint;
+            inputAll[1].value = "";
+
+            point[0].textContent = originalPoint2;
             point[1].textContent = 0;
             inputAll[1].setAttribute('value', '');
-            
-            // pointNum = 0;
+
         }
+        console.log(inputAll[1].value);
     }
 })
+
+
+// 입력창에 originalPoint보다 큰 값은 alert, 입력 value 빼서 textContent로 넣어주기
+const main_input = main.getElementsByClassName('main_input');
+let inputValue = 0;
+
+main.addEventListener('input', (e) => {
+    const targetEvent = e.target;
+
+    if (targetEvent == main_input[1]) {
+        console.log(inputAll[1].value);
+
+        inputValue = originalPoint - +inputAll[1].value;
+        if (inputValue > 0) {
+            point[0].textContent = inputValue;
+            point[1].textContent = +inputAll[1].value;
+        } else {
+            point[0].textContent = originalPoint2;
+        }
+        if (+inputAll[1].value > originalPoint) {
+            // console.log('에휴');
+            alert('다시 입력하3');
+            inputAll[1].value = "";
+        }
+    }
+
+})
+
 // 이 값 안나옴
-// console.log(pointNum)
+// console.log(originalPoint)
 
 // 이거 리액트로 onChange로 값 변하는거 비동기로 받고 어쩌구 해야할듯
 // 입력 받은 값으로 계산서의 포인트 사용도 바꿔야함
-// console.log(inputAll[1].textContent);
 
 
 // 결제방법
@@ -123,18 +207,20 @@ const totalProductMoneyTxt = document.getElementsByClassName('totalProductMoney'
     totalDiscountTxt = document.getElementsByClassName('totalDiscount'),
     totalMoneyTxt = document.getElementsByClassName('totalMoney');
 
-let couponDiscount = 3000;
-// 쿠폰이 있을때만 총 할인 금액에 넣고싶었으나 안됨
-// if (coupon.textContent !== '-') {
-//     couponDiscount = +totalProductMoney/0.9;
-// }
-// console.log(couponDiscount);
+let couponDiscount = 0;
+// 쿠폰이 있을때만 총 할인 금액에 넣고싶었으나 안coupon됨
+if (coupon.textContent != '-') {
+    couponDiscount = 3000;
+}
+console.log(couponDiscount);
 
+// 사용한 포인트값
+// let g = +inputAll[1].value;
 let totalProductMoney = 13000,
     deliveryMoney = 3000,
     // textContent가 안되서 위의 click이벤트에서 변수 설정해서 그 값
     // 넣어줄려고 했는데 안됨
-    totalDiscount = (+pointNum + couponDiscount),
+    totalDiscount = (+inputAll[1].value + couponDiscount),
     totalMoney = (totalProductMoney + deliveryMoney - totalDiscount);
 
 
@@ -149,4 +235,5 @@ deliveryMoneyTxt[1].textContent = deliveryMoney.toLocaleString(); // 계산서
 totalDiscountTxt[0].textContent = totalDiscount.toLocaleString(); // 계산서
 // 총 결제 금액 = 총 상품금액 + 총 배송비 - 총 할인
 totalMoneyTxt[0].textContent = totalMoney.toLocaleString(); // 계산서
+
 
