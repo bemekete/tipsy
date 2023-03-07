@@ -110,14 +110,15 @@ couponClickBtn.addEventListener('click', (e) => {
 })
 
 
-// 쿠폰 등록
+// 쿠폰 등록 alert창
 const inputCouponBtn = main.querySelector(".couponBtn");
 
 main.addEventListener('click', (e) => {
     const targetEvent = e.target;
 
     if (targetEvent === inputCouponBtn) {
-        alert('쿠폰 존재하지 않음');
+        inputAll[0].value = "";
+        alert('쿠폰이 존재하지 않아요. 다시 입력해주세요.');
     }
 })
 
@@ -200,8 +201,7 @@ main.addEventListener('input', (e) => {
         }
 
         if (inputPoint > originalPoint) {
-            // console.log('에휴');
-            alert('다시 입력하3');
+            alert('사용 가능 포인트 초과. 재입력하세요.');
             inputAll[1].value = "";
             point[1].innerText = "0";
         }
