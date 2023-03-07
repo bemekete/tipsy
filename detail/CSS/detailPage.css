@@ -945,6 +945,8 @@ header {
 
 .option_tit dd {
     height: 20px;
+    padding-left: 10px;
+    text-align: start;
 }
 
 .option_tit dd:nth-of-type(1) {
@@ -1023,16 +1025,19 @@ header {
 
 .count_button_box div {
     transform: translate(-112.5%, -150%);
-    border: 1px solid lightgray;
+    border: lightgray 1px solid;
 
 }
 
 .count_button_box a {
-    display: in;
-    color: white;
-    background-color: black;
+
     transform: translate(12.5%, -150%);
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
 }
+
 
 /* 수량 카운트 버튼 */
 .option_select button {
@@ -1049,6 +1054,12 @@ header {
     display: grid
 }
 
+.option_select_btn button:hover {
+    cursor: pointer;
+    background-color: #a0a0a0;
+}
+
+
 /* ============================옵션 변경============================== */
 
 /* ///////////////////////////////선택 항목 모두 삭제 시 문구///////////////////////////////// */
@@ -1063,26 +1074,22 @@ header {
 }
 
 /* 셀렉트 바 */
-.optionSelect {
-    width: 100%;
+.option_select td {
+    line-height: 50px;
+    text-align: center;
 }
 
-.optionSelect button,
-.optionSelect li {
-    width: 100%;
-    height: 100%;
-    border: hidden;
+.option_select tr,
+.option_select td {
+    border: 1px solid rgba(166, 166, 166, 0.7);
+    border-left: none;
+    border-right: none;
 }
 
-.optionSelect button {
-    padding-left: 10px;
-    text-align: left;
-
-    background-color: #f7f7f7;
-}
-
-.option_select td:nth-of-type(1) {
-    position: relative;
+.bottomOptOfProduct {
+    font-size: inherit;
+    border: none;
+    background: none;
 }
 
 .option_select input {
@@ -1093,20 +1100,6 @@ header {
     text-align: right;
     padding-right: 3px;
 }
-
-.select_scroll_img {
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-250%, -60%);
-
-    background: url(../image/down.svg) no-repeat center/100% 100%;
-}
-
-
 
 /* ########################/////footer/////##################### */
 /* footer */

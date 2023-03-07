@@ -12,8 +12,7 @@ const optionView = document.querySelector('.optionView'),
 
 option_tit_dl.children[0].innerHTML = document.querySelector('.detail_tit_img').innerHTML;
 option_tit_dl.children[1].innerText = titleTop;
-
-option_select.querySelector('.optionSelect button').innerText = titleTop;
+option_tit_dl.children[2].innerText = title.querySelector('.detail_tit_mid').innerText;
 
 
 
@@ -94,7 +93,8 @@ floatBar.addEventListener('click', (e) => {
 // 하단 바 버튼 클릭 시 옵션뷰 오픈
 const bottomSide = document.querySelector('.bottomSide'),
     bottomPopupBasket = bottomSide.querySelector('.bottomPopupBasket'); // 장바구니 플로팅 메시지
-const bottomPieces = document.getElementById('bottomPieces');
+const bottomOption = option_select.querySelector('.bottomOptOfProduct'),
+    bottomPieces = document.getElementById('bottomPieces');
 
 let unHref;
 unHref = !unHref; // e.preventDefault() 여부 결정 변수
@@ -137,7 +137,7 @@ optionView.addEventListener('click', (e) => {
     } else return;
 
     if (e.target.contains(buyBtn)) {
-        if (+bottomPieces.value === 0) {
+        if (!(bottomOption.value) || +bottomPieces.value === 0) {
             e.preventDefault();
             alert('옵션 및 수량을 입력해주세요.');
         } else if (unHref) {
