@@ -29,10 +29,7 @@ sortListCon.addEventListener('click', function (e) {
 
     if (this.contains(eventTarget) && !(eventTarget.classList == 'btnClick')) {
         eventTarget.classList.add('btnClick');
-    } else if (
-        this.contains(eventTarget) &&
-        eventTarget.classList == 'btnClick'
-    ) {
+    } else if (this.contains(eventTarget) && eventTarget.classList == 'btnClick') {
         eventTarget.classList.remove('btnClick');
     }
 });
