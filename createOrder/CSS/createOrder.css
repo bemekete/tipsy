@@ -302,13 +302,7 @@ hr {
     margin-bottom: 40px;
 }
 
-.form_container {
-    width: 450px;
-    margin: auto;
-}
-
-.box_container>div,
-.agreeUse {
+.box {
     border: solid 1px silver;
     padding: 30px;
     margin-top: 15px;
@@ -352,7 +346,7 @@ hr {
 }
 
 
-.box_container>div>div:nth-of-type(1) {
+.nthchild_1 {
     line-height: 40px;
     border-bottom: solid 1px rgb(92, 91, 91);
 }
@@ -373,6 +367,34 @@ hr {
 .main_none {
     display: none;
 }
+
+
+/* Box들 flex */
+.form_container {
+    width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftContainer,
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftContainer {
+    width: 50%;
+}
+
+.rightContainer {
+    width: 45%;
+    position: sticky;
+    top: 80px;
+}
+
+
 
 
 
@@ -598,7 +620,7 @@ hr {
     font-size: 18px;
     cursor: pointer;
 
-    margin: 25px 0 60px 0;
+    margin-top: 5px;
 }
 
 

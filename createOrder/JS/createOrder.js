@@ -149,5 +149,4 @@ deliveryMoneyTxt[1].textContent = deliveryMoney.toLocaleString(); // 계산서
 totalDiscountTxt[0].textContent = totalDiscount.toLocaleString(); // 계산서
 // 총 결제 금액 = 총 상품금액 + 총 배송비 - 총 할인
 totalMoneyTxt[0].textContent = totalMoney.toLocaleString(); // 계산서
-totalMoneyTxt[1].textContent = totalMoney.toLocaleString(); // 버튼
 
