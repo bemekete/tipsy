@@ -22,7 +22,25 @@ detailCategoryList.addEventListener('mouseleave', () => {
 
 
 
+const totalProductMoneyTxt = document.getElementsByClassName('totalProductMoney'),
+    deliveryMoneyTxt = document.getElementsByClassName('deliveryMoney'),
+    totalDiscountTxt = document.getElementsByClassName('totalDiscount'),
+    totalMoneyTxt = document.getElementsByClassName('totalMoney');
 
+let totalProductMoney = 13000,
+    deliveryMoney = 3000,
+    totalDiscount = 0,
+    totalMoney = totalProductMoney + deliveryMoney;
+
+let inputPoint = 0, inputCoupon = 0;
+
+function totalCal(inputPoint, inputCoupon) {
+    totalDiscount = inputPoint + inputCoupon;
+    totalMoney = totalProductMoney + deliveryMoney - totalDiscount;
+
+    totalDiscountTxt[0].innerText = `${totalDiscount}`;
+    totalMoneyTxt[0].innerText = `${totalMoney}`;
+}
 
 // 열고 닫기
 const main = document.getElementById('main'),
@@ -64,14 +82,16 @@ let beforeBtn = couponBtn[0];
 couponClickBtn.addEventListener('click', (e) => {
     const targetEvent = e.target.closest('button');
 
-    if (!targetEvent) return
+    if (!targetEvent) return;
 
     beforeBtn.classList.remove('pointBtnd')
     targetEvent.classList.toggle('pointBtnd');
     coupon.textContent = targetEvent.parentNode.childNodes[1].textContent
-    // console.log(targetEvent.parentNode.childNodes[1].textContent)
 
     beforeBtn = targetEvent
+
+    inputCoupon = +targetEvent.parentNode.childNodes[1].dataset.couponWon;
+    totalCal(inputPoint, inputCoupon);
 })
 
 
@@ -97,11 +117,11 @@ main.addEventListener('click', (e) => {
 
         if (payment.textContent == '-') {
             alert('결제방법을 선택해주세요.');
+        } else {
+            location.href = "../orderEnd/orderEnd.html";
         }
     }
 })
-
-
 
 
 // 포인트 전액 사용
@@ -142,6 +162,9 @@ main.addEventListener('click', (e) => {
         }
         console.log(inputAll[1].value);
     }
+
+    inputPoint = +point[1].textContent.replace(',', '');
+    totalCal(inputPoint, inputCoupon);
 })
 
 
@@ -153,22 +176,24 @@ main.addEventListener('input', (e) => {
     const targetEvent = e.target;
 
     if (targetEvent == main_input[1]) {
-        console.log(inputAll[1].value);
+        let inputPoint = +inputAll[1].value;
 
-        inputValue = originalPoint - +inputAll[1].value;
-        if (inputValue > 0) {
+        inputValue = originalPoint - inputPoint;
+        if (inputValue >= 0) {
             point[0].textContent = inputValue;
-            point[1].textContent = +inputAll[1].value;
+            point[1].textContent = inputPoint;
         } else {
             point[0].textContent = originalPoint2;
         }
-        if (+inputAll[1].value > originalPoint) {
+        if (inputPoint > originalPoint) {
             // console.log('에휴');
             alert('다시 입력하3');
             inputAll[1].value = "";
+            point[1].innerText = "0";
         }
     }
 
+    totalCal(inputPoint, inputCoupon);
 })
 
 // 이 값 안나옴
@@ -202,10 +227,7 @@ paymentMethod.addEventListener('click', (e) => {
 })
 
 
-const totalProductMoneyTxt = document.getElementsByClassName('totalProductMoney'),
-    deliveryMoneyTxt = document.getElementsByClassName('deliveryMoney'),
-    totalDiscountTxt = document.getElementsByClassName('totalDiscount'),
-    totalMoneyTxt = document.getElementsByClassName('totalMoney');
+
 
 let couponDiscount = 0;
 // 쿠폰이 있을때만 총 할인 금액에 넣고싶었으나 안coupon됨
@@ -216,12 +238,12 @@ console.log(couponDiscount);
 
 // 사용한 포인트값
 // let g = +inputAll[1].value;
-let totalProductMoney = 13000,
-    deliveryMoney = 3000,
-    // textContent가 안되서 위의 click이벤트에서 변수 설정해서 그 값
-    // 넣어줄려고 했는데 안됨
-    totalDiscount = (+inputAll[1].value + couponDiscount),
-    totalMoney = (totalProductMoney + deliveryMoney - totalDiscount);
+// let totalProductMoney = 13000,
+//     deliveryMoney = 3000;
+// textContent가 안되서 위의 click이벤트에서 변수 설정해서 그 값
+// 넣어줄려고 했는데 안됨
+// let totalDiscount = (+inputAll[1].value + couponDiscount),
+//     totalMoney = (totalProductMoney + deliveryMoney - totalDiscount);
 
 
 // 총 상품금액
