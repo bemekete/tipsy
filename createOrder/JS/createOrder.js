@@ -22,6 +22,7 @@ detailCategoryList.addEventListener('mouseleave', () => {
 
 
 
+// 값 
 const totalProductMoneyTxt = document.getElementsByClassName('totalProductMoney'),
     deliveryMoneyTxt = document.getElementsByClassName('deliveryMoney'),
     totalDiscountTxt = document.getElementsByClassName('totalDiscount'),
@@ -38,9 +39,23 @@ function totalCal(inputPoint, inputCoupon) {
     totalDiscount = inputPoint + inputCoupon;
     totalMoney = totalProductMoney + deliveryMoney - totalDiscount;
 
-    totalDiscountTxt[0].innerText = `${totalDiscount}`;
-    totalMoneyTxt[0].innerText = `${totalMoney}`;
+    totalDiscountTxt[0].innerText = `${totalDiscount.toLocaleString()}`;
+    totalMoneyTxt[0].innerText = `${totalMoney.toLocaleString()}`;
 }
+
+// 총 상품금액
+totalProductMoneyTxt[0].textContent = totalProductMoney.toLocaleString(); // 상품 금액
+totalProductMoneyTxt[1].textContent = totalProductMoney.toLocaleString(); // 주문 예정 상품
+totalProductMoneyTxt[2].textContent = totalProductMoney.toLocaleString(); // 계산서
+// 총 배송비
+deliveryMoneyTxt[0].textContent = deliveryMoney.toLocaleString(); // 주문 예정 상품
+deliveryMoneyTxt[1].textContent = deliveryMoney.toLocaleString(); // 계산서
+// 총 할인 = 포인트 + 쿠폰
+totalDiscountTxt[0].textContent = totalDiscount.toLocaleString(); // 계산서 (기본값 땜)
+// 총 결제 금액 = 총 상품금액 + 총 배송비 - 총 할인
+totalMoneyTxt[0].textContent = totalMoney.toLocaleString(); // 계산서 (기본값 땜)
+
+
 
 // 열고 닫기
 const main = document.getElementById('main'),
@@ -113,13 +128,11 @@ main.addEventListener('click', (e) => {
     const targetEvent = e.target
 
     if (targetEvent === submitBtn) {
-        e.preventDefault();
-
+        
         if (payment.textContent == '-') {
+            e.preventDefault();
             alert('결제방법을 선택해주세요.');
-        } else {
-            location.href = "../orderEnd/orderEnd.html";
-        }
+        } 
     }
 })
 
@@ -168,7 +181,7 @@ main.addEventListener('click', (e) => {
 })
 
 
-// 입력창에 originalPoint보다 큰 값은 alert, 입력 value 빼서 textContent로 넣어주기
+// 포인트 input
 const main_input = main.getElementsByClassName('main_input');
 let inputValue = 0;
 
@@ -180,11 +193,12 @@ main.addEventListener('input', (e) => {
 
         inputValue = originalPoint - inputPoint;
         if (inputValue >= 0) {
-            point[0].textContent = inputValue;
-            point[1].textContent = inputPoint;
+            point[0].textContent = inputValue.toLocaleString();
+            point[1].textContent = inputPoint.toLocaleString();
         } else {
             point[0].textContent = originalPoint2;
         }
+
         if (inputPoint > originalPoint) {
             // console.log('에휴');
             alert('다시 입력하3');
@@ -196,11 +210,6 @@ main.addEventListener('input', (e) => {
     totalCal(inputPoint, inputCoupon);
 })
 
-// 이 값 안나옴
-// console.log(originalPoint)
-
-// 이거 리액트로 onChange로 값 변하는거 비동기로 받고 어쩌구 해야할듯
-// 입력 받은 값으로 계산서의 포인트 사용도 바꿔야함
 
 
 // 결제방법
@@ -228,34 +237,5 @@ paymentMethod.addEventListener('click', (e) => {
 
 
 
-
-let couponDiscount = 0;
-// 쿠폰이 있을때만 총 할인 금액에 넣고싶었으나 안coupon됨
-if (coupon.textContent != '-') {
-    couponDiscount = 3000;
-}
-console.log(couponDiscount);
-
-// 사용한 포인트값
-// let g = +inputAll[1].value;
-// let totalProductMoney = 13000,
-//     deliveryMoney = 3000;
-// textContent가 안되서 위의 click이벤트에서 변수 설정해서 그 값
-// 넣어줄려고 했는데 안됨
-// let totalDiscount = (+inputAll[1].value + couponDiscount),
-//     totalMoney = (totalProductMoney + deliveryMoney - totalDiscount);
-
-
-// 총 상품금액
-totalProductMoneyTxt[0].textContent = totalProductMoney.toLocaleString(); // 상품 금액
-totalProductMoneyTxt[1].textContent = totalProductMoney.toLocaleString(); // 주문 예정 상품
-totalProductMoneyTxt[2].textContent = totalProductMoney.toLocaleString(); // 계산서
-// 총 배송비
-deliveryMoneyTxt[0].textContent = deliveryMoney.toLocaleString(); // 주문 예정 상품
-deliveryMoneyTxt[1].textContent = deliveryMoney.toLocaleString(); // 계산서
-// 총 할인 = 포인트 + 쿠폰
-totalDiscountTxt[0].textContent = totalDiscount.toLocaleString(); // 계산서
-// 총 결제 금액 = 총 상품금액 + 총 배송비 - 총 할인
-totalMoneyTxt[0].textContent = totalMoney.toLocaleString(); // 계산서
 
 
