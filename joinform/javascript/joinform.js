@@ -52,11 +52,12 @@ function join_check() {
         return false;
     }
 
-    let idCheck = /^[a-z0-9]{4,}$/;
+    const idCheck = /^[a-z0-9]{4,}$/;
 
     if (!idCheck.test(userID.value)) {
         alert('아이디를 다시 확인하세요.');
         userID.focus();
+        userID.value = '';
         return false;
     }
 
@@ -66,7 +67,7 @@ function join_check() {
         return false;
     }
 
-    let pwdCheck =
+    const pwdCheck =
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
     if (!pwdCheck.test(userPSW.value)) {
@@ -74,12 +75,14 @@ function join_check() {
             '비밀번호는 영문자+숫자+특수문자 조합으로 8자리이상 사용해야 합니다.'
         );
         userPSW.focus();
+        userPSW.value = '';
         return false;
     }
 
     if (rePSW.value !== userPSW.value) {
         alert('비밀번호가 일치하지 않습니다.');
         rePSW.focus();
+        rePSW.value = '';
         return false;
     }
 
@@ -107,24 +110,13 @@ function join_check() {
         return false;
     }
 
-    if (thirdNum.value == '') {
-        alert('전화번호를 다시 확인하세요.');
-        thirdNum.focus();
-        return false;
-    }
-
-    if (verificationCode.value == '') {
-        alert('인증번호를 입력하세요.');
-        verificationCode.focus();
-        return false;
-    }
-
-    let emailtext =
+    const emailtext =
         /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
     if (!emailtext.test(email.value)) {
         alert('이메일형식이 올바르지 않습니다.');
         email.focus();
+        email.value = '';
         return false;
     }
 
