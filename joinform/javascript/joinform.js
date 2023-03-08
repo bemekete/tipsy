@@ -36,16 +36,15 @@ rePSW.onchange = () => {
 
 // 회원가입 유효성검사
 function join_check() {
-    let userID = document.getElementById('userID');
-    let userPSW = document.getElementById('userPSW');
-    // let rePSW = document.getElementById('rePSW');
-    let ckpwa = document.getElementById('ckpwa');
-    let userName = document.getElementById('userName');
-    let address = document.getElementById('address');
-    let secondNum = document.getElementById('secondNum');
-    let thirdNum = document.getElementById('thirdNum');
-    let email = document.getElementById('email');
-    let verificationCode = document.getElementById('verificationCode');
+    const userID = document.getElementById('userID'),
+        userPSW = document.getElementById('userPSW'),
+        ckpwa = document.getElementById('ckpwa'),
+        userName = document.getElementById('userName'),
+        address = document.getElementById('address'),
+        secondNum = document.getElementById('secondNum'),
+        thirdNum = document.getElementById('thirdNum'),
+        email = document.getElementById('email'),
+        verificationCode = document.getElementById('verificationCode');
 
     if (userID.value == '') {
         alert('아이디를 입력하세요.');

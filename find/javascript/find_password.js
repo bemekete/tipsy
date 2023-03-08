@@ -36,9 +36,9 @@ document.addEventListener('scroll', function () {
 // 유효성검사
 
 function find_check() {
-    let user_email = document.getElementById('user_email');
-    let user_mobile = document.getElementById('user_mobile');
-    let check_num = document.getElementById('check_num');
+    const user_email = document.getElementById('user_email'),
+        user_mobile = document.getElementById('user_mobile'),
+        check_num = document.getElementById('check_num');
 
     if (user_email.value == '') {
         alert('이메일을 입력하세요');

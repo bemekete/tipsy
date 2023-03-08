@@ -36,9 +36,9 @@ document.addEventListener('scroll', function () {
 // 유효성검사
 
 function find_check() {
-    let user_name = document.getElementById('user_name');
-    let user_mobile = document.getElementById('user_mobile');
-    let check_num = document.getElementById('check_num');
+    const user_name = document.getElementById('user_name'),
+        user_mobile = document.getElementById('user_mobile'),
+        check_num = document.getElementById('check_num');
 
     if (user_name.value == '') {
         alert('이름을 입력하세요');
