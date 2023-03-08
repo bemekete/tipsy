@@ -726,7 +726,7 @@ header {
 }
 
 .productBuy_btn>div:nth-of-type(1),
-.productBuy_btn>a {
+.productBuy_btn>button {
     padding: 10px 20px;
     font-size: 100%;
     font-weight: bold;
@@ -1024,14 +1024,20 @@ header {
 
 }
 
-.count_button_box a {
-
+.count_button_box button {
     transform: translate(12.5%, -150%);
     background-color: black;
     border: 1px solid black;
     border-radius: 2px;
     color: white;
 }
+/* .count_button_box a {
+    transform: translate(12.5%, -150%);
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+} */
 
 
 /* 수량 카운트 버튼 */

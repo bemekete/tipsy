@@ -340,7 +340,7 @@
                     <!------------------------------ 플로팅바 ---------------------------------->
                     <div class="rightSide">
                         <div class="rightFloat">
-                            <form>
+                            <form action="../createOrder/createOrder.html">
                                 <div>
                                     <div class="label">
                                         <label>옵션</label>
@@ -379,7 +379,7 @@
                                 </div>
                                 <div class="productBuy_btn">
                                     <div>장바구니</div>
-                                    <a href="../createOrder/createOrder.html">구매하기</a>
+                                    <button type="submit">구매하기</button>
 
                                     <div class="popupBasket">
                                         <div class="popupBasketCon">
@@ -425,7 +425,7 @@
                     <!-- 장바구니 옵션뷰 -->
                     <div class="optionView displayNone">
                         <div class="goods_count_box">
-                            <div>
+                            <form class="bottomForm" action="../createOrder/createOrder.html">
                                 <p>옵션 선택
                                     <span class="overviewRemover">
                                         <img src="./image/close.png" alt="닫기">
@@ -450,21 +450,27 @@
                                             <tr>
                                                 <td>
                                                     <select class="bottomOptOfProduct" name="bottomOption" required>
-                                                        <option value disabled selected>옵션</option>
-                                                        <option value="soju">소주</option>
-                                                        <option value="beer">맥주</option>
-                                                        <option value="wine">와인</option>
+                                                        <option value disabled selected>옵션
+                                                        </option>
+                                                        <option value="soju">소주
+                                                        </option>
+                                                        <option value="beer">맥주
+                                                        </option>
+                                                        <option value="wine">와인
+                                                        </option>
                                                     </select>
                                                 </td>
                                                 <td><input type="text" id="bottomPieces" pattern="\d*" value="0"
-                                                        readonly>개</td>
+                                                        readonly>개
+                                                </td>
                                                 <td>
                                                     <div class="option_select_btn">
-                                                        <button>+</button>
-                                                        <button>-</button>
+                                                        <button type="button">+</button>
+                                                        <button type="button">-</button>
                                                     </div>
                                                 </td>
-                                                <td><span class="bottomCalcPrice">0</span>원</td>
+                                                <td><span class="bottomCalcPrice">0</span>원
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -472,10 +478,9 @@
                                 </div>
                                 <div class="count_button_box">
                                     <div>취소</div>
-                                    <a href="../createOrder/createOrder.html">확인</a>
+                                    <button type="submit">확인</button>
                                 </div>
-
-                            </div>
+                            </form>
                         </div>
                     </div>
 

@@ -65,7 +65,7 @@ floatBar.addEventListener('click', (e) => {
     calculation(target, pieces, numDown, numUp, calcPrice);
 
     // 구매하기 버튼 - 링크 이동
-    if (target === floatBar.querySelector('.productBuy_btn a')) {
+    if (target === floatBar.querySelector('.productBuy_btn button')) {
         if (!(option.value) || +pieces.value === 0) {
             e.preventDefault();
             alert('옵션 및 수량을 입력해주세요.');
@@ -125,12 +125,11 @@ bottomSide.addEventListener('click', (e) => {
 })
 
 
-
 // 옵션뷰 내 버튼
 optionView.addEventListener('click', (e) => {
     const closeBtn = e.target.closest('.overviewRemover img'), // X버튼
         cancelBtn = e.target.closest('.count_button_box div'), // 취소버튼
-        buyBtn = e.target.closest('.count_button_box a'); // 구매버튼
+        buyBtn = e.target.closest('.count_button_box button'); // 구매버튼
 
     if (e.target.contains(closeBtn) || e.target.contains(cancelBtn) || e.target.contains(buyBtn)) {
         optionView.classList.add('displayNone');
