@@ -105,7 +105,6 @@ table.addEventListener('input', function () {
 option_select_btn.addEventListener('click', function (e) {
     goodsCount(e);
     for (let i = 0; i < (goods_num.length * 2 - 1); i += 2) {
-        console.log(order_sum_price[1].textContent.split('원', [1]))
         option_select.children[0].children[3].textContent = (order_sum_price[0].textContent.replace(',', '').split('원', [1]) * Counting).toLocaleString();
     }
 
