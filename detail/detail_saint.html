@@ -446,21 +446,23 @@
                                                             <tbody class="option_select">
                                                                   <tr>
                                                                         <td>
-                                                                              <ul class="optionSelect">
-                                                                                    <li><button></button></li>
-                                                                              </ul>
-                                                                              <a href="" class="select_scroll_img"></a>
+                                                                              <select class="bottomOptOfProduct"
+                                                                                    name="bottomOption" required>
+                                                                                    <option value disabled selected>옵션
+                                                                                    </option>
+                                                                                    <option value="soju">소주</option>
+                                                                                    <option value="beer">맥주</option>
+                                                                                    <option value="wine">와인</option>
+                                                                              </select>
                                                                         </td>
                                                                         <td><input type="text" id="bottomPieces"
                                                                                     pattern="\d*" value="0" readonly>개
                                                                         </td>
                                                                         <td>
-                                                                              <select class="bottomOptOfProduct" name="bottomOption" required>
-                                                                                    <option value disabled selected>옵션</option>
-                                                                                    <option value="soju">소주</option>
-                                                                                    <option value="beer">맥주</option>
-                                                                                    <option value="wine">와인</option>
-                                                                                </select>
+                                                                              <div class="option_select_btn">
+                                                                                    <button>+</button>
+                                                                                    <button>-</button>
+                                                                              </div>
                                                                         </td>
                                                                         <td><span class="bottomCalcPrice">0</span>원</td>
                                                                   </tr>
