@@ -705,7 +705,7 @@ main {
         transform: translate3D(0, 0, 0);
         width: 800px;
         margin-right: 400px;
-        opacity: .5;
+        opacity: .8;
     }
 
     to {
@@ -721,7 +721,7 @@ main {
         transform: translate3D(0, 0, 0);
         width: 800px;
         margin-left: 400px;
-        opacity: .5;
+        opacity: .8;
     }
 
     to {
