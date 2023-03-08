@@ -83,6 +83,6 @@ function find_check() {
     }
 
     alert('회원님의 ID는 dlsr***** 입니다.');
-    location.href = '../../index.html';
+    location.href = '../../find/find_password.html';
     return true;
 }
