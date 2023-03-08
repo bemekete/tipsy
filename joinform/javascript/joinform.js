@@ -32,7 +32,7 @@ rePSW.onchange = () => {
         comparePSW.innerText = '일치함';
         comparePSW.classList.remove('notice');
     }
-}
+};
 
 // 회원가입 유효성검사
 function join_check() {
@@ -130,6 +130,7 @@ function join_check() {
     }
 
     alert('회원가입이 완료되었습니다.');
+    location.href = '../../login/login.html';
     return true;
 }
 
