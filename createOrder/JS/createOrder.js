@@ -129,11 +129,11 @@ main.addEventListener('click', (e) => {
     const targetEvent = e.target
 
     if (targetEvent === submitBtn) {
-        
+
         if (payment.textContent == '-') {
             e.preventDefault();
             alert('결제방법을 선택해주세요.');
-        } 
+        }
     }
 })
 
@@ -174,7 +174,6 @@ main.addEventListener('click', (e) => {
             inputAll[1].setAttribute('value', '');
 
         }
-        console.log(inputAll[1].value);
     }
 
     inputPoint = +point[1].textContent.replace(',', '');
@@ -216,8 +215,6 @@ main.addEventListener('input', (e) => {
 const paymentMethod = main.querySelector('.paymentMethod'),
     clickEvent = paymentMethod.getElementsByTagName('div'),
     payment = main.querySelector('.payment');
-// console.log(paymentMethod);
-// console.log(clickEvent);
 
 let before = clickEvent[0];
 
@@ -226,9 +223,7 @@ paymentMethod.addEventListener('click', (e) => {
 
     if (targetEvent !== paymentMethod) {
         before.classList.remove('paymentBackColor')
-        // console.log(targetEvent);
         targetEvent.classList.add('paymentBackColor');
-        // console.log(targetEvent.textContent)
         payment.textContent = targetEvent.textContent;
 
         before = targetEvent;
